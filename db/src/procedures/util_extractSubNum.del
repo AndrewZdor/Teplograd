@@ -1,0 +1,25 @@
+/**
+Extracts remaining string after integer in the begining.
+*/
+CREATE FUNCTION util_extractSubNum(
+	StringVal VARCHAR(256)
+)
+RETURNS LongString DETERMINISTIC
+BEGIN
+	-- Extracts remaining string after integer in the BEGIN
+    DECLARE @SQLState String;
+    DECLARE @ErrorMsg LongString;
+    DECLARE @ProcId INTEGER;
+
+    DECLARE StartTemp INTEGER;
+
+	SET StringVal = TRIM(StringVal) ;
+	SET StartTemp = PATINDEX('%[^0-9]%',StringVal) ;
+
+	IF StartTemp = 0 THEN
+		SET StartTemp = NULL
+	END IF;
+
+	RETURN SUBSTR(StringVal, StartTemp) ;
+	
+END;

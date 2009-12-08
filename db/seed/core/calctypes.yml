@@ -1,0 +1,20 @@
+---
+calctypes_1:
+  id: "1"
+  code: PlacesConsumersServices
+  inputfields: "ObjectId {INTEGER}, ServiceId {INTEGER}"
+  inputsql: |
+      SELECT DISTINCT o.Id AS ObjectId, s.Id AS ServiceId, o.InsDate, o.DelDate
+      FROM Objects o
+      CROSS JOIN Services s
+      WHERE EXISTS (
+        SELECT 1
+        FROM ObjectCapacities oc
+        JOIN Contracts c ON oc.ContractId = c.Id
+        WHERE oc.ObjectId = o.Id
+          AND oc.ServiceId = s.Id
+          AND c.DateFrom < _DateTo
+          AND COALESCE(c.DateTo, _DateTo) > _DateFrom)
+      ORDER BY o.Id, s.Id
+      LIMIT 1000
+  rem: "Расчет начислений по объектам, услугам и плательщикам"

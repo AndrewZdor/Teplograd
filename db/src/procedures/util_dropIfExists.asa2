@@ -1,0 +1,26 @@
+IF EXISTS(SELECT 1 FROM sys.SysProcedure WHERE Proc_Name = 'util_dropIfExists') THEN
+    DROP PROCEDURE util_dropIfExists;
+END IF;
+
+/**
+Handy dropping procedures or functions.
+*/
+CREATE PROCEDURE util_dropIfExists(
+	IN ProcNameIn VARCHAR(128)
+)
+BEGIN
+    DECLARE @SQLState String;
+    DECLARE @ErrorMsg LongString;
+    DECLARE @ProcId INTEGER;
+
+    DECLARE SQLTemp VARCHAR(512);
+
+	IF EXISTS(SELECT 1 FROM sys.SysProcedure WHERE Proc_Name = ProcNameIn) THEN
+		SET SQLTemp = 'DROP PROCEDURE ' || ProcNameIn;
+--		CALL sys_DebugMessage(SQLTemp);
+        EXECUTE IMMEDIATE SQLTemp;
+	ELSE
+--		CALL sys_DebugMessage('Procedure (function) ' || ProcNameIn || ' cannot be dropped cause it do not exists!');
+	END IF;
+	
+END;

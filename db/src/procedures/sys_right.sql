@@ -1,0 +1,16 @@
+/**
+ * Works as standard Right function.
+ */
+CREATE OR REPLACE FUNCTION sys_right(
+	IN StrIn TEXT,
+	IN CountIn INTEGER
+)
+RETURNS TEXT AS
+
+$BODY$
+	SELECT SUBSTR($1, LENGTH($1) - $2 + 1);
+$BODY$
+
+LANGUAGE SQL
+STRICT
+IMMUTABLE;

@@ -1,0 +1,34 @@
+---
+errors_1:
+  code: InvalidMetadata
+  state: "99100"
+errors_2:
+  code: NotImplemented
+  state: "99101"
+errors_3:
+  code: CannotCommit
+  state: "99102"
+errors_4:
+  code: CannotDelete
+  state: "99103"
+errors_5:
+  code: AccessDenied
+  state: "99104"
+errors_6:
+  code: AccessBlocked
+  state: "99105"
+errors_7:
+  code: Assert
+  state: "99106"
+errors_8:
+  code: DataIntegrity
+  state: "99108"
+errors_9:
+  code: EmptyReport
+  state: "99109"
+errors_10:
+  code: EmptyMandatoryField
+  state: "99110"
+errors_11:
+  code: UniqueConstraint
+  state: "99107"

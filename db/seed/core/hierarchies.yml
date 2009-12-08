@@ -1,0 +1,52 @@
+---
+hierarchies_1:
+  code: AddrByDepartments
+  id: "1"
+  priority: "20"
+  rm_mask: "0000000000000011"
+hierarchies_2:
+  code: Menu
+  id: "2"
+  priority: "10"
+  rm_mask: ~
+  type: Menu
+hierarchies_3:
+  code: Topology
+  id: "3"
+  priority: "50"
+  rm_mask: "0000000000001111"
+hierarchies_4:
+  code: AddrByStreets
+  id: "4"
+  priority: "30"
+  rm_mask: "0000000000001001"
+hierarchies_5:
+  code: sysHouseLookup
+  id: "5"
+  priority: ~
+  rem: "System hierarchy for House lookup"
+  rm_mask: ~
+  type: System
+hierarchies_7:
+  code: Consumers
+  id: "7"
+  priority: "40"
+  rm_mask: "0000000000000011"
+hierarchies_8:
+  code: Counters
+  id: "8"
+  priority: "60"
+  rem: "Приборы учета"
+  rm_mask: "0000000000000110"
+hierarchies_9:
+  code: Reports
+  id: "9"
+  priority: "70"
+  rm_mask: "0000000000001111"
+hierarchies_11:
+  code: sysHousePlaceLookup
+  id: "11"
+  priority: ~
+  rem: "System hierarchy for House and Place lookup"
+  rm_mask: ~
+  type: System

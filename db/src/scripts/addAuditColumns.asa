@@ -1,0 +1,32 @@
+BEGIN
+
+	DECLARE SQLScriptTemp VARCHAR(1024);
+
+	SET SQLScriptTemp = 'IF NOT EXISTS( \n' +
+		'SELECT 1 \n' +
+		'FROM SYSTAB st JOIN SYSTABCOL stc on st.table_id = stc.table_id \n' +
+		'WHERE st.table_name = ''{TableName}''  \n' +
+		'  AND stc.column_name IN (''InsertUserId'', ''InsertTS'', ''UpdateUserId'', ''UpdateTS'', ''Revision'')  \n' +
+		'HAVING COUNT(*) >= 1 \n' +
+		') THEN \n' +
+	 
+			'ALTER TABLE {TableName} \n' +
+			'ADD InsertUserId varchar(128)  default CURRENT USER, \n' +
+			'ADD InsertTS     timestamp     default CURRENT TIMESTAMP, \n' +
+			'ADD UpdateUserId varchar(128)  default LAST USER, \n' +
+			'ADD UpdateTS     timestamp     default TIMESTAMP, \n' +
+			'ADD Revision     INTEGER       default 0 \n' +
+			'; \n' +
+			 
+		'END IF; ' ;
+		
+	CALL util_runScriptForAllTables(SQLScriptTemp, 'asc') ;
+
+	/*
+	ALTER TABLE AuditLog DROP InsertUserId;
+	ALTER TABLE AuditLog DROP InsertTS;
+	ALTER TABLE AuditLog DROP UpdateUserId;
+	ALTER TABLE AuditLog DROP UpdateTS;
+	*/
+
+END ;

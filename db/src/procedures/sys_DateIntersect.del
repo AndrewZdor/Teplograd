@@ -1,0 +1,27 @@
+/**
+	Returns True when periods intersect.
+*/
+CREATE FUNCTION sys_DateIntersect(
+	IN @DateFrom1In DATE,
+	IN @DateTo1In DATE,
+	IN @DateFrom2In DATE,
+	IN @DateTo2In DATE
+)
+RETURNS BIT DETERMINISTIC
+BEGIN
+	IF @DateFrom2In >= @DateFrom1In THEN
+		IF @DateFrom2In < @DateTo1In THEN
+			RETURN 1;
+		ELSE
+			RETURN 0;
+		END IF;
+
+	ELSE
+		IF @DateTo2In > @DateFrom1In THEN
+			RETURN 1;
+		ELSE
+			RETURN 0;
+		END IF;
+	END IF;
+
+END;

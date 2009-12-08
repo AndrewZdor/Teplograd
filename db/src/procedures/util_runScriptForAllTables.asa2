@@ -1,0 +1,55 @@
+/**
+Процедура выполнения указанного скрипта над всеми таблицами в БД
+Процедура позволяет выполнить скрипт над всеми таблицами БД.
+Выполняемый скрипт не должен возвращать набора данных.
+После выполнения команды для каждой таблицы производится COMMIT.
+*/
+CREATE PROCEDURE util_runScriptForAllTables(
+	IN @SQLScript LONG VARCHAR, -- SQL скрипт (может включать макрос TableName)
+	IN @OrderBy CHAR(4) DEFAULT 'ASC' -- 1 - обрабатывать таблицы по возрастанию, 0 - по убыванию
+)
+BEGIN
+	-- Обработка по возрастанию
+	IF @OrderBy = 'ASC' THEN
+
+		FOR lTableList_ASC AS cTableList_ASC NO SCROLL CURSOR FOR
+			SELECT Table_Name AS @TableName
+			FROM util_getTables ()
+			ORDER BY Number
+		DO
+			CALL sys_DebugMessage('Proccess ' || @TableName);
+			CALL sys_DebugMessage('SQLScript = ' || @SQLScript);
+
+			EXECUTE IMMEDIATE WITH RESULT SET OFF
+			Replace(@SQLScript, '{TableName}', @TableName);
+
+			COMMIT;
+
+			CALL sys_DebugMessage('---');
+			CALL sys_DebugMessage(' ');
+
+		END FOR;
+
+	ELSE
+		-- Обработка по убыванию
+    	FOR lTableList_DESC AS cTableList_DESC NO SCROLL CURSOR FOR
+    		SELECT Table_Name AS @TableName
+    		FROM util_getTables ()
+    		ORDER BY Number DESC
+    	DO
+    		CALL sys_DebugMessage('Proccess ' || @TableName);
+			CALL sys_DebugMessage('SQLScript = ' || @SQLScript);
+
+			EXECUTE IMMEDIATE WITH RESULT SET OFF
+			Replace(@SQLScript, '{TableName}', @TableName);
+
+			COMMIT;
+
+      		CALL sys_DebugMessage('---');
+			CALL sys_DebugMessage(' ');
+
+      	END FOR;
+
+	END IF;
+
+END;

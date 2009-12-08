@@ -1,0 +1,99 @@
+IF EXISTS(SELECT 1 FROM sys.SysProcedure WHERE Proc_Name = 'util_dropAllObjects') THEN
+    DROP PROCEDURE util_dropAllObjects;
+END IF;
+
+/**
+Удаляет все процедуры, триггеры, таблицы, домены которые создал dba.
+!!!! В этой процедуре нельзя объявлять переменные или параметры с доменом вместо типа
+*/
+CREATE PROCEDURE util_dropAllObjects(
+	IN ObjectTypeIn Varchar(128)
+)
+BEGIN
+    DECLARE @SQLState String;
+    DECLARE @ErrorMsg LongString;
+    DECLARE @ProcId INTEGER;
+
+    DECLARE SQLTemp LONG VARCHAR;
+    DECLARE CreatorTemp VARCHAR(128);
+    SET CreatorTemp = sys_getTableOwner();
+
+	IF ObjectTypeIn = 'All' THEN
+
+		CALL sys_dropAllObjects('Triggers');
+		CALL sys_dropAllObjects('Procedures');
+		CALL sys_dropAllObjects('Tables');
+		CALL sys_dropAllObjects('Domains');
+
+	ELSEIF ObjectTypeIn LIKE 'Trigger%' THEN
+		-- Triggers.
+		FOR Trigger_loop AS curs_trig CURSOR FOR
+			SELECT TrigName, TName
+			FROM Sys.SysTriggers
+			WHERE Owner = CreatorTemp
+		DO
+			SET SQLTemp = 'DROP TRIGGER ' || TName || '.' || TrigName;
+	        MESSAGE SQLtemp TO CLIENT;
+	        EXECUTE IMMEDIATE SQLTemp;
+		END FOR;
+
+	ELSEIF ObjectTypeIn LIKE 'Procedure%' THEN
+		-- Procedures.
+	    CALL sys_dropAllObjects('rcpProc');
+	    CALL sys_dropAllObjects('utilProc');
+
+	ELSEIF ObjectTypeIn LIKE 'utilProc%' THEN
+		-- sys Procedures.
+		FOR sysProc_loop AS curs_sysProc CURSOR FOR
+	        SELECT ProcName
+			FROM SysProcs
+			WHERE Creator = sys_getTableOwner()
+			  AND ProcName LIKE 'util_%'
+			  AND ProcName NOT IN ('util_dropAllObjects', 'util_dropIfExists', 'util_getTableOwner')
+	    DO
+	        SET SQLTemp = 'drop procedure ' || CreatorTemp || '.' || ProcName;
+	        MESSAGE SQLtemp TO CLIENT;
+	        EXECUTE IMMEDIATE SQLTemp;
+	    END FOR;
+
+	ELSEIF ObjectTypeIn LIKE 'rcpProc%' THEN
+		-- rcp Procedures.
+		FOR rcpProc_loop AS curs_rcpProc CURSOR FOR
+	        SELECT ProcName
+			FROM SysProcs
+			WHERE Creator = sys_getTableOwner()
+			  AND ProcName NOT LIKE 'util_%'
+	    DO
+	        SET SQLTemp = 'drop procedure ' || CreatorTemp || '.' || ProcName;
+	        MESSAGE SQLtemp TO CLIENT;
+	        EXECUTE IMMEDIATE SQLTemp;
+	    END FOR;
+
+	ELSEIF ObjectTypeIn LIKE 'Table%' THEN
+		-- Tables
+		FOR Table_loop AS curs_table CURSOR FOR
+	        SELECT table_name
+			FROM sys.systab
+			WHERE Creator = user_id(sys_getTableOwner())
+	    DO
+	        SET SQLTemp = 'drop table ' || CreatorTemp || '.' || table_name;
+	        MESSAGE SQLtemp TO CLIENT;
+	        EXECUTE IMMEDIATE SQLTemp;
+	    END FOR;
+
+	ELSEIF ObjectTypeIn LIKE 'Domain%' THEN
+		--Domains
+		FOR Domain_loop AS curs_domain CURSOR FOR
+	        SELECT type_name
+			FROM sys.sysusertype
+			WHERE creator = user_id(sys_getTableOwner())
+	    DO
+	        SET SQLTemp = 'drop domain ' || type_name;
+	        MESSAGE SQLtemp TO CLIENT;
+	        EXECUTE IMMEDIATE SQLTemp;
+	    END FOR;
+
+	END IF;
+	
+END;
+

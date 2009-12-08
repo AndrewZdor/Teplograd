@@ -1,0 +1,24 @@
+BEGIN
+
+	DECLARE SQLScriptTemp VARCHAR(512);
+
+	SET SQLScriptTemp = 'IF EXISTS( \n' +
+		'SELECT 1 \n' +
+		'FROM SYSTAB st JOIN SYSTABCOL stc on st.table_id = stc.table_id \n' +
+		'WHERE st.table_name = ''{TableName}''  \n' +
+		'  AND stc.column_name IN (''InsertUserId'', ''InsertTS'', ''UpdateUserId'', ''UpdateTS'', ''Revision'')  \n' +
+		'HAVING COUNT(*) = 5 \n' +
+		') THEN \n' +
+	 
+			'ALTER TABLE {TableName} \n' +
+			'DROP InsertUserId, \n' +
+			'DROP InsertTS, \n' +
+			'DROP UpdateUserId, \n' +
+			'DROP UpdateTS, \n' +
+			'DROP Revision \n' +
+			'; \n' + 
+		'END IF; ' ;
+
+	CALL util_runScriptForAllTables(SQLScriptTemp, 'asc') ;
+
+END ;

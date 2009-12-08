@@ -1,0 +1,28 @@
+/**
+Extracts integer from left of string value.
+*/
+CREATE FUNCTION util_extractNum( StringVal VARCHAR(256) )
+RETURNS INTEGER
+DETERMINISTIC
+BEGIN
+    DECLARE @SQLState String;
+    DECLARE @ErrorMsg LongString;
+    DECLARE @ProcId INTEGER;
+
+    DECLARE NotNumberPosTemp INTEGER;
+	DECLARE StartTemp INTEGER;
+	DECLARE LengthTemp INTEGER;
+
+	SET StringVal = TRIM(StringVal) ;
+	SET StartTemp = PATINDEX('%[0-9]%',StringVal) ;
+	SET NotNumberPosTemp = PATINDEX('%[^0-9]%',StringVal) ;
+
+	IF NotNumberPosTemp > 0 THEN
+		SET LengthTemp = NotNumberPosTemp-1 ;
+	ELSE
+		SET LengthTemp = LENGTH(StringVal) ;
+	END IF;
+
+	RETURN CAST(SUBSTR(StringVal, StartTemp, LengthTemp) AS INTEGER) ;
+	
+END;

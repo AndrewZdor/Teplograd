@@ -1,0 +1,63 @@
+/**
+Alters Domain Datatype.
+*/
+CREATE PROCEDURE util_AlterDomain (
+    IN @DomainIn String,
+    IN @NewTypeIn String
+)
+BEGIN
+	--DECLARE LOCAL TEMPORARY TABLE ProcUsage (Proc_Name String)
+	--	ON COMMIT PRESERVE ROWS;
+	DECLARE LOCAL TEMPORARY TABLE DomainUsage (
+		Table_Name String, Column_Name String)
+		ON COMMIT PRESERVE ROWS;
+	DECLARE @SQL LongestString;
+
+	-- Delete procedures.
+	FOR PUsage AS PUsageCur NO SCROLL CURSOR FOR
+		SELECT DISTINCT p.proc_Name
+		FROM sysProcedure p
+		JOIN sysProcParm r ON r.Proc_Id = p.Proc_Id
+		JOIN sysUserType d ON d.Type_Id = r.User_Type
+		WHERE d.Type_Name = @DomainIn
+		ORDER BY p.proc_Name
+	FOR READ ONLY DO
+		SET @SQL = 'DROP Procedure ' || proc_Name;
+		MESSAGE @SQL TO CLIENT; EXECUTE IMMEDIATE @SQL;
+	END FOR;
+
+	-- Get Domain usage.
+	INSERT INTO DomainUsage(Table_Name, Column_Name)
+	SELECT t.Table_Name, c.Column_Name
+	FROM sysUserType d
+	JOIN SysTabCol c ON c.User_Type = d.Type_Id
+	JOIN SysTable t ON t.Table_Id = c.Table_Id
+	WHERE Type_Name = @DomainIn;
+
+	-- Change table type to new.
+	FOR DUsage AS DUsageCur NO SCROLL CURSOR FOR
+		SELECT Table_Name, Column_Name
+		FROM DomainUsage
+		ORDER BY Table_Name, Column_Name
+	FOR READ ONLY DO
+		SET @SQL = 'ALTER TABLE ' || Table_Name || ' MODIFY ' || Column_Name || ' ' || @NewTypeIn;
+		MESSAGE @SQL TO CLIENT; EXECUTE IMMEDIATE @SQL;
+	END FOR;
+
+	-- Alter domain.
+	SET @SQL = 'DROP DOMAIN ' || @DomainIn;
+	MESSAGE @SQL TO CLIENT; EXECUTE IMMEDIATE @SQL;
+	SET @SQL = 'CREATE DOMAIN ' || @DomainIn || ' ' || @NewTypeIn;
+	MESSAGE @SQL TO CLIENT; EXECUTE IMMEDIATE @SQL;
+
+	-- Change table type to Domain.
+	FOR DUsage2 AS DUsageCur2 NO SCROLL CURSOR FOR
+		SELECT Table_Name, Column_Name
+		FROM DomainUsage
+		ORDER BY Table_Name, Column_Name
+	FOR READ ONLY DO
+		SET @SQL = 'ALTER TABLE ' || Table_Name || ' MODIFY ' || Column_Name || ' ' || @DomainIn;
+		MESSAGE @SQL TO CLIENT; EXECUTE IMMEDIATE @SQL;
+	END FOR;
+
+END;

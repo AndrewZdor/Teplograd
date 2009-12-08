@@ -1,0 +1,11 @@
+---
+groups_1:
+  id: "1"
+  code: Admins
+  isadmin: t
+  rem: Администраторы
+groups_2:
+  id: "2"
+  code: Users
+  isadmin: f
+  rem: Пользователи

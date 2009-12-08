@@ -1,0 +1,61 @@
+/**
+Очищает конкретную таблицу или все таблицы, которые создал dbowner. Без записи в лог и зажигания триггеров.
+Сначала очищает таблицу/ы которые ссылаются на удаляемую
+Сбрасывает autoincrement value
+*/
+CREATE PROCEDURE util_clearTable(
+	IN TableNameIn Varchar(128) DEFAULT NULL
+)
+BEGIN
+    DECLARE @SQLState String;
+    DECLARE @ErrorMsg LongString;
+    DECLARE @ProcId INTEGER;
+
+    DECLARE CreatorIdTemp INTEGER;
+	DECLARE CreatorNameTemp VARCHAR(128);
+	DECLARE TableNameTemp VARCHAR(128);
+	DECLARE SQLTemp LONG VARCHAR;
+
+	SET CreatorNameTemp = SUBSTR(TableNameIn, 0, CHARINDEX('.', TableNameIn)) ;
+	SET CreatorIdTemp = suser_id(CreatorNameTemp) ;
+
+	IF CreatorIdTemp IS NULL THEN
+		SET CreatorNameTemp = sys_getTableOwner();
+		SET CreatorIdTemp = suser_id(CreatorNameTemp) ;
+	END IF;
+
+	SET TableNameTemp = SUBSTR(TableNameIn, CHARINDEX('.', TableNameIn)+1) ;
+
+	--MESSAGE 'Truncating table ' || IsNull(TableNameIn, '...') TO CLIENT;
+	MESSAGE ' \nTableNameIn = ' || TableNameIn || ' CreatorIdTemp = ' || CreatorIdTemp ||
+			' CreatorNameTemp = ' || CreatorNameTemp || ' TableNameTemp = ' || TableNameTemp || '\n ' TO CLIENT DEBUG ONLY;
+
+	FOR Table_loop AS curs_table CURSOR FOR
+		SELECT st.table_name AS TableName, st.creator
+		FROM SYS.SYSTAB st
+		WHERE st.table_name = TableNameTemp OR TableNameTemp IS NULL
+	      AND st.creator = CreatorIdTemp
+		ORDER BY st.table_name
+	DO
+
+		FOR ForeignTable_loop AS curs_ForeignTable CURSOR FOR
+			SELECT sf.foreign_creator AS ForeignCreator, sf.foreign_tname AS ForeignTableName
+			FROM SYS.SYSFOREIGNKEYS sf
+			WHERE sf.primary_tname = TableName
+			AND sf.primary_creator = CreatorNameTemp
+
+		DO
+			IF ForeignTableName IS NOT NULL THEN
+				CALL sys_clearTable(ForeignCreator || '.' || ForeignTableName);
+			END IF;
+
+		END FOR;
+
+		SET SQLTemp = 'TRUNCATE TABLE ' || TableName || '; ' ||
+				              'CALL sa_reset_identity(''' || TableName || ''', ''' || CreatorNameTemp || ''', 0); ' ;
+		MESSAGE SQLtemp TO CLIENT DEBUG ONLY;
+		EXECUTE IMMEDIATE SQLTemp;
+
+	END FOR;
+
+END;

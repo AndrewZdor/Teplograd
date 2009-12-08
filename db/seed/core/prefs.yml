@@ -1,0 +1,488 @@
+---
+prefs_1:
+  code: GUI.General.Language
+  datatype: Varchar
+  id: "1"
+  rem: "Язык интерфейса"
+  type: USER
+prefs_2:
+  code: GUI.NvgTree.HideSingleFolder
+  datatype: Bit
+  id: "2"
+  rem: "Показывать в дереве папку если она одна для объекта"
+  type: USER
+prefs_3:
+  code: GUI.NvgTree.Node.Object.ShowId
+  datatype: Bit
+  id: "3"
+  rem: "Показывать Id для объектов в дереве"
+  type: USER
+prefs_4:
+  code: GUI.NvgTree.Node.Folder.ShowChildCount
+  datatype: Bit
+  id: "4"
+  rem: "Показывать кол-во вложенных объектов для папки в дереве"
+  type: USER
+prefs_5:
+  code: GUI.Form.ShowId
+  datatype: Bit
+  id: "5"
+  rem: "Показывать поле Id в формах"
+  type: USER
+prefs_6:
+  code: GUI.Form.ShowAuditColumns
+  datatype: Bit
+  id: "6"
+  insertts: "2008-09-19 15:19:52.718"
+  insertuserid: DBA
+  rem: "Показывать колонки аудита в формах"
+  revision: "0"
+  type: USER
+  updatets: "2008-09-19 15:19:52.718"
+  updateuserid: DBA
+prefs_7:
+  code: System.Debug
+  datatype: Bit
+  id: "7"
+  insertts: "2008-09-19 15:19:52.718"
+  insertuserid: DBA
+  rem: "Spesify whether client run in debug mode."
+  revision: "0"
+  type: USER
+  updatets: "2008-09-19 15:19:52.718"
+  updateuserid: DBA
+prefs_8:
+  code: System.SQL.Delimiter
+  datatype: Varchar
+  id: "8"
+  insertts: "2008-09-19 15:19:52.718"
+  insertuserid: DBA
+  rem: "Delimiter, used to send row data to db."
+  revision: "0"
+  type: USER
+  updatets: "2008-09-19 15:19:52.718"
+  updateuserid: DBA
+prefs_9:
+  code: System.SQL.NULL
+  datatype: Varchar
+  id: "9"
+  insertts: "2008-09-19 15:19:52.718"
+  insertuserid: DBA
+  rem: "NULL value, as it sent to rcp_addObject."
+  revision: "0"
+  type: USER
+  updatets: "2008-09-19 15:19:52.718"
+  updateuserid: DBA
+prefs_10:
+  code: GUI.Editing.NULL
+  datatype: Varchar
+  id: "10"
+  insertts: "2008-09-19 15:19:52.734"
+  insertuserid: DBA
+  rem: "NULL value, as it shown in GUI in data-aware controls."
+  revision: "0"
+  type: USER
+  updatets: "2008-09-19 15:19:52.734"
+  updateuserid: DBA
+prefs_11:
+  code: GUI.Table.Cell.ToolTip.ShiftX
+  datatype: Integer
+  id: "11"
+  insertts: "2008-09-19 15:19:52.734"
+  insertuserid: DBA
+  rem: "Display delay time for tooltip on table cell."
+  revision: "0"
+  type: USER
+  updatets: "2008-09-19 15:19:52.734"
+  updateuserid: DBA
+prefs_12:
+  code: GUI.Table.Cell.ToolTip.ShiftY
+  datatype: Integer
+  id: "12"
+  insertts: "2008-09-19 15:19:52.734"
+  insertuserid: DBA
+  rem: "Display delay time for tooltip on table cell."
+  revision: "0"
+  type: USER
+  updatets: "2008-09-19 15:19:52.734"
+  updateuserid: DBA
+prefs_13:
+  code: GUI.Table.Cell.ToolTip.DisplayDelayTime
+  datatype: Integer
+  id: "13"
+  insertts: "2008-09-19 15:19:52.75"
+  insertuserid: DBA
+  rem: "Display delay time for tooltip on table cell."
+  revision: "0"
+  type: USER
+  updatets: "2008-09-19 15:19:52.75"
+  updateuserid: DBA
+prefs_14:
+  code: GUI.Table.Cell.ToolTip.TimeDisplayed
+  datatype: Integer
+  id: "14"
+  insertts: "2008-09-19 15:19:52.75"
+  insertuserid: DBA
+  rem: "Display delay time for tooltip on table cell."
+  revision: "0"
+  type: USER
+  updatets: "2008-09-19 15:19:52.75"
+  updateuserid: DBA
+prefs_15:
+  code: GUI.Table.Row.Background
+  datatype: Color
+  id: "15"
+  insertts: "2008-09-19 15:19:52.75"
+  insertuserid: DBA
+  rem: "Цвет фона чётной строки в гриде"
+  revision: "0"
+  type: USER
+  updatets: "2008-10-10 14:59:07.502"
+  updateuserid: DBA
+prefs_16:
+  code: GUI.Editor.Combo_VisibleItemCount
+  datatype: Integer
+  id: "16"
+  insertts: "2008-10-03 13:35:51.636"
+  insertuserid: DBA
+  rem: "Default rowcount in comboviewers."
+  revision: "0"
+  type: USER
+  updatets: "2008-10-03 13:35:51.636"
+  updateuserid: DBA
+prefs_17:
+  code: GUI.Editor.RefreshOnOpen.TABLEVIEW
+  datatype: Bit
+  id: "17"
+  insertts: "2008-10-03 13:35:51.667"
+  insertuserid: DBA
+  rem: "Do perform refresh of the folder when is is opened from Navigation tree?"
+  revision: "0"
+  type: USER
+  updatets: "2008-10-03 13:35:51.667"
+  updateuserid: DBA
+prefs_18:
+  code: GUI.Editor.RefreshOnOpen.FORMVIEW
+  datatype: Bit
+  id: "18"
+  insertts: "2008-10-03 13:35:51.667"
+  insertuserid: DBA
+  rem: "Do perform refresh of the object when is is opened from Navigation tree?"
+  revision: "0"
+  type: USER
+  updatets: "2008-10-03 13:35:51.667"
+  updateuserid: DBA
+prefs_19:
+  code: System.Revision
+  datatype: Varchar
+  id: "30"
+  insertts: "2008-11-20 14:14:21.641"
+  insertuserid: DBA
+  rem: "Revision of the DB"
+  revision: "0"
+  type: SYSTEM
+  updatets: "2008-12-12 13:48:31.574"
+  updateuserid: DBA
+prefs_20:
+  code: GUI.Editor.ShowIdInHeader
+  datatype: Bit
+  id: "31"
+  insertts: "2008-12-12 13:48:31.277"
+  insertuserid: DBA
+  rem: "Display id of the current object in the editor's header"
+  revision: "0"
+  type: USER
+  updatets: "2008-12-12 13:48:31.277"
+  updateuserid: DBA
+prefs_21:
+  code: Work.Period.DateFrom
+  datatype: Date
+  id: "32"
+  insertts: "2008-12-12 13:48:31.699"
+  insertuserid: DBA
+  rem: "Working period start date."
+  revision: "0"
+  type: USER
+  updatets: "2008-12-12 13:48:31.699"
+  updateuserid: DBA
+prefs_22:
+  code: GUI.Editor.RefreshAllOnInsert
+  datatype: Bit
+  id: "22"
+  insertts: "2008-10-10 14:59:07.502"
+  insertuserid: DBA
+  rem: "Do refresh all buffers of that type when new object inserted?"
+  revision: "0"
+  type: USER
+  updatets: "2008-10-10 14:59:07.502"
+  updateuserid: DBA
+prefs_23:
+  code: System.SQL.Delimiter2
+  datatype: Varchar
+  id: "23"
+  insertts: "2008-10-10 14:59:07.502"
+  insertuserid: DBA
+  rem: "Delimits value and it's decorator (e.g. for objects where isMetaTable() == true)."
+  revision: "0"
+  type: USER
+  updatets: "2008-10-10 14:59:07.502"
+  updateuserid: DBA
+prefs_24:
+  code: GUI.Editor.RefreshAllOnLookupRetrieve
+  datatype: Bit
+  id: "24"
+  insertts: "2008-10-24 13:08:08.778"
+  insertuserid: DBA
+  rem: "Retrieves all tables of that type after retrieving of lookup table (slow)."
+  revision: "0"
+  type: USER
+  updatets: "2008-10-24 13:08:08.778"
+  updateuserid: DBA
+prefs_25:
+  code: GUI.Editor.BulkEdit.Disabled
+  datatype: Bit
+  id: "25"
+  insertts: "2008-10-24 13:08:08.888"
+  insertuserid: DBA
+  rem: "Disables BulkEdit command."
+  revision: "0"
+  type: USER
+  updatets: "2008-10-24 13:08:08.888"
+  updateuserid: DBA
+prefs_26:
+  code: Error.SQLState
+  datatype: VARCHAR
+  id: "26"
+  insertts: "2008-11-04 13:21:18.688"
+  insertuserid: DBA
+  rem: "SQLState of the last error."
+  revision: "0"
+  type: USER
+  updatets: "2008-11-04 13:21:18.688"
+  updateuserid: DBA
+prefs_27:
+  code: Error.Message
+  datatype: VARCHAR
+  id: "27"
+  insertts: "2008-11-04 13:21:18.688"
+  insertuserid: DBA
+  rem: "Last errormessage."
+  revision: "0"
+  type: USER
+  updatets: "2008-11-04 13:21:18.688"
+  updateuserid: DBA
+prefs_28:
+  code: GUI.Editor.DirtyColumn.Foreground
+  datatype: Color
+  id: "28"
+  insertts: "2008-11-04 13:21:18.704"
+  insertuserid: DBA
+  rem: "Foreground color of column with dirty value."
+  revision: "0"
+  type: USER
+  updatets: "2008-11-04 13:21:18.704"
+  updateuserid: DBA
+prefs_29:
+  code: GUI.Editor.MandatoryColumn.Background
+  datatype: Color
+  id: "29"
+  insertts: "2008-11-04 13:21:18.704"
+  insertuserid: DBA
+  rem: "Background color of mandatory for new row."
+  revision: "0"
+  type: USER
+  updatets: "2008-11-04 13:21:18.704"
+  updateuserid: DBA
+prefs_30:
+  code: Work.Period.DateTo
+  datatype: Date
+  id: "33"
+  insertts: "2008-12-12 13:48:31.699"
+  insertuserid: DBA
+  rem: "Working period end date."
+  revision: "0"
+  type: USER
+  updatets: "2008-12-12 13:48:31.699"
+  updateuserid: DBA
+prefs_31:
+  code: GUI.Editor.DeletedRow.Foreground
+  datatype: Color
+  id: "34"
+  insertts: "2009-02-17 17:53:31.171"
+  insertuserid: DBA
+  rem: "Foreground color of deleted row"
+  revision: "0"
+  type: USER
+  updatets: "2009-02-17 17:53:31.171"
+  updateuserid: DBA
+prefs_32:
+  code: GUI.Editor.DeletedRow.Background
+  datatype: Color
+  id: "35"
+  insertts: "2009-02-17 17:53:31.171"
+  insertuserid: DBA
+  rem: "Background color of deleted row"
+  revision: "0"
+  type: USER
+  updatets: "2009-02-17 17:53:31.171"
+  updateuserid: DBA
+prefs_33:
+  code: GUI.Editor.NonEditableRow.Background
+  datatype: Color
+  id: "36"
+  insertts: "2009-02-17 17:53:31.171"
+  insertuserid: DBA
+  rem: "Background color of non-editable row"
+  revision: "0"
+  type: USER
+  updatets: "2009-02-17 17:53:31.171"
+  updateuserid: DBA
+prefs_34:
+  code: GUI.NvgTree.HideEmptyFolders.AddrByDepartments
+  datatype: Bit
+  id: "37"
+  insertts: "2009-06-10 13:35:12.718"
+  insertuserid: DBA
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-06-10 13:35:12.718"
+  updateuserid: DBA
+prefs_35:
+  code: GUI.NvgTree.HideEmptyFolders.Menu
+  datatype: Bit
+  id: "38"
+  insertts: "2009-06-10 13:35:12.718"
+  insertuserid: DBA
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-06-10 13:35:12.749"
+  updateuserid: DBA
+prefs_36:
+  code: GUI.NvgTree.HideEmptyFolders.Topology
+  datatype: Bit
+  id: "39"
+  insertts: "2009-06-10 13:35:12.718"
+  insertuserid: DBA
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-06-10 13:35:12.749"
+  updateuserid: DBA
+prefs_37:
+  code: GUI.NvgTree.HideEmptyFolders.AddrByStreets
+  datatype: Bit
+  id: "40"
+  insertts: "2009-06-10 13:35:12.718"
+  insertuserid: DBA
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-06-10 13:35:12.749"
+  updateuserid: DBA
+prefs_38:
+  code: GUI.NvgTree.HideEmptyFolders.sysHouseLookup
+  datatype: Bit
+  id: "41"
+  insertts: "2009-06-10 13:35:12.718"
+  insertuserid: DBA
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-06-10 13:35:12.749"
+  updateuserid: DBA
+prefs_39:
+  code: GUI.NvgTree.HideEmptyFolders.Consumers
+  datatype: Bit
+  id: "42"
+  insertts: "2009-06-10 13:35:12.718"
+  insertuserid: DBA
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-06-10 13:35:12.749"
+  updateuserid: DBA
+prefs_40:
+  code: GUI.NvgTree.HideEmptyFolders.Counters
+  datatype: Bit
+  id: "43"
+  insertts: "2009-06-10 13:35:12.718"
+  insertuserid: DBA
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-06-10 13:35:12.749"
+  updateuserid: DBA
+prefs_41:
+  code: GUI.NvgTree.HideEmptyFolders.Reports
+  datatype: Bit
+  id: "44"
+  insertts: "2009-06-10 13:35:12.718"
+  insertuserid: DBA
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-06-10 13:35:12.749"
+  updateuserid: DBA
+prefs_42:
+  code: GUI.NvgTree.Node.Object.ShowId.Color
+  datatype: Color
+  id: "46"
+  insertts: "2009-10-28 10:09:06.622"
+  insertuserid: tnd
+  rem: ~
+  revision: "0"
+  type: tnd
+  updatets: "2009-10-28 10:09:06.622"
+  updateuserid: tnd
+prefs_43:
+  code: GUI.NvgTree.Node.Folder.ShowChildCount.Color
+  datatype: Color
+  id: "47"
+  insertts: "2009-10-28 10:09:06.622"
+  insertuserid: tnd
+  rem: ~
+  revision: "0"
+  type: tnd
+  updatets: "2009-10-28 10:09:06.622"
+  updateuserid: tnd
+prefs_44:
+  code: GUI.NvgTree.HideFolders.AddrByStreets
+  datatype: VarChar
+  id: "48"
+  insertts: "2009-11-03 13:44:57.156"
+  insertuserid: postgres
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-11-03 13:44:57.156"
+  updateuserid: postgres
+prefs_45:
+  code: GUI.NvgTree.HideFolders.Topology
+  datatype: VarChar
+  id: "49"
+  insertts: "2009-11-09 10:01:37.187"
+  insertuserid: postgres
+  rem: ~
+  revision: "0"
+  type: USER
+  updatets: "2009-11-09 10:01:37.187"
+  updateuserid: postgres
+prefs_46:
+  code: System.rm
+  datatype: Integer
+  id: "50"
+  insertts: "2009-11-13 12:10:01.812"
+  insertuserid: postgres
+  rem: "Текущее рабочее место"
+  revision: "0"
+  type: USER
+  updatets: "2009-11-13 12:10:01.812"
+  updateuserid: postgres
+prefs_47:
+  id: 51
+  code: Calc.VAT_Percent
+  datatype: Number
+  type: SYSTEM
+  rem: "% НДС"

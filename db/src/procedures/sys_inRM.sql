@@ -1,0 +1,16 @@
+CREATE OR REPLACE FUNCTION sys_inRM (IN maskrm BIT(16))
+  RETURNS boolean AS
+$BODY$
+DECLARE
+	_RmNo INTEGER;
+
+BEGIN
+	_RmNo := rcp_getRM();
+
+	RETURN COALESCE((maskrm >> (_RmNo-1))&B'0000000000000001',1::bit)::int::boolean;
+
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE SECURITY DEFINER
+  COST 10;
+

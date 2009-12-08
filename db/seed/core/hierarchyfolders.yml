@@ -1,0 +1,1668 @@
+---
+hierarchyfolders_1:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "49"
+  hierarchyid: "3"
+  hint: ~
+  id: "92"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_2:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "49"
+  hierarchyid: "3"
+  hint: ~
+  id: "93"
+  isselectable: t
+  parententityid: "50"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_3:
+  action: ~
+  childfield: Svc1ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "14"
+  hierarchyid: "3"
+  hint: ~
+  id: "94"
+  isselectable: t
+  parententityid: "22"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_4:
+  action: ~
+  childfield: Svc2ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "14"
+  hierarchyid: "3"
+  hint: ~
+  id: "95"
+  isselectable: t
+  parententityid: "49"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_5:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "25"
+  hierarchyid: "3"
+  hint: ~
+  id: "103"
+  isselectable: t
+  parententityid: "22"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_6:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "25"
+  hierarchyid: "3"
+  hint: ~
+  id: "104"
+  isselectable: t
+  parententityid: "49"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_7:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "15"
+  hierarchyid: "3"
+  hint: ~
+  id: "107"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_8:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "15"
+  hierarchyid: "4"
+  hint: ~
+  id: "108"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_9:
+  action: ~
+  childfield: Id
+  code: ~
+  criteriasql: |
+      EXISTS (SELECT 1 FROM Objects o
+      WHERE o.EntityId = (SELECT e.Id FROM Entities e WHERE e.Code = 'Houses')
+      	AND (o.DelDate IS NULL OR o.DelDate > sys_getWorkingDate())
+      	AND o.InsDate <= sys_getWorkingDate()
+      	AND sys_getAttrValue(NULL, o.Id, 'StreetId', sys_getWorkingDate())::INT = %ChildField
+      	AND sys_getAttrValue(NULL, o.Id, 'DepartmentId', sys_getWorkingDate())::INT = %ParentField)
+  entityid: "12"
+  hierarchyid: "1"
+  hint: ~
+  id: "2"
+  isselectable: t
+  parententityid: "10"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_10:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: |-
+      (%ParentField = sys_getAttrValue(NULL, Objects.Id, 'ParentId', sys_getWorkingDate())::INT -- House as direct parent.
+          OR %ParentField = (SELECT sys_getAttrValue(NULL, he.Id, 'HouseId', sys_getWorkingDate())::INT
+                    FROM Objects he -- House as parent via HouseEntry.
+                    WHERE he.EntityId = (SELECT Id FROM Entities WHERE Code = 'HouseEntries')
+                        AND (he.DelDate IS NULL OR he.DelDate > sys_getWorkingDate())
+                        AND he.InsDate <= sys_getWorkingDate()
+                        AND he.Id = sys_getAttrValue(NULL, Objects.Id, 'ParentId', sys_getWorkingDate())::INT
+                    ) )
+  entityid: "22"
+  hierarchyid: "1"
+  hint: ~
+  id: "14"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: "30"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_11:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: |-
+      (%ParentField = sys_getAttrValue(NULL, Objects.Id, 'ParentId', sys_getWorkingDate())::INT -- House as direct parent.
+          OR %ParentField = (SELECT sys_getAttrValue(NULL, he.Id, 'HouseId', sys_getWorkingDate())::INT
+                    FROM Objects he -- House as parent via HouseEntry.
+                    WHERE he.EntityId = (SELECT Id FROM Entities WHERE Code = 'HouseEntries')
+                        AND (he.DelDate IS NULL OR he.DelDate > sys_getWorkingDate())
+                        AND he.InsDate <= sys_getWorkingDate()
+                        AND he.Id = sys_getAttrValue(NULL, Objects.Id, 'ParentId', sys_getWorkingDate())::INT
+                    ) )
+  entityid: "22"
+  hierarchyid: "4"
+  hint: ~
+  id: "15"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: "30"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_12:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "15"
+  hierarchyid: "1"
+  hint: ~
+  id: "16"
+  isselectable: t
+  parententityid: "14"
+  parentfield: Id
+  priority: "30"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_13:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "15"
+  hierarchyid: "4"
+  hint: ~
+  id: "17"
+  isselectable: t
+  parententityid: "14"
+  parentfield: Id
+  priority: "30"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_14:
+  action: ~
+  childfield: StreetId
+  code: ~
+  criteriasql: ~
+  entityid: "13"
+  hierarchyid: "5"
+  hint: ~
+  id: "29"
+  isselectable: t
+  parententityid: "12"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_15:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "22"
+  hierarchyid: "3"
+  hint: ~
+  id: "37"
+  isselectable: t
+  parententityid: "21"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_16:
+  action: SHOW_LOOKUP_TABLE
+  childfield: CalcTypeId
+  code: ~
+  criteriasql: ~
+  entityid: "42"
+  hierarchyid: "2"
+  hint: ~
+  id: "61"
+  isselectable: t
+  parententityid: "38"
+  parentfield: Id
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: CONTEXT
+hierarchyfolders_17:
+  action: SHOW_LOOKUP_TABLE
+  childfield: CalcTypeId
+  code: ~
+  criteriasql: ~
+  entityid: "42"
+  hierarchyid: "2"
+  hint: ~
+  id: "62"
+  isselectable: t
+  parententityid: "39"
+  parentfield: CalcTypeId
+  priority: "20"
+  revision: "0"
+  rm_mask: ~
+  type: CONTEXT
+hierarchyfolders_18:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: ~
+  entityid: "46"
+  hierarchyid: "8"
+  hint: ~
+  id: "63"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_19:
+  action: ~
+  childfield: NodeId
+  code: ~
+  criteriasql: ~
+  entityid: "45"
+  hierarchyid: "8"
+  hint: ~
+  id: "64"
+  isselectable: t
+  parententityid: "46"
+  parentfield: Id
+  priority: "20"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_20:
+  action: ~
+  childfield: CalcId
+  code: ~
+  criteriasql: ~
+  entityid: "25"
+  hierarchyid: "8"
+  hint: ~
+  id: "65"
+  isselectable: t
+  parententityid: "45"
+  parentfield: Id
+  priority: "30"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_21:
+  action: ~
+  childfield: CounterId
+  code: ~
+  criteriasql: ~
+  entityid: "44"
+  hierarchyid: "8"
+  hint: ~
+  id: "66"
+  isselectable: t
+  parententityid: "25"
+  parentfield: Id
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_22:
+  action: SHOW_LOOKUP_TABLE
+  childfield: CounterId
+  code: ~
+  criteriasql: ~
+  entityid: "44"
+  hierarchyid: "2"
+  hint: ~
+  id: "67"
+  isselectable: t
+  parententityid: "25"
+  parentfield: Id
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_23:
+  action: SHOW_LOOKUP_TABLE
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "15"
+  hierarchyid: "2"
+  hint: ~
+  id: "68"
+  isselectable: t
+  parententityid: "14"
+  parentfield: Id
+  priority: "30"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_24:
+  action: ~
+  childfield: HouseObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "46"
+  hierarchyid: "3"
+  hint: ~
+  id: "96"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_25:
+  action: ~
+  childfield: NodeId
+  code: ~
+  criteriasql: ~
+  entityid: "45"
+  hierarchyid: "3"
+  hint: ~
+  id: "97"
+  isselectable: t
+  parententityid: "46"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_26:
+  action: ~
+  childfield: CalcId
+  code: ~
+  criteriasql: ~
+  entityid: "25"
+  hierarchyid: "3"
+  hint: ~
+  id: "98"
+  isselectable: t
+  parententityid: "45"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_27:
+  action: ~
+  childfield: CounterId
+  code: ~
+  criteriasql: ~
+  entityid: "44"
+  hierarchyid: "3"
+  hint: ~
+  id: "99"
+  isselectable: t
+  parententityid: "25"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_28:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "15"
+  hierarchyid: "2"
+  hint: ~
+  id: "106"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_29:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "49"
+  hierarchyid: "3"
+  hint: ~
+  id: "74"
+  isselectable: t
+  parententityid: "21"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_30:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: |-
+      (%ParentField = sys_getAttrValue(NULL, Objects.Id, 'ParentId', sys_getWorkingDate())::INT -- House as direct parent.
+          OR %ParentField = (SELECT sys_getAttrValue(NULL, he.Id, 'HouseId', sys_getWorkingDate())::INT
+                    FROM Objects he -- House as parent via HouseEntry.
+                    WHERE he.EntityId = (SELECT Id FROM Entities WHERE Code = 'HouseEntries')
+                        AND (he.DelDate IS NULL OR he.DelDate > sys_getWorkingDate())
+                        AND he.InsDate <= sys_getWorkingDate()
+                        AND he.Id = sys_getAttrValue(NULL, Objects.Id, 'ParentId', sys_getWorkingDate())::INT
+                    ) )
+  entityid: "49"
+  hierarchyid: "1"
+  hint: ~
+  id: "75"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: "30"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_31:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: |-
+      (%ParentField = sys_getAttrValue(NULL, Objects.Id, 'ParentId', sys_getWorkingDate())::INT -- House as direct parent.
+          OR %ParentField = (SELECT sys_getAttrValue(NULL, he.Id, 'HouseId', sys_getWorkingDate())::INT
+                    FROM Objects he -- House as parent via HouseEntry.
+                    WHERE he.EntityId = (SELECT Id FROM Entities WHERE Code = 'HouseEntries')
+                        AND (he.DelDate IS NULL OR he.DelDate > sys_getWorkingDate())
+                        AND he.InsDate <= sys_getWorkingDate()
+                        AND he.Id = sys_getAttrValue(NULL, Objects.Id, 'ParentId', sys_getWorkingDate())::INT
+                    ) )
+  entityid: "49"
+  hierarchyid: "4"
+  hint: ~
+  id: "76"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: "30"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_32:
+  action: EXEC_DYN_CONTEXT_CMD
+  childfield: ~
+  code: Hierarchy.Reports.All
+  criteriasql: ~
+  entityid: "42"
+  hierarchyid: "9"
+  hint: ~
+  id: "77"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_33:
+  action: EXEC_DYN_CONTEXT_CMD
+  childfield: ~
+  code: Hierarchy.Reports.Calculational
+  criteriasql: "CalcTypeId IS NOT NULL"
+  entityid: "42"
+  hierarchyid: "9"
+  hint: ~
+  id: "78"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: "20"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_34:
+  action: EXEC_DYN_CONTEXT_CMD
+  childfield: ~
+  code: Hierarchy.Reports.Non-Calculational
+  criteriasql: "CalcTypeId IS NULL"
+  entityid: "42"
+  hierarchyid: "9"
+  hint: ~
+  id: "79"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: "30"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_35:
+  action: ~
+  childfield: Svc1ParentId
+  code: Hierarchy.Topology.HouseHeating
+  criteriasql: ~
+  entityid: "13"
+  hierarchyid: "3"
+  hint: ~
+  id: "80"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_36:
+  action: ~
+  childfield: Svc1ParentId
+  code: Hierarchy.Topology.HouseHeating
+  criteriasql: ~
+  entityid: "13"
+  hierarchyid: "3"
+  hint: ~
+  id: "81"
+  isselectable: t
+  parententityid: "21"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_37:
+  action: ~
+  childfield: Svc2ParentId
+  code: Hierarchy.Topology.HousesHotWater
+  criteriasql: ~
+  entityid: "13"
+  hierarchyid: "3"
+  hint: ~
+  id: "82"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_38:
+  action: ~
+  childfield: Svc2ParentId
+  code: Hierarchy.Topology.HousesHotWater
+  criteriasql: ~
+  entityid: "13"
+  hierarchyid: "3"
+  hint: ~
+  id: "83"
+  isselectable: t
+  parententityid: "21"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_39:
+  action: ~
+  childfield: Svc1ParentId
+  code: Hierarchy.Topology.HouseEntryHeating
+  criteriasql: ~
+  entityid: "50"
+  hierarchyid: "3"
+  hint: ~
+  id: "84"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_40:
+  action: ~
+  childfield: Svc1ParentId
+  code: Hierarchy.Topology.HouseEntryHeating
+  criteriasql: ~
+  entityid: "50"
+  hierarchyid: "3"
+  hint: ~
+  id: "85"
+  isselectable: t
+  parententityid: "21"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_41:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: ~
+  entityid: "12"
+  hierarchyid: "5"
+  hint: ~
+  id: "28"
+  isselectable: f
+  parententityid: "1"
+  parentfield: ~
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_42:
+  action: ~
+  childfield: Svc2ParentId
+  code: Hierarchy.Topology.HouseEntryHotWater
+  criteriasql: ~
+  entityid: "50"
+  hierarchyid: "3"
+  hint: ~
+  id: "86"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_43:
+  action: ~
+  childfield: Svc2ParentId
+  code: Hierarchy.Topology.HouseEntryHotWater
+  criteriasql: ~
+  entityid: "50"
+  hierarchyid: "3"
+  hint: ~
+  id: "87"
+  isselectable: t
+  parententityid: "21"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_44:
+  action: ~
+  childfield: HouseId
+  code: ~
+  criteriasql: ~
+  entityid: "14"
+  hierarchyid: "3"
+  hint: ~
+  id: "88"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_45:
+  action: ~
+  childfield: HouseId
+  code: ~
+  criteriasql: ~
+  entityid: "50"
+  hierarchyid: "3"
+  hint: ~
+  id: "89"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_46:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "22"
+  hierarchyid: "3"
+  hint: ~
+  id: "90"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_47:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "22"
+  hierarchyid: "3"
+  hint: ~
+  id: "91"
+  isselectable: t
+  parententityid: "50"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_48:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "25"
+  hierarchyid: "3"
+  hint: ~
+  id: "100"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_49:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "25"
+  hierarchyid: "3"
+  hint: ~
+  id: "101"
+  isselectable: t
+  parententityid: "14"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_50:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "25"
+  hierarchyid: "3"
+  hint: ~
+  id: "102"
+  isselectable: t
+  parententityid: "21"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_51:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "49"
+  hierarchyid: "3"
+  hint: ~
+  id: "73"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_52:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "15"
+  hierarchyid: "1"
+  hint: ~
+  id: "105"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_53:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: ~
+  entityid: "10"
+  hierarchyid: "1"
+  hint: ~
+  id: "1"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_54:
+  action: ~
+  childfield: StreetId
+  code: ~
+  criteriasql: ~
+  entityid: "13"
+  hierarchyid: "1"
+  hint: "{HierarchicalQuery: Departments}"
+  id: "3"
+  isselectable: t
+  parententityid: "12"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_55:
+  action: ~
+  childfield: HouseId
+  code: ~
+  criteriasql: ~
+  entityid: "14"
+  hierarchyid: "1"
+  hint: "{HouseOwnerId:CCombo ReuseParent Houses.HouseOwners}"
+  id: "4"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: "20"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_56:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: ~
+  entityid: "10"
+  hierarchyid: "3"
+  hint: ~
+  id: "8"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_57:
+  action: ~
+  childfield: DepartmentId
+  code: ~
+  criteriasql: ~
+  entityid: "20"
+  hierarchyid: "3"
+  hint: ~
+  id: "9"
+  isselectable: t
+  parententityid: "10"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_58:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: ~
+  entityid: "12"
+  hierarchyid: "4"
+  hint: ~
+  id: "10"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_59:
+  action: ~
+  childfield: StreetId
+  code: ~
+  criteriasql: ~
+  entityid: "13"
+  hierarchyid: "4"
+  hint: ~
+  id: "11"
+  isselectable: t
+  parententityid: "12"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_60:
+  action: ~
+  childfield: HouseId
+  code: ~
+  criteriasql: ~
+  entityid: "14"
+  hierarchyid: "4"
+  hint: "{HouseOwnerId:CCombo ReuseParent Houses.HouseOwners}"
+  id: "12"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: "20"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_61:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "22"
+  hierarchyid: "3"
+  hint: ~
+  id: "33"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_62:
+  action: ~
+  childfield: ~
+  code: Hierarchy.Consumers.CustomersWithUnknownDepartment
+  criteriasql: |-
+      NOT EXISTS (SELECT 1 FROM Contracts c
+      	JOIN ObjectCapacities oc ON oc.ContractId = c.Id
+      		AND oc.DateFrom <= sys_getWorkingDate()
+      	JOIN Objects p ON p.Id = oc.ObjectId /*Places*/
+       		AND p.EntityId = (SELECT e.Id FROM Entities e WHERE e.Code = 'Places')
+      		AND (p.DelDate IS NULL OR p.DelDate > sys_getWorkingDate())
+      		AND p.InsDate <= sys_getWorkingDate()
+      	JOIN EntityProperties pep ON pep.EntityId = p.EntityId
+      		AND pep.Code = 'HouseId'
+      	JOIN ObjectProperties pp ON pp.ObjectId = p.Id /*HouseId*/
+      		AND pp.PropertyId = pep.Id
+      		AND pp.DateFrom <= sys_getWorkingDate()
+      	JOIN Objects h ON h.Id = pp.Value::INT /*Houses*/
+      		AND (h.DelDate IS NULL OR h.DelDate > sys_getWorkingDate())
+      		AND h.InsDate <= sys_getWorkingDate()
+      	JOIN EntityProperties hep ON hep.EntityId = h.EntityId
+      		AND hep.Code = 'DepartmentId'
+      	JOIN ObjectProperties hop ON hop.ObjectId = h.Id
+      		AND hop.DateFrom <= sys_getWorkingDate()
+      		AND hop.PropertyId = hep.Id
+      		AND hop.Value::INT IS NOT NULL /*DepartmentId*/
+      	WHERE c.ConsumerId = Consumers.Id)
+  entityid: "18"
+  hierarchyid: "7"
+  hint: ~
+  id: "48"
+  isselectable: t
+  parententityid: "1"
+  parentfield: Id
+  priority: "100"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_63:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: ~
+  entityid: "10"
+  hierarchyid: "7"
+  hint: ~
+  id: "110"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_64:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: |-
+      EXISTS (SELECT 1 FROM Contracts c
+      	JOIN ObjectCapacities oc ON oc.ContractId = c.Id
+      		AND oc.DateFrom <= sys_getWorkingDate()
+      	JOIN Objects p ON p.Id = oc.ObjectId /*Places*/
+       		AND p.EntityId = (SELECT e.Id FROM Entities e WHERE e.Code = 'Places')
+      		AND (p.DelDate IS NULL OR p.DelDate > sys_getWorkingDate())
+      		AND p.InsDate <= sys_getWorkingDate()
+      	JOIN EntityProperties pep ON pep.EntityId = p.EntityId
+      		AND pep.Code = 'HouseId'
+      	JOIN ObjectProperties pp ON pp.ObjectId = p.Id /*HouseId*/
+      		AND pp.PropertyId = pep.Id
+      		AND pp.DateFrom <= sys_getWorkingDate()
+      	JOIN Objects h ON h.Id = pp.Value::INT /*Houses*/
+      		AND (h.DelDate IS NULL OR h.DelDate > sys_getWorkingDate())
+      		AND h.InsDate <= sys_getWorkingDate()
+      	JOIN EntityProperties hep ON hep.EntityId = h.EntityId
+      		AND hep.Code = 'DepartmentId'
+      	JOIN ObjectProperties hop ON hop.ObjectId = h.Id
+      		AND hop.DateFrom <= sys_getWorkingDate()
+      		AND hop.PropertyId = hep.Id
+      		AND hop.Value::INT = %ParentField /*DepartmentId*/
+      	WHERE c.ConsumerId = Consumers.Id)
+  entityid: "18"
+  hierarchyid: "7"
+  hint: ~
+  id: "111"
+  isselectable: t
+  parententityid: "10"
+  parentfield: Id
+  priority: "20"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_65:
+  action: ~
+  childfield: ConsumerId
+  code: ~
+  criteriasql: ~
+  entityid: "53"
+  hierarchyid: "7"
+  hint: ~
+  id: "112"
+  isselectable: t
+  parententityid: "18"
+  parentfield: Id
+  priority: "40"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_66:
+  action: ~
+  childfield: ContractId
+  code: ~
+  criteriasql: ~
+  entityid: "15"
+  hierarchyid: "7"
+  hint: ~
+  id: "114"
+  isselectable: t
+  parententityid: "53"
+  parentfield: Id
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_67:
+  action: ~
+  childfield: ContractId
+  code: ~
+  criteriasql: ~
+  entityid: "15"
+  hierarchyid: "2"
+  hint: ~
+  id: "115"
+  isselectable: t
+  parententityid: "53"
+  parentfield: Id
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_68:
+  action: ~
+  childfield: PersonId
+  code: ~
+  criteriasql: ~
+  entityid: "55"
+  hierarchyid: "2"
+  hint: ~
+  id: "116"
+  isselectable: t
+  parententityid: "27"
+  parentfield: Id
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_69:
+  action: ~
+  childfield: StreetId
+  code: ~
+  criteriasql: ~
+  entityid: "13"
+  hierarchyid: "11"
+  hint: ~
+  id: "117"
+  isselectable: t
+  parententityid: "12"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_70:
+  action: ~
+  childfield: ~
+  code: ~
+  criteriasql: ~
+  entityid: "12"
+  hierarchyid: "11"
+  hint: ~
+  id: "118"
+  isselectable: f
+  parententityid: "1"
+  parentfield: ~
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_71:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "21"
+  hierarchyid: "3"
+  hint: ~
+  id: "32"
+  isselectable: t
+  parententityid: "62"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_72:
+  action: ~
+  childfield: ConsumerId
+  code: ~
+  criteriasql: ~
+  entityid: "53"
+  hierarchyid: "2"
+  hint: ~
+  id: "113"
+  isselectable: t
+  parententityid: "18"
+  parentfield: Id
+  priority: "40"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_73:
+  action: ~
+  childfield: ConsumerId
+  code: ~
+  criteriasql: ~
+  entityid: "53"
+  hierarchyid: "7"
+  hint: ~
+  id: "120"
+  isselectable: t
+  parententityid: "18"
+  parentfield: Id
+  priority: "40"
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_74:
+  action: ~
+  childfield: HouseId
+  code: ~
+  criteriasql: ~
+  entityid: "14"
+  hierarchyid: "11"
+  hint: ~
+  id: "119"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: "10"
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_75:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "62"
+  hierarchyid: "3"
+  hint: ~
+  id: "122"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_76:
+  action: ~
+  childfield: ParentId
+  code: ~
+  criteriasql: ~
+  entityid: "21"
+  hierarchyid: "3"
+  hint: ~
+  id: "123"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: TREE
+hierarchyfolders_77:
+  action: SHOW_LOOKUP_TABLE
+  childfield: ~
+  code: GUI.NvgView.Menu.Sale
+  criteriasql: "LookupCategory LIKE '%Sale%'"
+  entityid: "2"
+  hierarchyid: "2"
+  hint: ~
+  id: "6"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: 2
+  revision: "0"
+  rm_mask: "0000000000001111"
+  type: TREE
+hierarchyfolders_78:
+  action: SHOW_LOOKUP_TABLE
+  childfield: ~
+  code: GUI.NvgView.Menu.System
+  criteriasql: "LookupCategory LIKE '%System%'"
+  entityid: "2"
+  hierarchyid: "2"
+  hint: ~
+  id: "7"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: 7
+  revision: "0"
+  rm_mask: "0000000000000001"
+  type: TREE
+hierarchyfolders_79:
+  action: SHOW_LOOKUP_TABLE
+  childfield: ~
+  code: GUI.NvgView.Menu.Views
+  criteriasql: "LookupCategory LIKE '%View%'"
+  entityid: "2"
+  hierarchyid: "2"
+  hint: ~
+  id: "121"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: 6
+  revision: "0"
+  rm_mask: "0000000000001111"
+  type: TREE
+hierarchyfolders_80:
+  action: SHOW_LOOKUP_TABLE
+  childfield: ~
+  code: GUI.NvgView.Menu.AddressSpace
+  criteriasql: "LookupCategory LIKE '%AddressSpace%'"
+  entityid: "2"
+  hierarchyid: "2"
+  hint: ~
+  id: "124"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: 1
+  revision: "0"
+  rm_mask: "0000000000001111"
+  type: TREE
+hierarchyfolders_81:
+  action: SHOW_LOOKUP_TABLE
+  childfield: ~
+  code: GUI.NvgView.Menu.Counters
+  criteriasql: "LookupCategory LIKE '%Counters%'"
+  entityid: "2"
+  hierarchyid: "2"
+  hint: ~
+  id: "125"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: 4
+  revision: "0"
+  rm_mask: "0000000000001111"
+  type: TREE
+hierarchyfolders_82:
+  action: SHOW_LOOKUP_TABLE
+  childfield: ~
+  code: GUI.NvgView.Menu.Benefits
+  criteriasql: "LookupCategory LIKE '%Benefits%'"
+  entityid: "2"
+  hierarchyid: "2"
+  hint: ~
+  id: "126"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: 5
+  revision: "0"
+  rm_mask: "0000000000001111"
+  type: TREE
+hierarchyfolders_83:
+  action: SHOW_LOOKUP_TABLE
+  childfield: ~
+  code: GUI.NvgView.Menu.Topology
+  criteriasql: "LookupCategory LIKE '%Topology%'"
+  entityid: "2"
+  hierarchyid: "2"
+  hint: ~
+  id: "127"
+  isselectable: t
+  parententityid: "1"
+  parentfield: ~
+  priority: 3
+  revision: "0"
+  rm_mask: "0000000000001111"
+  type: TREE
+hierarchyfolders_128:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "3"
+  hint: ~
+  id: "128"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_129:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "3"
+  hint: ~
+  id: "129"
+  isselectable: t
+  parententityid: "14"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_130:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "3"
+  hint: ~
+  id: "130"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_131:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "3"
+  hint: ~
+  id: "131"
+  isselectable: t
+  parententityid: "21"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_132:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "3"
+  hint: ~
+  id: "132"
+  isselectable: t
+  parententityid: "22"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_133:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "3"
+  hint: ~
+  id: "133"
+  isselectable: t
+  parententityid: "49"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_134:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "3"
+  hint: ~
+  id: "134"
+  isselectable: t
+  parententityid: "50"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_135:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "3"
+  hint: ~
+  id: "135"
+  isselectable: t
+  parententityid: "62"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+
+hierarchyfolders_136:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "2"
+  hint: ~
+  id: "136"
+  isselectable: t
+  parententityid: "13"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_137:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "2"
+  hint: ~
+  id: "137"
+  isselectable: t
+  parententityid: "14"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_138:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "2"
+  hint: ~
+  id: "138"
+  isselectable: t
+  parententityid: "20"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_139:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "2"
+  hint: ~
+  id: "139"
+  isselectable: t
+  parententityid: "21"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_140:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "2"
+  hint: ~
+  id: "140"
+  isselectable: t
+  parententityid: "22"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_141:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "2"
+  hint: ~
+  id: "141"
+  isselectable: t
+  parententityid: "49"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_142:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "2"
+  hint: ~
+  id: "142"
+  isselectable: t
+  parententityid: "50"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS
+hierarchyfolders_143:
+  action: ~
+  childfield: ObjectId
+  code: ~
+  criteriasql: ~
+  entityid: "34"
+  hierarchyid: "2"
+  hint: ~
+  id: "143"
+  isselectable: t
+  parententityid: "62"
+  parentfield: Id
+  priority: ~
+  revision: "0"
+  rm_mask: ~
+  type: DETAILS

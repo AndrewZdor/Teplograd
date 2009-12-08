@@ -1,0 +1,972 @@
+---
+entities_000001:
+  code: Root
+  decorator: ""
+  id: "1"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: ~
+  priority: ~
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: HierarchyRootNode
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000002:
+  code: Entities
+  decorator: Table.%Code
+  id: "2"
+  istranslatable: t
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.Priority"
+  priority: ~
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "705"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000003:
+  code: Users
+  decorator: "%Name"
+  id: "3"
+  istranslatable: f
+  lookupcategory: System
+  lookuphierarchyid: ~
+  orderby: "%t.Name"
+  priority: "1"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "704"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000004:
+  code: Prefs
+  decorator: "%Code"
+  id: "4"
+  istranslatable: f
+  lookupcategory: System
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "3"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "739"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000005:
+  code: PrefValues
+  decorator: "%PrefId %Value"
+  id: "5"
+  istranslatable: f
+  lookupcategory: System
+  lookuphierarchyid: ~
+  orderby: "%t.PrefId, %t.UserId"
+  priority: "4"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "740"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000006:
+  code: Dictionary
+  decorator: "%LanguageCode %Code"
+  id: "6"
+  istranslatable: f
+  lookupcategory: System
+  lookuphierarchyid: ~
+  orderby: "%t.LanguageCode, %t.Code"
+  priority: "5"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "718"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000007:
+  code: TestTable
+  decorator: "%ParentId"
+  id: "7"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.Id"
+  priority: "6"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "747"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000008:
+  code: ObjectCapacities
+  decorator: "%ServiceId"
+  id: "15"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.DateFrom, %t.ServiceId"
+  priority: ~
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "732"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000009:
+  code: Objects
+  decorator: "%Code %Name"
+  id: "19"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: "3"
+  orderby: "%t.EntityId, %t.Code"
+  priority: ~
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "728"
+  type: SOFT
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000010:
+  code: PlaceTariffs
+  decorator: "%DateFrom: %TariffId"
+  id: "23"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.DateFrom, %t.TariffId"
+  priority: ~
+  rem: "!!!DELETED!!!"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000011:
+  code: PlaceServices
+  decorator: "%DateFrom - %DateTo: %ServiceId"
+  id: "24"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.DateFrom, %t.DateTo, %t.ServiceId"
+  priority: ~
+  rem: "!!!DELETED!!!"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000012:
+  code: PlaceOwners
+  decorator: "%PersonId %ConsumerId %PayerId"
+  id: "29"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.DateFrom, %t.PersonId, %t.ConsumerId, %t.PayerId"
+  priority: ~
+  rem: "!!!DELETED!!!"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000013:
+  code: PlaceTopology
+  decorator: "%DateFrom %ObjectId"
+  id: "30"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.DateFrom, %t.ObjectId"
+  priority: ~
+  rem: "!!!DELETED!!!"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000014:
+  code: Entrances
+  decorator: "%Num"
+  id: "33"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.HouseId, %t.Num"
+  priority: "120"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "721"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000015:
+  code: ObjectProperties
+  decorator: ~
+  id: "35"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: ~
+  priority: ~
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "729"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000016:
+  code: EntityProperties
+  decorator: "%Code"
+  id: "36"
+  istranslatable: t
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.OrderNo, %t.Code"
+  priority: ~
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "720"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000017:
+  code: TaskTypes
+  decorator: "%Code"
+  id: "40"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: ~
+  rem: TaskTypes
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "776"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000018:
+  code: heat_objects
+  decorator: ~
+  id: "52"
+  istranslatable: f
+  lookupcategory: View
+  lookuphierarchyid: ~
+  orderby: ~
+  priority: ~
+  rem: "Объекты теплоснабжения"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: VIEW
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000019:
+  code: Cities
+  decorator: "%Name"
+  id: "8"
+  istranslatable: f
+  lookupcategory: "PureLookUp, AddressSpace"
+  lookuphierarchyid: ~
+  orderby: "%t.Name"
+  priority: "9"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000000"
+  table_id_: "708"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000020:
+  code: Regions
+  decorator: "%Code %Name"
+  id: "9"
+  istranslatable: f
+  lookupcategory: "PureLookUp, AddressSpace"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "10"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000011"
+  table_id_: "711"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000021:
+  code: Departments
+  decorator: "%Code %Name"
+  id: "10"
+  istranslatable: f
+  lookupcategory: "PureLookUp, AddressSpace"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "20"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001111"
+  table_id_: "710"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000022:
+  code: StreetTypes
+  decorator: "%Code"
+  id: "11"
+  istranslatable: f
+  lookupcategory: "PureLookUp, AddressSpace"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "30"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000011"
+  table_id_: "707"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000023:
+  code: Streets
+  decorator: "%StreetTypeId %Name %Spec"
+  id: "12"
+  istranslatable: f
+  lookupcategory: "PureLookUp, AddressSpace"
+  lookuphierarchyid: ~
+  orderby: "%t.Name"
+  priority: "40"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001111"
+  table_id_: "709"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000024:
+  code: Tariffs
+  decorator: "%Code %Name"
+  id: "16"
+  istranslatable: f
+  lookupcategory: "PureLookup, Sale"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "70"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000010"
+  table_id_: "789"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000025:
+  code: Services
+  decorator: "%Code %Name"
+  id: "17"
+  istranslatable: f
+  lookupcategory: "PureLookup, Sale, Benefits"
+  lookuphierarchyid: ~
+  orderby: "%t.Code, %t.Name"
+  priority: "80"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000011"
+  table_id_: "731"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000026:
+  code: Consumers
+  decorator: "%Code %Nam"
+  id: "18"
+  istranslatable: f
+  lookupcategory: "PureLookup, Sale"
+  lookuphierarchyid: ~
+  orderby: "%t.Code, %t.Name"
+  priority: "100"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000110"
+  table_id_: "715"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000027:
+  code: Counters
+  decorator: "%ServiceId"
+  id: "25"
+  istranslatable: f
+  lookupcategory: "PureLookup, Counters"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "110"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000100"
+  table_id_: "784"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000028:
+  code: CalcTypes
+  decorator: "%Code"
+  id: "38"
+  istranslatable: t
+  lookupcategory: System
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: ~
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000010"
+  table_id_: "769"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000029:
+  code: HouseEntries
+  decorator: "%HouseId %Svc1ParentId %Svc2ParentId"
+  id: "50"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: "3"
+  orderby: "%t.Id"
+  priority: ~
+  rem: "Topology object, for connecting complex houses to supply network"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: SOFT
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000030:
+  code: Tasks
+  decorator: "%TypeId - %Description (%InsertTS)"
+  id: "41"
+  istranslatable: f
+  lookupcategory: ~
+  lookuphierarchyid: ~
+  orderby: "%t.InsertTS DESC"
+  priority: ~
+  rem: Tasks
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: "777"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000031:
+  code: benefit_persons
+  decorator: ~
+  id: "56"
+  istranslatable: f
+  lookupcategory: View
+  lookuphierarchyid: ~
+  orderby: ~
+  priority: ~
+  rem: Пільговики
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: VIEW
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000032:
+  code: Pavilions
+  decorator: "%Code %Name"
+  id: "62"
+  istranslatable: f
+  lookupcategory: "Lookup, Topology"
+  lookuphierarchyid: "3"
+  orderby: "%t.Code, %t.Name"
+  priority: "1005"
+  rem: Павильйоны
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: SOFT
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000033:
+  code: Persons
+  decorator: "%INN: %LastName %FirstName %MiddleName"
+  id: "27"
+  istranslatable: f
+  lookupcategory: "PureLookup, Benefits"
+  lookuphierarchyid: ~
+  orderby: "%t.LastName, %t.FirstName, %t.MiddleName, %t.INN"
+  priority: "120"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000010"
+  table_id_: "730"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000034:
+  code: ServiceLog
+  decorator: "%DateFrom %ServiceId %State"
+  id: "34"
+  istranslatable: f
+  lookupcategory: "LookUp, Topology"
+  lookuphierarchyid: ~
+  orderby: "%t.ObjectId, %t.DateFrom, %t.ServiceId, %t.State"
+  priority: "130"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001000"
+  table_id_: "757"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000035:
+  code: Calculations
+  decorator: "%DateFrom %CalcTypeId"
+  id: "39"
+  istranslatable: f
+  lookupcategory: "Lookup, Sale"
+  lookuphierarchyid: ~
+  orderby: "%t.DateFrom, %t.CalcTypeId"
+  priority: 130
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000010"
+  table_id_: "770"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000036:
+  code: Reports
+  decorator: "%Code"
+  id: "42"
+  istranslatable: t
+  lookupcategory: System
+  lookuphierarchyid: ~
+  orderby: Code
+  priority: ~
+  rem: "BIRT Report classes"
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001111"
+  table_id_: "778"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000037:
+  code: CountPPRTypes
+  decorator: "%Code %Name"
+  id: "43"
+  istranslatable: f
+  lookupcategory: "PureLookup, Counters"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "102"
+  rem: "PPR Types"
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000100"
+  table_id_: "780"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000038:
+  code: CountData
+  decorator: "%DateFrom %Value"
+  id: "44"
+  istranslatable: f
+  lookupcategory: "Lookup, Counters"
+  lookuphierarchyid: ~
+  orderby: "%t.DateFrom, %t.Value"
+  priority: "112"
+  rem: "Counter Registrations"
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000100"
+  table_id_: "785"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000039:
+  code: CountCalculators
+  decorator: "%CalcTypeId"
+  id: "45"
+  istranslatable: f
+  lookupcategory: "Lookup, Counters"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "109"
+  rem: Calculators
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000100"
+  table_id_: "783"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000040:
+  code: CountNodes
+  decorator: "%Code %Name %HouseObjectId"
+  id: "46"
+  istranslatable: f
+  lookupcategory: "Lookup, Counters"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "108"
+  rem: "Counter Nodes"
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000100"
+  table_id_: "779"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000041:
+  code: CountCalcTypes
+  decorator: "%Code %Name"
+  id: "47"
+  istranslatable: f
+  lookupcategory: "PureLookup, Counters"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "106"
+  rem: "Calculator Types"
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000100"
+  table_id_: "782"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000042:
+  code: CountTSPTypes
+  decorator: "%Code %Name"
+  id: "48"
+  istranslatable: f
+  lookupcategory: "PureLookup, Counters"
+  lookuphierarchyid: ~
+  orderby: "%t.Code"
+  priority: "104"
+  rem: "TSP Types"
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000100"
+  table_id_: "781"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000043:
+  code: Contracts
+  decorator: "%ConsumerId №%Code от %DateFrom "
+  id: "53"
+  istranslatable: f
+  lookupcategory: "PureLookup, Sale"
+  lookuphierarchyid: ~
+  orderby: "%t.ConsumerId, %t.Code, %t.DateFrom"
+  priority: "110"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000010"
+  table_id_: ~
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000044:
+  code: BenefitTypes
+  decorator: "%KFK-%Code %Name"
+  id: "54"
+  istranslatable: f
+  lookupcategory: "PureLookup, Benefits"
+  lookuphierarchyid: ~
+  orderby: "%t.code "
+  priority: "125"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000010"
+  table_id_: ~
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000045:
+  code: Places
+  decorator: "%HouseId/%Code %Name"
+  id: "14"
+  istranslatable: f
+  lookupcategory: "LookUp, AddressSpace"
+  lookuphierarchyid: "4"
+  orderby: ~
+  priority: "60"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001011"
+  table_id_: ~
+  type: SOFT
+  uniquefields: "HouseId,Code"
+  updateproc: ~
+  validateproc: ~
+entities_000046:
+  code: Houses
+  decorator: "%StreetId %Code"
+  id: "13"
+  istranslatable: f
+  lookupcategory: "LookUp, AddressSpace"
+  lookuphierarchyid: "4"
+  orderby: |-
+      	(SELECT Name FROM Streets WHERE id = sys_getAttrValue(null, %t.Id, 'StreetId', sys_getWorkingDate())::INTEGER),
+      	SUBSTRING(%t.Code FROM E'\d+')::INTEGER, %t.Code
+  priority: "50"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001111"
+  table_id_: ~
+  type: SOFT
+  uniquefields: "StreetId,Code,Name"
+  updateproc: ~
+  validateproc: ~
+entities_000047:
+  code: Benefits
+  decorator: "%PersonId %Doc"
+  id: "55"
+  istranslatable: f
+  lookupcategory: "Lookup, Benefits"
+  lookuphierarchyid: ~
+  orderby: "%t.PersonId"
+  priority: "126"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000010"
+  table_id_: ~
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000048:
+  code: HouseOwners
+  decorator: "%ConsumerId %HouseObjectId\""
+  id: "37"
+  istranslatable: f
+  lookupcategory: "Lookup, Sale"
+  lookuphierarchyid: ~
+  orderby: "%t.HouseObjectId, %t.ConsumerId, %t.Area"
+  priority: 120
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000000010"
+  table_id_: "760"
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000049:
+  code: Boilers
+  decorator: "%Code %Name"
+  id: "20"
+  istranslatable: f
+  lookupcategory: "LookUp, Topology"
+  lookuphierarchyid: "3"
+  orderby: "%t.Code"
+  priority: "1000"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001001"
+  table_id_: ~
+  type: SOFT
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000050:
+  code: TRP
+  decorator: "%Code %Name"
+  id: "21"
+  istranslatable: f
+  lookupcategory: "LookUp, Topology"
+  lookuphierarchyid: "3"
+  orderby: "%t.Code"
+  priority: "1010"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001001"
+  table_id_: ~
+  type: SOFT
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000051:
+  code: ElevatorNodes
+  decorator: "%Code %ParentId %Corpus %Block %FlatsRange"
+  id: "22"
+  istranslatable: f
+  lookupcategory: "LookUp, Topology"
+  lookuphierarchyid: "3"
+  orderby: "%t.Code"
+  priority: "1020"
+  rem: ~
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001001"
+  table_id_: ~
+  type: SOFT
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000052:
+  code: TPGV
+  decorator: "%Code %ParentId %Corpus %Block %FlatsRange"
+  id: "49"
+  istranslatable: f
+  lookupcategory: "LookUp, Topology"
+  lookuphierarchyid: "3"
+  orderby: "%t.Code"
+  priority: "1030"
+  rem: "Точка подключения гарячего водоснабжения"
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001001"
+  table_id_: ~
+  type: SOFT
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000053:
+  code: TariffValues
+  decorator: ~
+  id: "63"
+  istranslatable: f
+  lookupcategory: "Lookup, Sale"
+  lookuphierarchyid: ~
+  orderby: "%t.TariffId, %t.ServiceId, %t.Datefrom"
+  priority: "75"
+  rem: "История значений тарифов"
+  revisionthreshold: "1000"
+  rm_mask: "0000000000001001"
+  table_id_: ~
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000054:
+  code: calc_results
+  decorator: ~
+  id: "64"
+  istranslatable: f
+  lookupcategory: View
+  lookuphierarchyid: ~
+  orderby: ~
+  priority: 1
+  rem: "Розрахунки"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: VIEW
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000055:
+  code: calc_results_by_payers
+  decorator: ~
+  id: "65"
+  istranslatable: f
+  lookupcategory: View
+  lookuphierarchyid: ~
+  orderby: ~
+  priority: 2
+  rem: "Розрахунки по платниках"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: VIEW
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000056:
+  code: calc_results_by_objects
+  decorator: ~
+  id: "66"
+  istranslatable: f
+  lookupcategory: View
+  lookuphierarchyid: ~
+  orderby: ~
+  priority: 3
+  rem: "Розрахунки по об'єктах"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: VIEW
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~
+entities_000057:
+  code: Corrections
+  decorator: ~
+  id: "67"
+  istranslatable: f
+  lookupcategory: "Sale"
+  lookuphierarchyid: ~
+  orderby: ~
+  priority: 140
+  rem: "Корегування"
+  revisionthreshold: "1000"
+  rm_mask: ~
+  table_id_: ~
+  type: HARD
+  uniquefields: ~
+  updateproc: ~
+  validateproc: ~

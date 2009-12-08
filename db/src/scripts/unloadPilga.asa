@@ -1,0 +1,33 @@
+parameters path ;
+
+CONNECT USING 'ENG=PilgaServer;DBN=Pilga;UID=tnd;PWD=aesaraaa0004089001001' ;
+--CONNECT USING 'DBF=c:\Work\DB\tg{rem_code}.db;UID=tnd;PWD=aesaraaa0004089001001'
+
+SELECT * FROM AR;
+OUTPUT TO '{path}\Pilga_AR.dbf'
+FORMAT DBASEIII;
+
+SELECT * FROM TR;
+OUTPUT TO '{path}\Pilga_TR.dbf'
+FORMAT DBASEIII;
+
+SELECT * FROM LgotSprav;
+OUTPUT TO '{path}\Pilga_LgotSprav.dbf'
+FORMAT DBASEIII;
+
+IF NOT EXISTS (SELECT 1 FROM "tornado"."LgotList" WHERE length(comments) > 128) THEN
+	ALTER TABLE LgotList
+	ALTER Comments VARCHAR(128);
+END IF;
+
+SELECT * FROM LgotList;
+OUTPUT TO '{path}\Pilga_LgotList.dbf'
+FORMAT DBASEIII;
+
+SELECT * FROM LgotNC;
+OUTPUT TO '{path}\Pilga_LgotNC.dbf'
+FORMAT DBASEIII;
+
+SELECT * FROM cst;
+OUTPUT TO '{path}\Pilga_cst.dbf'
+FORMAT DBASEIII;

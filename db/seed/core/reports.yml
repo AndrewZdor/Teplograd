@@ -1,0 +1,371 @@
+---
+reports_1:
+  calctypeid: "1"
+  code: main_invoice
+  id: "1"
+  rem: ~
+  reportsql: |
+    SELECT ROW_NUMBER() OVER (PARTITION BY c.TaxCode)::INT AS InvoiceNo,
+        c.Id AS ConsumerId,
+        c.Nam::TEXT AS Name,
+        c.TaxCode::TEXT AS TaxCode,
+        c.DeliveryAddress::TEXT AS DeliveryAddress,
+        a.Address,
+        a.PlaceCode,
+        s.Name || ' (' || s.Value2 || ')' AS ServiceName,
+        rr.Value::Numeric AS Capacity,
+        rr.Tariff::Numeric AS Tariff,
+        rr.Sum_Days::Numeric AS Sum_Days,
+        rr.Sum_Money::Numeric AS Sum_Money,
+        rr.Sum_Money * (SELECT Value::Number * 0.01 + 1 FROM sys_getPrefValue('Calc.VAT_Percent'))
+            ::Numeric AS Sum_Money_VAT
+    FROM (SELECT r.ObjectId, r.ServiceId, r.PayerId, r.Value, r.Tariff,
+            Sum(r.days) AS sum_days, sum(r.money) AS sum_money
+        FROM %result% r
+        GROUP BY r.ObjectId, r.ServiceId, r.PayerId, r.Value, r.Tariff) rr
+    JOIN Services s ON s.Id = rr.ServiceId
+    LEFT JOIN Consumers c ON c.Id = rr.PayerId
+    LEFT JOIN sys_getAddresses() a ON a.ObjectId = rr.ObjectId
+    ORDER BY c.Nam
+  jrxml: |
+    <?xml version="1.0" encoding="UTF-8"?>
+    <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main_invoice" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="525" leftMargin="42" rightMargin="28" topMargin="28" bottomMargin="28">
+        <style name="Common" isDefault="true" fontName="Arial" fontSize="10" pdfEncoding="Cp1251" isPdfEmbedded="true"/>
+        <parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+            <defaultValueExpression><![CDATA[]]></defaultValueExpression>
+        </parameter>
+        <queryString>
+            <![CDATA[SELECT * FROM rcp_getReportData('Main_Invoice') AS (
+        InvoiceNo INT, ConsumerId INT, Name TEXT, TaxCode TEXT, DeliveryAddress TEXT, Address TEXT, PlaceCode TEXT,
+        ServiceName TEXT, Capacity Numeric, Tariff Numeric, Sum_Days Numeric, Sum_Money Numeric, Sum_Money_VAT Numeric) ]]>
+        </queryString>
+        <field name="invoiceno" class="java.lang.Integer">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="consumerid" class="java.lang.Integer">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="name" class="java.lang.String">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="taxcode" class="java.lang.String">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="deliveryaddress" class="java.lang.String">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="address" class="java.lang.String">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="placecode" class="java.lang.String">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="servicename" class="java.lang.String">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="capacity" class="java.math.BigDecimal">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="tariff" class="java.math.BigDecimal">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="sum_days" class="java.math.BigDecimal">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="sum_money" class="java.math.BigDecimal">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <field name="sum_money_vat" class="java.math.BigDecimal">
+            <fieldDescription><![CDATA[]]></fieldDescription>
+        </field>
+        <variable name="sum_money_byconsumerid" class="java.math.BigDecimal" resetType="Group" resetGroup="ByConsumerId" calculation="Sum">
+            <variableExpression><![CDATA[$F{sum_money}]]></variableExpression>
+        </variable>
+        <group name="ByConsumerId" isStartNewPage="true">
+            <groupExpression><![CDATA[$F{consumerid}]]></groupExpression>
+            <groupHeader>
+                <band height="156">
+                    <staticText>
+                        <reportElement x="214" y="141" width="61" height="13"/>
+                        <textElement textAlignment="Center">
+                            <font fontName="Arial" pdfEncoding="Cp1251"/>
+                        </textElement>
+                        <text><![CDATA[Показник]]></text>
+                    </staticText>
+                    <staticText>
+                        <reportElement x="275" y="141" width="109" height="12"/>
+                        <textElement textAlignment="Center">
+                            <font fontName="Arial" pdfEncoding="Cp1251"/>
+                        </textElement>
+                        <text><![CDATA[Тариф без ПДВ]]></text>
+                    </staticText>
+                    <staticText>
+                        <reportElement x="384" y="141" width="53" height="12"/>
+                        <textElement textAlignment="Center">
+                            <font fontName="Arial" pdfEncoding="Cp1251"/>
+                        </textElement>
+                        <text><![CDATA[Дні]]></text>
+                    </staticText>
+                    <staticText>
+                        <reportElement x="437" y="141" width="88" height="12"/>
+                        <textElement textAlignment="Center">
+                            <font fontName="Arial" pdfEncoding="Cp1251"/>
+                        </textElement>
+                        <text><![CDATA[Сума без ПДВ]]></text>
+                    </staticText>
+                    <line>
+                        <reportElement x="0" y="102" width="525" height="1"/>
+                    </line>
+                    <textField>
+                        <reportElement x="0" y="0" width="525" height="14"/>
+                        <textElement>
+                            <font fontName="Tahoma" size="10"/>
+                        </textElement>
+                        <textFieldExpression class="java.lang.String"><![CDATA["Адреса доставки:" +  $F{deliveryaddress}]]></textFieldExpression>
+                    </textField>
+                    <staticText>
+                        <reportElement x="0" y="22" width="231" height="77"/>
+                        <textElement>
+                            <font fontName="Arial" isBold="false" isItalic="false" isUnderline="false"/>
+                        </textElement>
+                        <text><![CDATA[Постачальник:
+    МКП "Дніпропетровські Міські Теплові мережі"
+
+
+    Розрахунковий рахунок: 260376115
+    ДФВАТ АБ Укргазбанк
+    МФО 305448      ОКПО 32082770]]></text>
+                    </staticText>
+                    <staticText>
+                        <reportElement x="240" y="22" width="74" height="14"/>
+                        <textElement>
+                            <font fontName="Arial" isBold="true"/>
+                        </textElement>
+                        <text><![CDATA[Платник:]]></text>
+                    </staticText>
+                    <textField>
+                        <reportElement x="240" y="84" width="285" height="15"/>
+                        <textElement markup="none">
+                            <font fontName="Arial" size="10" isBold="true"/>
+                        </textElement>
+                        <textFieldExpression class="java.lang.String"><![CDATA["ЄДРПОУ: " + $F{taxcode}]]></textFieldExpression>
+                    </textField>
+                    <textField>
+                        <reportElement x="240" y="36" width="285" height="48"/>
+                        <textElement>
+                            <font fontName="Arial" size="10" isBold="true"/>
+                        </textElement>
+                        <textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
+                    </textField>
+                    <textField>
+                        <reportElement x="0" y="109" width="397" height="25"/>
+                        <textElement textAlignment="Center" markup="none">
+                            <font fontName="Arial" size="14" pdfEncoding="Cp1251"/>
+                        </textElement>
+                        <textFieldExpression class="java.lang.String"><![CDATA["Рахунок №" + $F{invoiceno}]]></textFieldExpression>
+                    </textField>
+                    <line>
+                        <reportElement x="0" y="140" width="525" height="1"/>
+                    </line>
+                    <textField>
+                        <reportElement x="397" y="109" width="92" height="12"/>
+                        <textElement markup="none">
+                            <font fontName="Arial" pdfEncoding="Cp1251"/>
+                        </textElement>
+                        <textFieldExpression class="java.lang.String"><![CDATA["від ______"]]></textFieldExpression>
+                    </textField>
+                    <textField>
+                        <reportElement x="397" y="122" width="92" height="12"/>
+                        <textElement markup="none">
+                            <font fontName="Arial" pdfEncoding="Cp1251"/>
+                        </textElement>
+                        <textFieldExpression class="java.lang.String"><![CDATA["за ______"]]></textFieldExpression>
+                    </textField>
+                    <line>
+                        <reportElement x="0" y="154" width="525" height="1"/>
+                    </line>
+                    <staticText>
+                        <reportElement x="0" y="140" width="214" height="13"/>
+                        <textElement textAlignment="Center">
+                            <font fontName="Arial" pdfEncoding="Cp1251"/>
+                        </textElement>
+                        <text><![CDATA[Адреса, приміщення, послуга]]></text>
+                    </staticText>
+                </band>
+            </groupHeader>
+            <groupFooter>
+                <band height="81">
+                    <line>
+                        <reportElement x="337" y="5" width="188" height="1"/>
+                    </line>
+                    <staticText>
+                        <reportElement x="337" y="35" width="100" height="13"/>
+                        <textElement textAlignment="Right">
+                            <font fontName="Tahoma" isBold="true"/>
+                        </textElement>
+                        <text><![CDATA[До сплати:]]></text>
+                    </staticText>
+                    <staticText>
+                        <reportElement mode="Transparent" x="337" y="9" width="100" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+                        <textElement textAlignment="Right" verticalAlignment="Top" rotation="None" lineSpacing="Single" markup="none">
+                            <font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+                        </textElement>
+                        <text><![CDATA[Нараховано:]]></text>
+                    </staticText>
+                    <staticText>
+                        <reportElement mode="Transparent" x="337" y="22" width="100" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+                        <textElement textAlignment="Right" verticalAlignment="Top" rotation="None" lineSpacing="Single" markup="none">
+                            <font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+                        </textElement>
+                        <text><![CDATA[ПДВ:]]></text>
+                    </staticText>
+                    <staticText>
+                        <reportElement x="126" y="54" width="105" height="15"/>
+                        <textElement>
+                            <font isUnderline="false"/>
+                        </textElement>
+                        <text><![CDATA[Головний бухгалтер   ]]></text>
+                    </staticText>
+                    <line>
+                        <reportElement x="231" y="68" width="188" height="1"/>
+                    </line>
+                    <textField pattern="###0.00">
+                        <reportElement x="437" y="9" width="88" height="13"/>
+                        <textElement textAlignment="Right"/>
+                        <textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sum_money_byconsumerid}]]></textFieldExpression>
+                    </textField>
+                    <textField pattern="###0.00">
+                        <reportElement x="437" y="22" width="88" height="13"/>
+                        <textElement textAlignment="Right"/>
+                        <textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sum_money_byconsumerid} * 0.2]]></textFieldExpression>
+                    </textField>
+                    <textField pattern="###0.00">
+                        <reportElement x="437" y="35" width="88" height="13"/>
+                        <textElement textAlignment="Right">
+                            <font isBold="true"/>
+                        </textElement>
+                        <textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sum_money_byconsumerid} * 1.2]]></textFieldExpression>
+                    </textField>
+                </band>
+            </groupFooter>
+        </group>
+        <group name="ByAddress">
+            <groupExpression><![CDATA[$F{address}]]></groupExpression>
+            <groupHeader>
+                <band height="16">
+                    <textField>
+                        <reportElement x="0" y="0" width="525" height="16"/>
+                        <textElement>
+                            <font fontName="Tahoma" isBold="true"/>
+                        </textElement>
+                        <textFieldExpression class="java.lang.String"><![CDATA[$F{address}]]></textFieldExpression>
+                    </textField>
+                </band>
+            </groupHeader>
+            <groupFooter>
+                <band/>
+            </groupFooter>
+        </group>
+        <group name="ByPlaceCode">
+            <groupExpression><![CDATA[$F{placecode}]]></groupExpression>
+            <groupHeader>
+                <band height="16">
+                    <textField>
+                        <reportElement x="46" y="0" width="479" height="16"/>
+                        <textElement>
+                            <font fontName="Tahoma" isBold="false" isItalic="true"/>
+                        </textElement>
+                        <textFieldExpression class="java.lang.String"><![CDATA[$F{placecode}]]></textFieldExpression>
+                    </textField>
+                </band>
+            </groupHeader>
+            <groupFooter>
+                <band/>
+            </groupFooter>
+        </group>
+        <title>
+            <band splitType="Stretch"/>
+        </title>
+        <pageHeader>
+            <band height="45" splitType="Prevent">
+                <staticText>
+                    <reportElement style="Common" x="0" y="0" width="231" height="37"/>
+                    <textElement>
+                        <font fontName="Arial" size="10"/>
+                    </textElement>
+                    <text><![CDATA[Звірка рахунків за адресою: вул. Глинки, 15-А
+    відділ збуту: тел. 778-59-93
+    приймальня: тел. 778-07-87]]></text>
+                </staticText>
+                <line>
+                    <reportElement x="0" y="37" width="525" height="1"/>
+                </line>
+            </band>
+        </pageHeader>
+        <detail>
+            <band height="14" splitType="Stretch">
+                <textField>
+                    <reportElement x="83" y="0" width="131" height="13"/>
+                    <textElement>
+                        <font fontName="Tahoma"/>
+                    </textElement>
+                    <textFieldExpression class="java.lang.String"><![CDATA[$F{servicename}]]></textFieldExpression>
+                </textField>
+                <textField pattern="###0.00" isBlankWhenNull="true">
+                    <reportElement x="214" y="0" width="61" height="13"/>
+                    <textElement textAlignment="Right">
+                        <font fontName="Tahoma"/>
+                    </textElement>
+                    <textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{capacity}]]></textFieldExpression>
+                </textField>
+                <textField pattern="###0.000" isBlankWhenNull="true">
+                    <reportElement x="275" y="0" width="109" height="13"/>
+                    <textElement textAlignment="Right">
+                        <font fontName="Tahoma"/>
+                    </textElement>
+                    <textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{tariff}]]></textFieldExpression>
+                </textField>
+                <textField pattern="###0.00" isBlankWhenNull="true">
+                    <reportElement x="384" y="0" width="53" height="13"/>
+                    <textElement textAlignment="Right">
+                        <font fontName="Tahoma"/>
+                    </textElement>
+                    <textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{sum_days}]]></textFieldExpression>
+                </textField>
+                <textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+                    <reportElement x="437" y="0" width="89" height="13"/>
+                    <textElement textAlignment="Right">
+                        <font fontName="Tahoma"/>
+                    </textElement>
+                    <textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{sum_money}]]></textFieldExpression>
+                </textField>
+            </band>
+        </detail>
+        <pageFooter>
+            <band splitType="Stretch"/>
+        </pageFooter>
+    </jasperReport>
+
+reports_2:
+  calctypeid: "1"
+  code: TestReport2
+  id: "2"
+  rem: ~
+  reportsql: ~
+
+reports_3:
+  calctypeid: ~
+  code: PlacesAll
+  id: "3"
+  rem: ~
+  reportsql: |
+    SELECT p.Id, COALESCE(st.Code || ' ', '') || COALESCE(s.Name || ' ', '') || COALESCE(h.Code, '') || COALESCE(h.Name, '') || ' / ' || COALESCE(p.Code, '') || COALESCE(p.Name, '') AS Address,
+        sys_getAttrValue(NULL, p.Id, 'Area', sys_getWorkingDate()) AS Area, p.Rem
+    FROM Objects p
+    LEFT JOIN Objects h ON h.Id = sys_getAttrValue(NULL, p.Id, 'HouseId', sys_getWorkingDate())::INT
+    LEFT JOIN Streets s ON s.Id = sys_getAttrValue(NULL, h.Id, 'StreetId', sys_getWorkingDate())::INT
+    LEFT JOIN StreetTypes st ON st.Id = s.StreetTypeId
+    WHERE p.EntityId = (Select e.Id FROM Entities e WHERE e.Code = 'Places')
+      AND p.InsDate <= sys_getWorkingDate() AND (p.DelDate IS NULL OR p.DelDate > sys_getWorkingDate())
+    ORDER BY Address, p.Id
+

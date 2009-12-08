@@ -1,0 +1,1277 @@
+--- 
+entityproperties_000001: 
+  code: CapacityHotWater
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "22"
+  id: "14"
+  insertts: "2008-10-24 13:08:08.872"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "30"
+  propgroup: ~
+  refentityid: ~
+  rem: "Навантаження на г.в."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-10-24 13:08:08.888"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000002: 
+  code: DepartmentId
+  datalength: "20"
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "20"
+  id: "2"
+  insertts: "2008-09-19 15:20:09.875"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "30"
+  propgroup: ~
+  refentityid: "10"
+  rem: "Прив'язка котельні до теплового района"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-23 11:57:38.14"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000003: 
+  code: CapacityHeat
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "22"
+  id: "15"
+  insertts: "2008-10-24 13:08:08.872"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "25"
+  propgroup: ~
+  refentityid: ~
+  rem: "Навантаження на опалення"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-11-04 13:21:18.719"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000004: 
+  code: ParentId
+  datalength: ~
+  datatype: INTEGER
+  donumsort: f
+  editable: ~
+  entityid: "21"
+  id: "4"
+  insertts: "2008-10-10 14:59:07.517"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "5"
+  propgroup: ~
+  refentityid: "19"
+  rem: "Parent node in the topology."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000005: 
+  code: ParentId
+  datalength: ~
+  datatype: INTEGER
+  donumsort: f
+  editable: ~
+  entityid: "22"
+  id: "5"
+  insertts: "2008-10-10 14:59:07.517"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "5"
+  propgroup: ~
+  refentityid: "19"
+  rem: "Parent node in the topology."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000006: 
+  code: FlatsRange
+  datalength: "512"
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "22"
+  id: "7"
+  insertts: "2008-10-10 14:59:08.174"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "20"
+  propgroup: ~
+  refentityid: ~
+  rem: "Range of flats in the haouse, using given ElevatorNode."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-10-10 14:59:08.174"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000007: 
+  code: Remarks(SNAT)
+  datalength: ~
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "9"
+  insertts: "2008-10-10 14:59:08.22"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "130"
+  propgroup: Tags
+  refentityid: ~
+  rem: " (SNAT)"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-10-24 13:08:08.872"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000008: 
+  code: VID_RS(VID_RS)
+  datalength: ~
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "10"
+  insertts: "2008-10-10 14:59:08.22"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "120"
+  propgroup: Tags
+  refentityid: ~
+  rem: " (VID_RS)"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-10-24 13:08:08.872"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000009: 
+  code: Agency(WED)
+  datalength: ~
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "11"
+  insertts: "2008-10-10 14:59:08.22"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "140"
+  propgroup: Tags
+  refentityid: ~
+  rem: "Ведомство (WED)"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-10-24 13:08:08.872"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000010: 
+  code: AbonService(WEIGHT)
+  datalength: ~
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "12"
+  insertts: "2008-10-10 14:59:08.22"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "150"
+  propgroup: Tags
+  refentityid: ~
+  rem: "Находится ли объект на абон. обслуживании? (WEIGHT)"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-10-24 13:08:08.872"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000011: 
+  code: ConsumerClass(VID_P)
+  datalength: ~
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "18"
+  id: "13"
+  insertts: "2008-10-10 14:59:08.22"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "160"
+  propgroup: Tags
+  refentityid: ~
+  rem: "бнгх - бюджет, население, гос., хозрасчет (VID_P)"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-10-24 13:08:08.872"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000012: 
+  code: Corpus
+  datalength: "8"
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "22"
+  id: "16"
+  insertts: "2008-11-04 13:21:18.719"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "12"
+  propgroup: ~
+  refentityid: ~
+  rem: "Номер корпуса"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-11-04 13:21:18.719"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000013: 
+  code: Block
+  datalength: "8"
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "22"
+  id: "17"
+  insertts: "2008-11-04 13:21:18.719"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "14"
+  propgroup: ~
+  refentityid: ~
+  rem: "Номер корпуса"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2008-11-04 13:21:18.719"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000014: 
+  code: Block
+  datalength: "8"
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "49"
+  id: "18"
+  insertts: "2009-03-19 14:02:29.096"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "14"
+  propgroup: ~
+  refentityid: ~
+  rem: "Номер корпуса"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-03-19 14:02:29.096"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000015: 
+  code: CapacityHotWater
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "49"
+  id: "19"
+  insertts: "2009-03-19 14:02:29.096"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "30"
+  propgroup: ~
+  refentityid: ~
+  rem: "Навантаження на г.в."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-03-19 14:02:29.096"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000016: 
+  code: Corpus
+  datalength: "8"
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "49"
+  id: "20"
+  insertts: "2009-03-19 14:02:29.096"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "12"
+  propgroup: ~
+  refentityid: ~
+  rem: "Номер корпуса"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-03-19 14:02:29.096"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000017: 
+  code: FlatsRange
+  datalength: "512"
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "49"
+  id: "21"
+  insertts: "2009-03-19 14:02:29.096"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "20"
+  propgroup: ~
+  refentityid: ~
+  rem: "Range of flats in the haouse, using given ElevatorNode."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-03-19 14:02:29.096"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000018: 
+  code: ParentId
+  datalength: ~
+  datatype: INTEGER
+  donumsort: f
+  editable: ~
+  entityid: "49"
+  id: "23"
+  insertts: "2009-03-19 14:02:29.096"
+  insertuserid: DBA
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "5"
+  propgroup: ~
+  refentityid: "19"
+  rem: "Parent node in the topology."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000019: 
+  code: Area
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "25"
+  insertts: "2009-06-10 13:34:03.779"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "20"
+  propgroup: ~
+  refentityid: ~
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-23 11:57:38.125"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000020: 
+  code: Rem2
+  datalength: ~
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "27"
+  insertts: "2009-06-10 13:34:03.779"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "40"
+  propgroup: ~
+  refentityid: ~
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.593"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000021: 
+  code: StreetId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "28"
+  insertts: "2009-06-10 13:34:06.342"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: t
+  orderno: "10"
+  propgroup: ~
+  refentityid: "12"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:34:06.342"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000022: 
+  code: DepartmentId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "29"
+  insertts: "2009-06-10 13:34:06.342"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: t
+  orderno: "20"
+  propgroup: ~
+  refentityid: "10"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:34:06.342"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000023: 
+  code: RegionId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "30"
+  insertts: "2009-06-10 13:34:06.342"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "30"
+  propgroup: ~
+  refentityid: "9"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000024: 
+  code: EntranceCount
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "31"
+  insertts: "2009-06-10 13:34:06.357"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "40"
+  propgroup: ~
+  refentityid: ~
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000025: 
+  code: Area
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "32"
+  insertts: "2009-06-10 13:34:06.357"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "50"
+  propgroup: ~
+  refentityid: ~
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000026: 
+  code: TariffId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "33"
+  insertts: "2009-06-10 13:34:17.451"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "50"
+  propgroup: ~
+  refentityid: "16"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.593"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000027: 
+  code: Svc1ParentId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "34"
+  insertts: "2009-06-10 13:34:18.467"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "60"
+  propgroup: ~
+  refentityid: "19"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000028: 
+  code: Svc2ParentId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "35"
+  insertts: "2009-06-10 13:34:18.826"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "70"
+  propgroup: ~
+  refentityid: "19"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.593"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000029: 
+  code: ConsumerId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "37"
+  insertts: "2009-06-10 13:34:19.232"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "80"
+  propgroup: ~
+  refentityid: "18"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.593"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000030: 
+  code: Svc1ParentId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "50"
+  id: "40"
+  insertts: "2009-06-10 13:34:26.576"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "10"
+  propgroup: ~
+  refentityid: "19"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000031: 
+  code: Svc2ParentId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "50"
+  id: "41"
+  insertts: "2009-06-10 13:34:26.576"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: t
+  orderno: "20"
+  propgroup: ~
+  refentityid: "19"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:34:26.576"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000032: 
+  code: Svc1ParentId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "43"
+  insertts: "2009-06-10 13:34:26.967"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "60"
+  propgroup: ~
+  refentityid: "19"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000033: 
+  code: Svc2ParentId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "44"
+  insertts: "2009-06-10 13:34:26.967"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "70"
+  propgroup: ~
+  refentityid: "19"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-06-10 13:35:12.796"
+  updateuserid: DBA
+  validationsql: ~
+entityproperties_000034: 
+  code: FloorCount
+  datalength: ~
+  datatype: INTEGER
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "46"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "80"
+  propgroup: ~
+  refentityid: ~
+  rem: "Кількість поверхів"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000035: 
+  code: BuildYear
+  datalength: ~
+  datatype: INTEGER
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "47"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "90"
+  propgroup: ~
+  refentityid: ~
+  rem: "Рік забудови"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000036: 
+  code: Volume
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "48"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "100"
+  propgroup: ~
+  refentityid: ~
+  rem: "Об'єм споруди, куб.м"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000037: 
+  code: Spec
+  datalength: ~
+  datatype: CITEXT
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "49"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "110"
+  propgroup: ~
+  refentityid: ~
+  rem: "Характеристика (панельний,кирпичний та ін.)"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000038: 
+  code: LivingArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "50"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "120"
+  propgroup: ~
+  refentityid: ~
+  rem: "Житлова площа, кв.м"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000039: 
+  code: HeatingArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "51"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "130"
+  propgroup: ~
+  refentityid: ~
+  rem: "Опалювальна (корисна) площа, кв.м"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000040: 
+  code: TotalPlaceArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "52"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "140"
+  propgroup: ~
+  refentityid: ~
+  rem: "Загальна площа квартир, кв.м"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000041: 
+  code: BasementArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "53"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "150"
+  propgroup: ~
+  refentityid: ~
+  rem: "Площа підвалу, кв.м"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000042: 
+  code: GarbageArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "54"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "160"
+  propgroup: ~
+  refentityid: ~
+  rem: "Площа сміттєкамери, кв.м"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000043: 
+  code: AtticArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "55"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "170"
+  propgroup: ~
+  refentityid: ~
+  rem: "Площа горища, технічного поверху, кв.м"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000044: 
+  code: FootpaceArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "56"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "180"
+  propgroup: ~
+  refentityid: ~
+  rem: "Площа сходових кліток, кв.м"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000045: 
+  code: NAreaExCounters
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "57"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "190"
+  propgroup: ~
+  refentityid: ~
+  rem: "Площа насенелення без ЗО"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000046: 
+  code: SelfHeatingArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "58"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "200"
+  propgroup: ~
+  refentityid: ~
+  rem: "Площа автономного опалення"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000047: 
+  code: NArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "59"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "210"
+  propgroup: ~
+  refentityid: ~
+  rem: "Площа насенелення з ЗО"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000048: 
+  code: BArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "60"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "220"
+  propgroup: ~
+  refentityid: ~
+  rem: "Площа бюджетних установ"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000049: 
+  code: XArea
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "61"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "230"
+  propgroup: ~
+  refentityid: ~
+  rem: "Площа госпрозрахункових закладів"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-08-27 14:30:06.885"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000050: 
+  code: ObjectId
+  datalength: ~
+  datatype: ~
+  donumsort: f
+  editable: ~
+  entityid: "15"
+  id: "62"
+  insertts: "2009-09-16 14:35:07.529"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: "11"
+  mandatory: f
+  orderno: ~
+  propgroup: ~
+  refentityid: ~
+  rem: "Uses sysHousePlaceLookup hierarchy to resolve references."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-09-16 14:35:07.529"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000051: 
+  code: ObjectId
+  datalength: ~
+  datatype: ~
+  donumsort: f
+  editable: ~
+  entityid: "27"
+  id: "63"
+  insertts: "2009-09-16 14:35:07.529"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: "11"
+  mandatory: f
+  orderno: ~
+  propgroup: ~
+  refentityid: ~
+  rem: "Uses sysHousePlaceLookup hierarchy to resolve references."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-09-16 14:35:07.529"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000052: 
+  code: HouseId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "14"
+  id: "24"
+  insertts: "2009-06-10 13:34:03.763"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: "5"
+  mandatory: t
+  orderno: "10"
+  propgroup: ~
+  refentityid: "13"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-09-16 14:35:07.529"
+  updateuserid: tnd
+  validationsql: ~
+entityproperties_000053: 
+  code: HouseId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "50"
+  id: "42"
+  insertts: "2009-06-10 13:34:26.576"
+  insertuserid: DBA
+  istemporal: f
+  lookuphierarchyid: "5"
+  mandatory: t
+  orderno: "30"
+  propgroup: ~
+  refentityid: "13"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-09-16 14:35:07.529"
+  updateuserid: tnd
+  validationsql: ~
+entityproperties_000054: 
+  code: Rem2
+  datalength: ~
+  datatype: VARCHAR
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "64"
+  insertts: "2009-10-09 10:05:04.978"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "53"
+  propgroup: ~
+  refentityid: ~
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-10-09 10:05:04.978"
+  updateuserid: tnd
+  validationsql: ~
+entityproperties_000055: 
+  code: TariffId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "65"
+  insertts: "2009-10-09 10:05:04.978"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "55"
+  propgroup: ~
+  refentityid: "16"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-10-09 10:05:04.978"
+  updateuserid: tnd
+  validationsql: ~
+entityproperties_000056: 
+  code: ConsumerId
+  datalength: ~
+  datatype: NUMERIC
+  donumsort: f
+  editable: ~
+  entityid: "13"
+  id: "66"
+  insertts: "2009-10-09 10:05:04.978"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "75"
+  propgroup: ~
+  refentityid: "18"
+  rem: ~
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-10-09 10:05:04.978"
+  updateuserid: tnd
+  validationsql: ~
+entityproperties_000057: 
+  code: ParentId
+  datalength: ~
+  datatype: INTEGER
+  donumsort: f
+  editable: ~
+  entityid: "62"
+  id: "67"
+  insertts: "2009-11-09 09:55:13.765"
+  insertuserid: postgres
+  istemporal: t
+  lookuphierarchyid: ~
+  mandatory: f
+  orderno: "5"
+  propgroup: ~
+  refentityid: "19"
+  rem: "Parent node in the topology."
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-11-09 09:55:13.765"
+  updateuserid: postgres
+  validationsql: ~
+entityproperties_000058: 
+  code: HouseObjectId
+  datalength: ~
+  datatype: ~
+  donumsort: f
+  editable: ~
+  entityid: "46"
+  id: "68"
+  insertts: "2009-11-09 10:27:48"
+  insertuserid: postgres
+  istemporal: f
+  lookuphierarchyid: "5"
+  mandatory: f
+  orderno: ~
+  propgroup: ~
+  refentityid: ~
+  rem: "Uses sysHouseLookup hierarchy to resolve references"
+  retrievesql: ~
+  revision: "0"
+  updatets: "2009-11-09 10:27:48"
+  updateuserid: postgres
+  validationsql: ~

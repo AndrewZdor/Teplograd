@@ -1,0 +1,53 @@
+--- 
+typemapping_1: 
+  javasqltype: SMALLINT
+  sqltype: int2
+  typegroup: DECIMAL
+typemapping_2: 
+  javasqltype: INTEGER
+  sqltype: int4
+  typegroup: DECIMAL
+typemapping_3: 
+  javasqltype: BIGINT
+  sqltype: int8
+  typegroup: DECIMAL
+typemapping_4: 
+  javasqltype: NUMERIC
+  sqltype: numeric
+  typegroup: DECIMAL
+typemapping_5: 
+  javasqltype: NVARCHAR
+  sqltype: citext
+  typegroup: TEXT
+typemapping_6: 
+  javasqltype: NVARCHAR
+  sqltype: string
+  typegroup: TEXT
+typemapping_7: 
+  javasqltype: NVARCHAR
+  sqltype: longstring
+  typegroup: TEXT
+typemapping_8: 
+  javasqltype: NVARCHAR
+  sqltype: longeststring
+  typegroup: TEXT
+typemapping_9: 
+  javasqltype: NVARCHAR
+  sqltype: text
+  typegroup: TEXT
+typemapping_10: 
+  javasqltype: DATE
+  sqltype: date
+  typegroup: DATETIME
+typemapping_11: 
+  javasqltype: BIT
+  sqltype: bit
+  typegroup: BOOLEAN
+typemapping_12: 
+  javasqltype: BOOLEAN
+  sqltype: boolean
+  typegroup: BOOLEAN
+typemapping_13: 
+  javasqltype: BOOLEAN
+  sqltype: bool
+  typegroup: BOOLEAN

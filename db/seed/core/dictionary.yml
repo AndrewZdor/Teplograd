@@ -1,0 +1,2635 @@
+dictionary_1:
+  code: Table.Houses.Name
+  id: "342"
+  languagecode: UKR
+  name: Додатково
+  rem: "Додаткова інформація про будівлю"
+dictionary_2:
+  code: Table.Places.Svc1ParentId
+  id: "343"
+  languagecode: UKR
+  name: "Підключення до опалення"
+dictionary_3:
+  code: Table.Places.Svc2ParentId
+  id: "344"
+  languagecode: UKR
+  name: "Підключення до г.в."
+dictionary_4:
+  code: Table.Places.PersonId
+  id: "345"
+  languagecode: UKR
+  name: "Власник (фіз. особа)"
+dictionary_5:
+  code: Table.Places.PayerId
+  id: "347"
+  languagecode: UKR
+  name: "Платник (юр. особа)"
+dictionary_6:
+  code: Table.HouseEntries
+  id: "348"
+  languagecode: UKR
+  name: "Точка вводу в дім"
+  names: "Точки вводу в дома"
+dictionary_7:
+  code: Table.HouseEntries.Svc1ParentId
+  id: "349"
+  languagecode: UKR
+  name: "Підключення до опалення"
+dictionary_8:
+  code: Table.HouseEntries.Svc2ParentId
+  id: "350"
+  languagecode: UKR
+  name: "Підключення до г.в."
+dictionary_9:
+  code: Table.HouseEntries.HouseId
+  id: "351"
+  languagecode: UKR
+  name: Будівля
+dictionary_10:
+  code: Table.Houses.Svc1ParentId
+  id: "352"
+  languagecode: UKR
+  name: "Підключення до опалення"
+dictionary_11:
+  code: Table.Houses.Svc2ParentId
+  id: "353"
+  languagecode: UKR
+  name: "Підключення до г.в."
+dictionary_12:
+  code: Common.TariffId
+  id: "354"
+  languagecode: UKR
+  name: Тариф
+  names: Тарифи
+dictionary_13:
+  code: Hierarchy.Topology.HouseHeating
+  id: "355"
+  languagecode: UKR
+  name: "Будівлі (опалення)"
+dictionary_14:
+  code: Hierarchy.Topology.HousesHotWater
+  id: "356"
+  languagecode: UKR
+  name: "Будівлі (гор. вода)"
+dictionary_15:
+  code: Hierarchy.Topology.HouseEntryHeating
+  id: "357"
+  languagecode: UKR
+  name: "Вводи в будівлі (опалення)"
+dictionary_16:
+  code: Hierarchy.Topology.HouseEntryHotWater
+  id: "358"
+  languagecode: UKR
+  name: "Вводи в будівлі (гор. вода)"
+dictionary_17:
+  code: Error.EmptyMandatoryField
+  id: "359"
+  languagecode: UKR
+  name: "Не заповнене обов'язкове поле %s"
+dictionary_18:
+  code: GUI.Editor.ThisColumnCannotBeEdited
+  id: "360"
+  languagecode: UKR
+  name: "Цей стовпчик не може змінюватися користувачами"
+dictionary_19:
+  code: Common.HouseObjectId
+  id: "361"
+  languagecode: UKR
+  name: Домівка
+dictionary_20:
+  code: GUI.Editor.Delete.ConfirmDialog.Unbind
+  id: "364"
+  languagecode: UKR
+  name: "Від'єднати"
+dictionary_21:
+  code: GUI.Editor.Delete.ConfirmDialog.Delete
+  id: "365"
+  languagecode: UKR
+  name: Видалити
+dictionary_22:
+  code: Common.Cancel
+  id: "366"
+  languagecode: UKR
+  name: Відмінити
+dictionary_23:
+  code: Table.ObjectCapacities.CounterPart
+  id: "375"
+  languagecode: UKR
+  name: "Частка, %"
+  rem: "Частка показаннь лічильника"
+dictionary_24:
+  code: Table.Consumers.RS
+  id: "376"
+  languagecode: UKR
+  name: "Розр. рахунок"
+  rem: "Розрахунковий рахунок"
+dictionary_25:
+  code: Table.Consumers.MFO
+  id: "377"
+  languagecode: UKR
+  name: МФО
+  rem: "МФО Банку"
+dictionary_26:
+  code: Table.ElevatorNodes.Corpus
+  id: "229"
+  languagecode: UKR
+  name: Корпус
+  rem: "Номер корпуса, де встановлений елеваторний вузол"
+dictionary_27:
+  code: Table.ElevatorNodes.Block
+  id: "230"
+  languagecode: UKR
+  name: Блок
+  rem: "Номер блоку, де встановлений елеваторний вузол"
+dictionary_28:
+  code: Table.HouseOwners
+  id: "232"
+  languagecode: UKR
+  name: Балансоутримувач
+  names: Балансоутримувачі
+  rem: "Балансоутримувачі забудов"
+dictionary_29:
+  code: Table.HouseOwners.Id
+  id: "233"
+  languagecode: UKR
+  name: Ід
+  names: Ід
+  rem: Ідентифікатор
+dictionary_30:
+  code: Table.HouseOwners.ConsumerId
+  id: "234"
+  languagecode: UKR
+  name: Балансоутримувач
+  names: Балансоутримувачі
+  rem: "Балансоутримувач забудови"
+dictionary_31:
+  code: Table.HouseOwners.Area
+  id: "235"
+  languagecode: UKR
+  name: Площа
+  names: Площа
+  rem: Площа
+dictionary_32:
+  code: Table.HouseOwners.FlatRange
+  id: "236"
+  languagecode: UKR
+  name: "Діапазон квартир"
+  names: "Діапазони квартир"
+  rem: "Діапазон квартир"
+dictionary_33:
+  code: Table.CountCalculators.CalcId
+  id: "268"
+  languagecode: UKR
+  name: Обчислювач
+  names: Обчислювачі
+  rem: Обчислювачі
+dictionary_34:
+  code: Table.CountCalculators.NodeId
+  id: "269"
+  languagecode: UKR
+  name: "Вузол обліку"
+  names: "Вузли обліку"
+  rem: "Вузол обліку"
+dictionary_35:
+  code: Table.CountCalculators.Num
+  id: "270"
+  languagecode: UKR
+  name: з/номер
+  names: з/номери
+  rem: "Заводський номер"
+dictionary_36:
+  code: Table.CountCalculators.CalcTypeId
+  id: "271"
+  languagecode: UKR
+  name: "Тип обчислювача"
+  names: "Типи обчислювачів"
+  rem: "Тип обчислювача"
+dictionary_37:
+  code: Table.CountCalculators.Combined
+  id: "272"
+  languagecode: UKR
+  name: Суміщений
+  names: Суміщені
+  rem: Суміщений
+dictionary_38:
+  code: Table.CountCalculators.Rem
+  id: "273"
+  languagecode: UKR
+  name: Коментар
+  names: Коментарі
+  rem: Коментар
+dictionary_39:
+  code: Table.CountCalculators.Name
+  id: "274"
+  languagecode: UKR
+  name: Назва
+  names: Назви
+  rem: Назва
+dictionary_40:
+  code: Table.CountCalculators.Code
+  id: "275"
+  languagecode: UKR
+  name: Код
+  names: Коди
+  rem: Код
+dictionary_41:
+  code: Table.CountCalculators
+  id: "276"
+  languagecode: UKR
+  name: Обчислювач
+  names: Обчислювачі
+  rem: Обчислювачі
+dictionary_42:
+  code: Table.CountNodes.Rem
+  id: "277"
+  languagecode: UKR
+  name: Коментар
+  names: Коментарі
+  rem: Коментар
+dictionary_43:
+  code: Table.CountNodes.Name
+  id: "278"
+  languagecode: UKR
+  name: Назва
+  names: Назви
+  rem: Назва
+dictionary_44:
+  code: Table.CountNodes.Code
+  id: "279"
+  languagecode: UKR
+  name: Код
+  names: Коди
+  rem: Код
+dictionary_45:
+  code: TableRows.Hierarchies.Reports
+  id: "325"
+  languagecode: UKR
+  name: Звіти
+dictionary_46:
+  code: Table.Houses.Area
+  id: "231"
+  languagecode: UKR
+  name: "Площа дов."
+  rem: "Площа будівлі (довідково)"
+dictionary_47:
+  code: Table.Places.ConsumerId
+  id: "346"
+  languagecode: UKR
+  name: Балансоутримувач
+dictionary_48:
+  code: Table.CountNodes
+  id: "280"
+  languagecode: UKR
+  name: "Вузол обліку"
+  names: "Вузли обліку"
+  rem: "Вузли обліку"
+dictionary_49:
+  code: Table.CountCalcTypes.Rem
+  id: "281"
+  languagecode: UKR
+  name: Коментар
+  names: Коментарі
+  rem: Коментар
+dictionary_50:
+  code: Table.CountCalcTypes.Name
+  id: "282"
+  languagecode: UKR
+  name: Назва
+  names: Назви
+  rem: Назва
+dictionary_51:
+  code: Table.CountCalcTypes.Code
+  id: "283"
+  languagecode: UKR
+  name: Код
+  names: Коди
+  rem: Код
+dictionary_52:
+  code: Table.CountCalcTypes
+  id: "284"
+  languagecode: UKR
+  name: "Тип обчислювача"
+  names: "Типи обчислювачів"
+  rem: "Типи обчислювачів"
+dictionary_53:
+  code: Table.CountTSPTypes.Rem
+  id: "285"
+  languagecode: UKR
+  name: Коментар
+  names: Коментарі
+  rem: Коментар
+dictionary_54:
+  code: Table.CountTSPTypes.Name
+  id: "286"
+  languagecode: UKR
+  name: Назва
+  names: Назви
+  rem: Назва
+dictionary_55:
+  code: Table.CountTSPTypes.Code
+  id: "287"
+  languagecode: UKR
+  name: Код
+  names: Коди
+  rem: Код
+dictionary_56:
+  abbr: ТСП
+  code: Table.CountTSPTypes
+  id: "288"
+  languagecode: UKR
+  name: "Тип ТСП"
+  names: "Типи ТСП"
+  rem: "Типи ТСП"
+dictionary_57:
+  code: Table.CountPPRTypes.Rem
+  id: "289"
+  languagecode: UKR
+  name: Коментар
+  names: Коментарі
+  rem: Коментар
+dictionary_58:
+  code: Table.CountPPRTypes.Name
+  id: "290"
+  languagecode: UKR
+  name: Назва
+  names: Назви
+  rem: Назва
+dictionary_59:
+  code: Table.CountPPRTypes.Code
+  id: "291"
+  languagecode: UKR
+  name: Код
+  names: Коди
+  rem: Код
+dictionary_60:
+  code: Table.CountNodes.OwnerId
+  id: "292"
+  languagecode: UKR
+  name: Власник
+  names: Власники
+  rem: Власник
+dictionary_61:
+  code: Table.Counters.CalcId
+  id: "293"
+  languagecode: UKR
+  name: Обчислювач
+  names: Обчислювачi
+  rem: Обчислювач
+  revision: "2"
+dictionary_62:
+  code: Error.InvalidMetadata
+  id: "294"
+  languagecode: UKR
+  name: "Невірні метадані в %s (%s) при %s."
+dictionary_63:
+  code: Error.NotImplemented
+  id: "295"
+  languagecode: UKR
+  name: "Feature not implemented: %s. Occurred when %s."
+dictionary_64:
+  code: Error.CannotCommit
+  id: "296"
+  languagecode: UKR
+  name: "Неможливо зберегти об'єкт: %s."
+dictionary_65:
+  code: Error.CannotDelete
+  id: "297"
+  languagecode: UKR
+  name: "Неможливо видалити об'єкт: %s."
+dictionary_66:
+  code: Error.AccessDenied
+  id: "298"
+  languagecode: UKR
+  name: "Access заборонено: %s."
+dictionary_67:
+  code: Error.AccessBlocked
+  id: "299"
+  languagecode: UKR
+  name: "Доступ заблоковано: %s."
+dictionary_68:
+  code: Error.Assert
+  id: "300"
+  languagecode: UKR
+  name: "Assert: %s."
+dictionary_69:
+  code: Common.Money
+  id: "334"
+  languagecode: UKR
+  name: "Сума, грн."
+dictionary_70:
+  code: Table.Calculations
+  id: "335"
+  languagecode: UKR
+  name: Розрахунок
+  names: Розрахунки
+dictionary_71:
+  code: Table.CalcTypes
+  id: "336"
+  languagecode: UKR
+  name: "Тип обчислень"
+  names: "Типи обчислень"
+dictionary_72:
+  code: Table.Reports
+  id: "337"
+  languagecode: UKR
+  name: Звіт
+  names: Звіти
+dictionary_73:
+  code: Table.Tasks
+  id: "338"
+  languagecode: UKR
+  name: Задача
+  names: Задачі
+dictionary_74:
+  code: Table.Places.Name
+  id: "340"
+  languagecode: UKR
+  name: Додатково
+  rem: "Додаткова адресна інформація (блок №, корпус №, тощо)"
+dictionary_75:
+  code: Table.Counters.PlaceId
+  id: "260"
+  languagecode: UKR
+  name: Приміщення
+  names: Приміщення
+  rem: "В якому приміщенні встановлений"
+dictionary_77:
+  code: Table.Counters.NodeId
+  id: "262"
+  languagecode: UKR
+  name: "Вузол обліку"
+  names: "Вузли обліку"
+  rem: "Вузол обліку"
+dictionary_78:
+  code: Table.CountData.Rem
+  id: "263"
+  languagecode: UKR
+  name: Коментар
+  names: Коментарі
+  rem: Коментар
+dictionary_79:
+  code: Table.CountData.Value
+  id: "264"
+  languagecode: UKR
+  name: Показання
+  names: Показання
+  rem: Показання
+dictionary_80:
+  code: Table.CountData.CounterId
+  id: "266"
+  languagecode: UKR
+  name: "Давач обліку"
+  names: "Давачі обліку"
+  rem: Лічильник
+dictionary_81:
+  code: Table.CountData
+  id: "267"
+  languagecode: UKR
+  name: "Показання приладу обліку"
+  names: "Показання приладів обліку"
+  rem: "Показання приладів обліку"
+dictionary_82:
+  code: Table.Prefs
+  id: "179"
+  languagecode: UKR
+  name: "Види налаштуваннь"
+  names: "Види налаштуваннь"
+  rem: "Види налаштуваннь"
+dictionary_83:
+  code: Table.Prefs.Code
+  id: "180"
+  languagecode: UKR
+  name: Код
+  rem: Код
+dictionary_84:
+  code: Table.Prefs.DataType
+  id: "181"
+  languagecode: UKR
+  name: "Тип даних"
+  rem: "Тип даних"
+dictionary_85:
+  code: Table.Prefs.Rem
+  id: "182"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_86:
+  code: Table.PrefValues
+  id: "183"
+  languagecode: UKR
+  name: Налаштування
+  names: Налаштування
+  rem: Налаштування
+dictionary_87:
+  code: Table.PrefValues.PrefId
+  id: "184"
+  languagecode: UKR
+  name: "Вид налаштування"
+  rem: "Вид налаштування"
+dictionary_88:
+  code: Table.PrefValues.UserId
+  id: "185"
+  languagecode: UKR
+  name: Користувач
+  rem: Користувач
+dictionary_89:
+  code: Table.PrefValues.SessionId
+  id: "186"
+  languagecode: UKR
+  name: Сесія
+  rem: Сесія
+dictionary_90:
+  code: Table.PrefValues.DateFrom
+  id: "187"
+  languagecode: UKR
+  name: Дата
+  rem: Дата
+dictionary_91:
+  code: Table.PrefValues.Value
+  id: "188"
+  languagecode: UKR
+  name: Значення
+  rem: Значення
+dictionary_92:
+  code: Table.TestTable
+  id: "189"
+  languagecode: UKR
+  name: "Тестова таблиця"
+  names: "Тестова таблиця"
+  rem: "Тестова таблиця"
+dictionary_93:
+  code: Table.PlaceCounters
+  id: "190"
+  languagecode: UKR
+  name: "Давач обліку"
+  names: "Давачі обліку"
+  rem: Лічильники
+dictionary_94:
+  code: Table.PlaceCounters.PlaceId
+  id: "191"
+  languagecode: UKR
+  name: Приміщення
+  rem: Приміщення
+dictionary_95:
+  code: Table.PlaceCounters.DateFrom
+  id: "192"
+  languagecode: UKR
+  name: Дата
+  rem: Дата
+dictionary_97:
+  code: Table.PlaceCounters.CounterId
+  id: "194"
+  languagecode: UKR
+  name: "Давач обліку"
+  names: "Давачі обліку"
+  rem: Лічильник
+dictionary_98:
+  code: Table.Places.Code
+  id: "339"
+  languagecode: UKR
+  name: Ідентифікатор
+  rem: "Номер квартири"
+dictionary_99:
+  code: Table.PlaceCounters.Part
+  id: "195"
+  languagecode: UKR
+  name: Частка
+  rem: "Частка показників лічильника"
+dictionary_100:
+  code: GUI.Editor.Details.HistorySection
+  id: "367"
+  languagecode: UKR
+  name: "Історія змін"
+dictionary_101:
+  code: GUI.Editor.SmartInsert.Dialog.Title
+  id: "368"
+  languagecode: UKR
+  name: "Розшинене вставлення"
+dictionary_102:
+  code: GUI.Editor.SmartInsert.Dialog.Message
+  id: "369"
+  languagecode: UKR
+  name: |
+      В БД знайдено об'єкт з таким же набором унікальних полей (%s), як у того, що вставляється. Сюда може бути приєднаний iснуючий в БД об'єкт, що зараз приєднаний до: %s
+      Оберіть необхідну дію:
+       - натисніть "Приєднати без змін" щоб приєднати об'єкт та втратити введені зміни;
+       - натисніть "Приєднати та змінити" щоб приєднати об'єкт та застосувати введені зміни;
+       - натисніть "Відмінити", якщо підстановка непотрібна.
+dictionary_103:
+  code: GUI.Editor.SmartInsert.Dialog.LoadTheirs
+  id: "370"
+  languagecode: UKR
+  name: "Приєднати без змін"
+dictionary_104:
+  code: GUI.Editor.SmartInsert.Dialog.LoadOurs
+  id: "371"
+  languagecode: UKR
+  name: "Приєднати та змінити"
+dictionary_105:
+  code: GUI.Editor.SmartInsert.ObjRefAlreadyInBuffer
+  id: "372"
+  languagecode: UKR
+  name: "Об'єкт з даним набором унікальних полей вже присутній в цьому буфері!"
+dictionary_106:
+  code: Table.ServiceLog
+  id: "215"
+  languagecode: UKR
+  name: "Журнал відключень"
+  names: "Журнал відключень"
+  rem: "Журнал відключень"
+dictionary_107:
+  code: Table.ServiceLog.Id
+  id: "216"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_108:
+  code: Table.ServiceLog.ObjectId
+  id: "217"
+  languagecode: UKR
+  name: "Вузол топології"
+  rem: "Вузол топології"
+dictionary_109:
+  code: Table.ServiceLog.DateFrom
+  id: "218"
+  languagecode: UKR
+  name: Дата
+  rem: Дата
+dictionary_111:
+  code: Table.ServiceLog.State
+  id: "220"
+  languagecode: UKR
+  name: Стан
+  rem: Стан
+dictionary_112:
+  code: Table.ServiceLog.Rem
+  id: "221"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_113:
+  code: GUI.Editor.Details.TagsSection
+  id: "222"
+  languagecode: UKR
+  name: "Допоміжні ознаки"
+dictionary_114:
+  code: Table.ObjectProperties.DateFrom
+  id: "223"
+  languagecode: UKR
+  name: Дата
+dictionary_115:
+  code: Table.ObjectProperties.PropertyId
+  id: "224"
+  languagecode: UKR
+  name: Ознака
+dictionary_116:
+  code: Table.ObjectProperties.Value
+  id: "225"
+  languagecode: UKR
+  name: Значення
+dictionary_117:
+  code: Table.ElevatorNodes.CapacityHotWater
+  id: "226"
+  languagecode: UKR
+  name: "Навантаження г.в."
+  rem: "Приєднане навантаження на гарячу воду"
+dictionary_118:
+  code: Table.ElevatorNodes.CapacityHeat
+  id: "227"
+  languagecode: UKR
+  name: "Навантаження опалення"
+  rem: "Приєднане навантаження на опалення"
+dictionary_119:
+  code: GUI.Editor.BulkEdit.Disabled.Message
+  id: "228"
+  languagecode: UKR
+  name: "Масове редагування відключене. Використовуйте меню Сервіс->Налагодження->Масове редагування щоб включити цю команду."
+dictionary_120:
+  code: Table.Places.rem2
+  id: "302"
+  languagecode: UKR
+  name: "Коментар 2"
+  rem: "Коментар 2"
+dictionary_121:
+  code: Common.DateFrom
+  id: "303"
+  languagecode: UKR
+  name: "Дата з"
+dictionary_122:
+  code: Common.DateFrom
+  id: "304"
+  languagecode: RUS
+  name: "Дата c"
+dictionary_123:
+  code: Common.DateTo
+  id: "305"
+  languagecode: UKR
+  name: "Дата по"
+dictionary_124:
+  code: Common.DateTo
+  id: "306"
+  languagecode: RUS
+  name: "Дата по"
+dictionary_125:
+  abbr: буд.
+  code: Common.HouseId
+  id: "307"
+  languagecode: UKR
+  name: Будівля
+  names: Будівлі
+  rem: Будівля
+dictionary_126:
+  code: Common.HouseId
+  id: "308"
+  languagecode: RUS
+  name: Здание
+  names: Здания
+  rem: Здание
+dictionary_127:
+  code: Error.DataIntegrity
+  id: "309"
+  languagecode: RUS
+  name: "Нарушение целостности данных: %s."
+dictionary_128:
+  code: Error.DataIntegrity
+  id: "310"
+  languagecode: UKR
+  name: "Порушення цілістності даних: %s."
+dictionary_129:
+  abbr: ТПГВ
+  code: Table.TPGV
+  id: "311"
+  languagecode: UKR
+  name: ТПГВ
+  names: ТПГВ
+  rem: "Точка підключення гарячого водопостачання"
+dictionary_130:
+  abbr: ТПГВ
+  code: Table.TPGV
+  id: "312"
+  languagecode: RUS
+  name: ТПГВ
+  rem: "Точка подключения гарячего водоснабжения"
+dictionary_131:
+  code: Table.TPGV.ParentId
+  id: "313"
+  languagecode: RUS
+  name: Присоединение
+  rem: Присоединение
+dictionary_132:
+  code: Table.TPGV.Block
+  id: "314"
+  languagecode: UKR
+  name: Блок
+  rem: "Номер блоку, де встановлений елеваторний вузол"
+dictionary_133:
+  code: Table.TPGV.CapacityHotWater
+  id: "315"
+  languagecode: UKR
+  name: "Навантаження г.в."
+  rem: "Приєднане навантаження на гарячу воду"
+dictionary_134:
+  code: Table.TPGV.Corpus
+  id: "316"
+  languagecode: UKR
+  name: Корпус
+  rem: "Номер корпуса, де встановлений елеваторний вузол"
+dictionary_135:
+  code: Table.TPGV.FlatsRange
+  id: "317"
+  languagecode: UKR
+  name: "Діапазон квартир"
+  rem: "Діапазон квартир, які підключені до елеваторного вузла."
+dictionary_136:
+  code: Table.TPGV.HouseId
+  id: "318"
+  languagecode: UKR
+  name: Будівля
+  rem: "Будівля, до якої належить елеваторний вузол"
+dictionary_137:
+  code: Table.TPGV.ParentId
+  id: "319"
+  languagecode: UKR
+  name: Приєднання
+  rem: "Приєднання до об'єкту верхнього рівня (ТРП, Котельні)."
+dictionary_138:
+  code: Table.Counters.PPRTypeId2
+  id: "320"
+  languagecode: UKR
+  name: "Тип ППР 2"
+  rem: "Тип ППР"
+dictionary_139:
+  code: Table.Counters.PPRNum2
+  id: "321"
+  languagecode: UKR
+  name: "з/номер ППР 2"
+  rem: "заводський номер ППР"
+dictionary_140:
+  code: Table.Counters.TSPTypeId2
+  id: "322"
+  languagecode: UKR
+  name: "Тип ТСП 2"
+  rem: "Тип ТСП"
+dictionary_141:
+  code: Table.Counters.TSPNum2
+  id: "323"
+  languagecode: UKR
+  name: "з/номер ТСП 2"
+  rem: "заводський номер ТСП"
+dictionary_142:
+  code: Error.EmptyReport
+  id: "324"
+  languagecode: UKR
+  name: "Немає даних для побудови звіту!"
+dictionary_143:
+  code: Hierarchy.Reports.All
+  id: "326"
+  languagecode: UKR
+  name: Всі
+dictionary_144:
+  code: Hierarchy.Reports.Calculational
+  id: "327"
+  languagecode: UKR
+  name: "За розрахунками"
+dictionary_145:
+  code: Hierarchy.Reports.Non-Calculational
+  id: "328"
+  languagecode: UKR
+  name: Інші
+dictionary_146:
+  code: TableRows.Reports.main_invoice
+  id: "329"
+  languagecode: UKR
+  name: "Рахунок для юр. осіб"
+dictionary_147:
+  code: Common.PayerName
+  id: "330"
+  languagecode: UKR
+  name: Платник
+dictionary_148:
+  code: Common.Days
+  id: "331"
+  languagecode: UKR
+  name: Дні
+dictionary_149:
+  code: Common.Value
+  id: "332"
+  languagecode: UKR
+  name: "Об'єм"
+dictionary_150:
+  code: Common.Tariff
+  id: "333"
+  languagecode: UKR
+  name: Тариф
+dictionary_151:
+  code: TableRows.Hierarchies.Consumers
+  id: "238"
+  languagecode: UKR
+  name: Платники
+  rem: Платники
+dictionary_152:
+  code: GUI.NvgView.Consumer.Consumers
+  id: "239"
+  languagecode: UKR
+  name: Платники
+  rem: Платники
+dictionary_153:
+  code: Hierarchy.Consumers.Consumers.HouseOwners
+  id: "242"
+  languagecode: UKR
+  name: "Будівлі на балансі"
+dictionary_154:
+  code: Table.HouseOwners.HouseId
+  id: "243"
+  languagecode: UKR
+  name: Будівля
+dictionary_155:
+  abbr: ППР
+  code: Table.CountPPRTypes
+  id: "244"
+  languagecode: UKR
+  name: "Тип ППР"
+  names: "Типи ППР"
+  rem: "Типи ППР"
+dictionary_156:
+  code: TableRows.Hierarchies.Counters
+  id: "245"
+  languagecode: UKR
+  name: "Засоби обліку"
+  names: "Засоби обліку"
+  rem: "Засоби обліку"
+dictionary_157:
+  code: Common.Rem
+  id: "246"
+  languagecode: RUS
+  name: Комментарий
+  names: Комментарии
+  rem: Комментарий
+dictionary_158:
+  code: Common.Name
+  id: "247"
+  languagecode: RUS
+  name: Название
+  names: Названия
+  rem: Название
+dictionary_159:
+  code: Common.Code
+  id: "248"
+  languagecode: RUS
+  name: Обчислювач
+  names: Коды
+  rem: "Вузол обліку"
+dictionary_160:
+  code: Common.Rem
+  id: "249"
+  languagecode: UKR
+  name: Коментар
+  names: Коментарі
+  rem: Коментар
+dictionary_161:
+  code: Common.Name
+  id: "250"
+  languagecode: UKR
+  name: Назва
+  names: Назви
+  rem: Назва
+dictionary_162:
+  code: Common.Code
+  id: "251"
+  languagecode: UKR
+  name: Код
+  names: Коди
+  rem: Код
+dictionary_163:
+  code: Table.Counters.CheckDate
+  id: "252"
+  languagecode: UKR
+  name: "Дата перевірки"
+  names: "Дати перевірки"
+  rem: "Дата перевірки"
+dictionary_164:
+  code: Table.Counters.DelDate
+  id: "253"
+  languagecode: UKR
+  name: "Дата видалення"
+  names: "Дати видалення"
+  rem: "Дата видалення"
+dictionary_165:
+  code: Table.Counters.UnRegDate
+  id: "254"
+  languagecode: UKR
+  name: "Знятий з ком. обліку"
+  rem: "Знятий з комерційного обліку"
+dictionary_166:
+  code: Table.Counters.RegDate
+  id: "255"
+  languagecode: UKR
+  name: "Пост. на ком. облік"
+  rem: "Поставлений на комерційний облік"
+dictionary_167:
+  code: Table.Counters.TSPNum
+  id: "256"
+  languagecode: UKR
+  name: "з/номер ТСП"
+  names: "з/номери ТСП"
+  rem: "заводський номер ТСП"
+dictionary_168:
+  code: Table.Counters.TSPTypeId
+  id: "257"
+  languagecode: UKR
+  name: "Тип ТСП"
+  names: "Типи ТСП"
+  rem: "Тип ТСП"
+dictionary_169:
+  code: Table.Counters.PPRNum
+  id: "258"
+  languagecode: UKR
+  name: "з/номер ППР"
+  names: "з/номери ППР"
+  rem: "заводський номер ППР"
+dictionary_170:
+  code: Table.Counters.PPRTypeId
+  id: "259"
+  languagecode: UKR
+  name: "Тип ППР"
+  names: "Типи ППР"
+  rem: "Тип ППР"
+dictionary_171:
+  code: GUI.Editor.BulkEdit.Error.Button.Stop
+  id: "127"
+  languagecode: UKR
+  name: Зупинити
+dictionary_172:
+  code: GUI.Editor.Delete.ConfirmDialog.Title
+  id: "128"
+  languagecode: UKR
+  name: Видалити
+dictionary_173:
+  code: GUI.Editor.Delete.ConfirmDialog.Message
+  id: "129"
+  languagecode: UKR
+  name: "Буде видалено %s %s"
+dictionary_174:
+  code: GUI.Application.Title
+  id: "130"
+  languagecode: UKR
+  name: Теплоград
+dictionary_175:
+  abbr: кот.
+  code: Table.Boilers
+  id: "131"
+  languagecode: UKR
+  name: Котельня
+  names: Котельні
+  rem: Котельні
+dictionary_176:
+  code: Table.Boilers.Code
+  id: "132"
+  languagecode: UKR
+  name: Код
+  rem: "Код котельні"
+dictionary_177:
+  code: Table.Boilers.Name
+  id: "133"
+  languagecode: UKR
+  name: Назва
+  rem: "Назва котельні"
+dictionary_178:
+  code: Table.Boilers.DepartmentId
+  id: "134"
+  languagecode: UKR
+  name: "Тепловий район"
+  rem: "Тепловий район"
+dictionary_179:
+  code: Table.Boilers.Rem
+  id: "135"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_180:
+  abbr: трп
+  code: Table.TRP
+  id: "136"
+  languagecode: UKR
+  name: ТРП
+  names: ТРП
+  rem: "Теплорозподілювальні вузли"
+dictionary_181:
+  code: Table.TRP.Code
+  id: "137"
+  languagecode: UKR
+  name: Код
+  rem: "Код ТРП"
+dictionary_182:
+  code: Table.TRP.Name
+  id: "138"
+  languagecode: UKR
+  name: Назва
+  rem: "Назва ТРП"
+dictionary_183:
+  code: Table.TRP.Rem
+  id: "139"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_184:
+  abbr: ЕВ
+  code: Table.ElevatorNodes
+  id: "140"
+  languagecode: UKR
+  name: "Елеваторні вузли"
+  names: "Елеваторні вузли"
+  rem: "Елеваторні вузли"
+dictionary_185:
+  code: Table.ElevatorNodes.Code
+  id: "141"
+  languagecode: UKR
+  name: Код
+  rem: "Код ЕВ"
+dictionary_186:
+  code: Table.ElevatorNodes.Name
+  id: "142"
+  languagecode: UKR
+  name: Назва
+  rem: "Назва ЕВ"
+dictionary_187:
+  code: Table.ElevatorNodes.Rem
+  id: "143"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_188:
+  code: Messages.Error
+  id: "373"
+  languagecode: UKR
+  name: Помилка
+dictionary_189:
+  code: TableRows.Hierarchies.AddrByStreets
+  id: "144"
+  languagecode: UKR
+  name: Вулиці
+dictionary_190:
+  code: Table.ElevatorNodes.ParentId
+  id: "145"
+  languagecode: UKR
+  name: Прив'язка
+  rem: "Прив'язка до об'єкту верхнього рівня (ТРП, Котельні)."
+dictionary_191:
+  code: Table.TRP.ParentId
+  id: "146"
+  languagecode: UKR
+  name: Прив'язка
+  rem: "Прив'язка до об'єкту верхнього рівня (ТРП, Котельні)."
+dictionary_192:
+  code: Table.ElevatorNodes.HouseId
+  id: "147"
+  languagecode: UKR
+  name: Будівля
+  rem: "Будівля, до якої належить елеваторний вузол"
+dictionary_193:
+  code: Table.ElevatorNodes.FlatsRange
+  id: "148"
+  languagecode: UKR
+  name: "Діапазон квартир"
+  rem: "Діапазон квартир, які підключені до елеваторного вузла."
+dictionary_194:
+  code: Table.Counters
+  id: "149"
+  languagecode: UKR
+  name: "Прилад обліку"
+  names: "Прилади обліку"
+  rem: Лічильники
+dictionary_195:
+  code: Table.Counters.Id
+  id: "150"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_196:
+  code: Table.Counters.Code
+  id: "151"
+  languagecode: UKR
+  name: Код
+  rem: Код
+dictionary_197:
+  code: Table.Counters.Name
+  id: "152"
+  languagecode: UKR
+  name: Назва
+  rem: Назва
+dictionary_198:
+  code: Table.Counters.ObjectId
+  id: "153"
+  languagecode: UKR
+  name: "Вузол топології"
+  names: "Вузли топології"
+  rem: "На якому вузлі топології встановлений"
+dictionary_199:
+  code: Table.Counters.Rem
+  id: "154"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_200:
+  code: Table.Persons
+  id: "155"
+  languagecode: UKR
+  name: "Пільговик"
+  names: "Пільговики"
+  rem: "Фіз. особи"
+dictionary_201:
+  code: Table.Persons.Rem
+  id: "166"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_202:
+  code: Table.Consumers.Code
+  id: "168"
+  languagecode: UKR
+  name: Код
+  rem: Код
+dictionary_203:
+  code: Table.Consumers.Nam
+  id: "169"
+  languagecode: UKR
+  name: "Назва стисла"
+  rem: "Назва стисла"
+dictionary_204:
+  code: Table.Consumers.Name
+  id: "170"
+  languagecode: UKR
+  name: "Назва повна"
+  rem: "Назва повна"
+dictionary_205:
+  code: Table.Consumers.Rem
+  id: "171"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_206:
+  code: Table.Consumers.TaxCode
+  id: "172"
+  languagecode: UKR
+  name: "ЄДРПОУ"
+  rem: "ЄДРПОУ (ОКПО)"
+dictionary_207:
+  code: Table.Consumers.NdsCode
+  id: "173"
+  languagecode: UKR
+  name: "Код платника ПДВ"
+  rem: "Код платника ПДВ"
+dictionary_208:
+  code: Table.Consumers.NdsSvidet
+  id: "174"
+  languagecode: UKR
+  name: "Свідоцтво ПДВ"
+  rem: "Свідоцтво ПДВ"
+dictionary_209:
+  code: Table.Consumers.Phone
+  id: "175"
+  languagecode: UKR
+  name: Телефон
+  rem: Телефон
+dictionary_210:
+  code: Table.Consumers.Address
+  id: "176"
+  languagecode: UKR
+  name: Адреса
+  rem: Адреса
+dictionary_211:
+  code: Table.Consumers.Email
+  id: "177"
+  languagecode: UKR
+  name: Email
+  rem: Email
+dictionary_212:
+  code: Table.Consumers.TaxMode
+  id: "178"
+  languagecode: UKR
+  name: "Tax Mode"
+  rem: "Tax Mode"
+dictionary_213:
+  code: Error.UniqueConstraint
+  id: "301"
+  languagecode: UKR
+  name: "Порушено умови унікальності (%s). Об'єкт, що дублюється: Id=%s, Code=%s, InsDate=%s"
+dictionary_214:
+  code: Table.Services
+  id: "72"
+  languagecode: UKR
+  name: "Послуга"
+  names: "Послуги"
+  rem: "Види послуг"
+dictionary_215:
+  code: Table.Services.Code
+  id: "73"
+  languagecode: UKR
+  name: "Код послуги"
+  rem: "Код послуги"
+dictionary_216:
+  code: Table.Services.Name
+  id: "74"
+  languagecode: UKR
+  name: "Назва послуги"
+  rem: "Назва послуги"
+dictionary_217:
+  code: Table.Services.Value1
+  id: "75"
+  languagecode: UKR
+  name: "Одиниця виміру 1"
+  rem: "Одиниця виміру 1"
+dictionary_218:
+  code: Table.Services.Value2
+  id: "76"
+  languagecode: UKR
+  name: "Одиниця виміру 2"
+  rem: "Одиниця виміру 2"
+dictionary_219:
+  code: Table.Services.Value3
+  id: "77"
+  languagecode: UKR
+  name: "Одиниця виміру 3"
+  rem: "Одиниця виміру 3"
+dictionary_220:
+  code: Table.Services.Rem
+  id: "78"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_221:
+  code: TableRows.Hierarchies.AddrByDepartments
+  id: "79"
+  languagecode: UKR
+  name: "Теплові райони"
+dictionary_222:
+  code: TableRows.Hierarchies.System
+  id: "81"
+  languagecode: UKR
+  name: "Системні об'єкти"
+  rem: "Системні об'єкти"
+dictionary_223:
+  code: Menu.File
+  id: "83"
+  languagecode: UKR
+  name: "&Файл"
+  rem: "Меню Файл"
+dictionary_224:
+  code: Menu.Edit
+  id: "84"
+  languagecode: UKR
+  name: "&Правка"
+  rem: "Меню Правка"
+dictionary_225:
+  code: Menu.Navigation
+  id: "85"
+  languagecode: UKR
+  name: "&Навігація"
+  rem: "Меню Навігація"
+dictionary_226:
+  code: Menu.Window
+  id: "86"
+  languagecode: UKR
+  name: "&Вікно"
+  rem: "Меню Вікно"
+dictionary_227:
+  code: Menu.Help
+  id: "87"
+  languagecode: UKR
+  name: "&Довідка"
+  rem: "Меню Довідка"
+dictionary_228:
+  code: GUI.NvgView.Name
+  id: "90"
+  languagecode: UKR
+  name: Навігатор
+  rem: Навігатор
+dictionary_229:
+  code: GUI.NvgView.DND.Title
+  id: "91"
+  languagecode: UKR
+  name: Перетаскування
+dictionary_230:
+  code: GUI.NvgView.DND.Message
+  id: "92"
+  languagecode: UKR
+  name: "Буде переміщено %d об'єктів"
+dictionary_231:
+  code: GUI.Action.coreforms.views.navigation.open
+  id: "93"
+  languagecode: UKR
+  name: Навігатор
+  rem: Навігатор
+dictionary_232:
+  code: GUI.Editor.NewRow
+  id: "94"
+  languagecode: UKR
+  name: Новий
+dictionary_233:
+  code: GUI.Editor.Filter.FormHeaderText
+  id: "95"
+  languagecode: UKR
+  name: Фільтр
+dictionary_234:
+  code: GUI.Editor.Filter.Title
+  id: "96"
+  languagecode: UKR
+  name: Фільтр
+dictionary_235:
+  code: GUI.Editor.Filter.Description
+  id: "97"
+  languagecode: UKR
+  name: "Оберіть поля форми та умови для фільтрування даних"
+dictionary_236:
+  code: Common.FirstName
+  id: "156"
+  languagecode: UKR
+  name: Ім'я
+  rem: Ім'я
+dictionary_237:
+  code: TableRows.Hierarchies.Menu
+  id: "80"
+  languagecode: UKR
+  name: Довідники
+  rem: "Дерево меню"
+dictionary_238:
+  code: GUI.NvgView.Menu.Sale
+  id: "88"
+  languagecode: UKR
+  name: Збут
+dictionary_239:
+  code: GUI.NvgView.Menu.System
+  id: "89"
+  languagecode: UKR
+  name: Системні
+dictionary_240:
+  code: TableRows.Hierarchies.Topology
+  id: "82"
+  languagecode: UKR
+  name: "Теплова мережа"
+  rem: "Теплова мережа"
+dictionary_241:
+  code: GUI.Editor.Filter.Columns.Field
+  id: "98"
+  languagecode: UKR
+  name: Поле
+dictionary_242:
+  code: GUI.Editor.Filter.Columns.Condition
+  id: "99"
+  languagecode: UKR
+  name: Умова
+dictionary_243:
+  code: GUI.Editor.Filter.Columns.Value
+  id: "100"
+  languagecode: UKR
+  name: Значення
+dictionary_244:
+  code: GUI.Editor.Filter.ClearButton
+  id: "101"
+  languagecode: UKR
+  name: Очистити
+dictionary_245:
+  abbr: "null"
+  code: GUI.Editor.Filter.Condition.ISNULL
+  id: "102"
+  languagecode: UKR
+  name: пусте
+dictionary_246:
+  abbr: "not null"
+  code: GUI.Editor.Filter.Condition.NOT_ISNULL
+  id: "103"
+  languagecode: UKR
+  name: "не пусте"
+dictionary_247:
+  abbr: "="
+  code: GUI.Editor.Filter.Condition.EQUAL
+  id: "104"
+  languagecode: UKR
+  name: дорівнює
+dictionary_248:
+  abbr: "!="
+  code: GUI.Editor.Filter.Condition.NOT_EQUAL
+  id: "105"
+  languagecode: UKR
+  name: "не дорівнює"
+dictionary_249:
+  abbr: ">"
+  code: GUI.Editor.Filter.Condition.GT
+  id: "106"
+  languagecode: UKR
+  name: більше
+dictionary_250:
+  abbr: ">="
+  code: GUI.Editor.Filter.Condition.GTE
+  id: "107"
+  languagecode: UKR
+  name: "не менше"
+dictionary_251:
+  abbr: <
+  code: GUI.Editor.Filter.Condition.LT
+  id: "108"
+  languagecode: UKR
+  name: менше
+dictionary_252:
+  abbr: <=
+  code: GUI.Editor.Filter.Condition.LTE
+  id: "109"
+  languagecode: UKR
+  name: "не більше"
+dictionary_253:
+  abbr: like
+  code: GUI.Editor.Filter.Condition.LIKE
+  id: "110"
+  languagecode: UKR
+  name: подібно
+dictionary_254:
+  abbr: "not like"
+  code: GUI.Editor.Filter.Condition.NOT_LIKE
+  id: "111"
+  languagecode: UKR
+  name: "не подібно"
+dictionary_255:
+  abbr: contains
+  code: GUI.Editor.Filter.Condition.CONTAINS
+  id: "112"
+  languagecode: UKR
+  name: містить
+dictionary_256:
+  abbr: "not contains"
+  code: GUI.Editor.Filter.Condition.NOT_CONTAINS
+  id: "113"
+  languagecode: UKR
+  name: "не містить"
+dictionary_257:
+  code: GUI.Editor.BulkEdit.Title
+  id: "114"
+  languagecode: UKR
+  name: "Присвоєння по стовпцю"
+dictionary_258:
+  code: GUI.Editor.BulkEdit.Description
+  id: "115"
+  languagecode: UKR
+  name: "Оберіть совпець і його значення"
+dictionary_259:
+  code: GUI.Editor.BulkEdit.FieldLabel
+  id: "116"
+  languagecode: UKR
+  name: Стовпець
+dictionary_260:
+  code: GUI.Editor.BulkEdit.ValueLabel
+  id: "117"
+  languagecode: UKR
+  name: Значення
+dictionary_261:
+  code: GUI.Editor.BulkEdit.Confirm.Title
+  id: "118"
+  languagecode: UKR
+  name: "Присвоєння по стовпцю"
+dictionary_262:
+  code: GUI.Editor.BulkEdit.Confirm.Message
+  id: "119"
+  languagecode: UKR
+  name: "Увага: для всіх рядків таблиці стовпцю %s буде присвоєне значення %s"
+dictionary_263:
+  code: GUI.Editor.BulkEdit.Resault.Title
+  id: "120"
+  languagecode: UKR
+  name: "Присвоєння по стовпцю"
+dictionary_264:
+  code: GUI.Editor.BulkEdit.Resault.SuccessMessage
+  id: "121"
+  languagecode: UKR
+  name: "Завершено успішно"
+dictionary_265:
+  code: GUI.Editor.BulkEdit.Resault.ErrorMessage
+  id: "122"
+  languagecode: UKR
+  name: "Завершено з помилками"
+dictionary_266:
+  code: GUI.Editor.BulkEdit.Error.Title
+  id: "123"
+  languagecode: UKR
+  name: "Присвоєння по стовпцю"
+dictionary_267:
+  code: GUI.Editor.BulkEdit.Error.Message
+  id: "124"
+  languagecode: UKR
+  name: "Помилка при збереженні в БД %s %s"
+dictionary_268:
+  code: GUI.Editor.BulkEdit.Error.Button.Skip
+  id: "125"
+  languagecode: UKR
+  name: Ігнорувати
+dictionary_269:
+  code: GUI.Editor.BulkEdit.Error.Button.SkipAll
+  id: "126"
+  languagecode: UKR
+  name: "Ігнорувати все"
+dictionary_270:
+  code: Table.StreetTypes.Id
+  id: "15"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_271:
+  code: Table.StreetTypes.Code
+  id: "16"
+  languagecode: UKR
+  name: "Тип вулиці скорочено"
+  rem: "Тип вулиці скорочено"
+dictionary_272:
+  code: Table.StreetTypes.Name
+  id: "17"
+  languagecode: UKR
+  name: "Тип вулиці"
+  rem: "Тип вулиці скорочено"
+dictionary_273:
+  code: Table.Streets
+  id: "18"
+  languagecode: UKR
+  name: Вулиця
+  names: Вулиці
+  rem: Вулиці
+dictionary_274:
+  code: Table.Streets.Id
+  id: "19"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_275:
+  code: Table.Streets.CityId
+  id: "20"
+  languagecode: UKR
+  name: Місто
+  rem: Місто
+dictionary_276:
+  code: Table.Streets.StreetTypeId
+  id: "21"
+  languagecode: UKR
+  name: "Тип вулиці"
+  rem: "Тип вулиці"
+dictionary_277:
+  code: Table.Streets.Code
+  id: "22"
+  languagecode: UKR
+  name: "Код вулиці"
+  rem: "Код вулиці"
+dictionary_278:
+  code: Table.Streets.Name
+  id: "23"
+  languagecode: UKR
+  name: "Назва вулиці"
+  rem: "Назва вулиці"
+dictionary_279:
+  code: Table.Streets.Spec
+  id: "24"
+  languagecode: UKR
+  name: Ознака
+  rem: "Ознака - якщо вулиця з однаковою назвою присутня в кылькох районах"
+dictionary_280:
+  code: Table.Houses
+  id: "25"
+  languagecode: UKR
+  name: Будівля
+  names: Будівлі
+  rem: Будівлі
+dictionary_281:
+  code: Table.Houses.Id
+  id: "26"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_282:
+  code: Table.Houses.StreetId
+  id: "27"
+  languagecode: UKR
+  name: Вулиця
+  rem: Вулиця
+dictionary_283:
+  code: Table.Houses.RegionId
+  id: "28"
+  languagecode: UKR
+  name: "Адмін. район"
+  rem: "Адмін. район"
+dictionary_284:
+  code: Table.Houses.DepartmentId
+  id: "29"
+  languagecode: UKR
+  name: "Тепловий район"
+  rem: "Тепловий район"
+dictionary_285:
+  code: Table.Houses.Num
+  id: "30"
+  languagecode: UKR
+  name: Номер
+  rem: Номер
+dictionary_286:
+  code: Table.Houses.SubNum
+  id: "31"
+  languagecode: UKR
+  name: "Дод. Ід"
+  rem: "Дод. Ід"
+dictionary_287:
+  code: Table.Houses.EntranceCount
+  id: "32"
+  languagecode: UKR
+  name: "Кіл-сть під'їздів"
+  rem: "Кількість під'їздів"
+dictionary_288:
+  code: Table.Places
+  id: "33"
+  languagecode: UKR
+  name: Приміщення
+  names: Приміщення
+  rem: Приміщення
+dictionary_289:
+  code: Table.Places.Id
+  id: "34"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_290:
+  code: Table.Places.HouseId
+  id: "35"
+  languagecode: UKR
+  name: Будівля
+  rem: Будівля
+dictionary_291:
+  code: Table.Places.FrameType
+  id: "36"
+  languagecode: UKR
+  name: "Тип корпусу"
+  rem: "Тип корпусу"
+dictionary_292:
+  code: Table.Places.FrameNum
+  id: "37"
+  languagecode: UKR
+  name: Номер
+  rem: Номер
+dictionary_293:
+  code: Table.Places.Num
+  id: "38"
+  languagecode: UKR
+  name: "Номер приміщення"
+  rem: "Номер приміщення"
+dictionary_294:
+  code: Table.Places.Rem
+  id: "40"
+  languagecode: UKR
+  name: Споживач
+  rem: Коментар
+dictionary_295:
+  code: Table.ObjectCapacities
+  id: "41"
+  languagecode: UKR
+  name: Навантаження
+  names: Навантаження
+  rem: Навантаження
+dictionary_296:
+  code: Table.ObjectCapacities.Id
+  id: "42"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_297:
+  code: Table.ObjectCapacities.PlaceId
+  id: "43"
+  languagecode: UKR
+  name: Приміщення
+  rem: Приміщення
+dictionary_298:
+  code: Table.ObjectCapacities.DateFrom
+  id: "44"
+  languagecode: UKR
+  name: Дата
+  rem: Дата
+dictionary_303:
+  code: Table.Users
+  id: "49"
+  languagecode: UKR
+  name: Користувач
+  names: Користувачі
+  rem: Користувачі
+dictionary_304:
+  code: Table.Users.Id
+  id: "50"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_305:
+  code: Table.Users.Name
+  id: "51"
+  languagecode: UKR
+  name: Логін
+  rem: Логін
+dictionary_306:
+  code: Table.Languages
+  id: "52"
+  languagecode: UKR
+  name: Мова
+  names: Мови
+  rem: Мови
+dictionary_307:
+  code: Table.Languages.Code
+  id: "53"
+  languagecode: UKR
+  name: "Код мови"
+  rem: "Код мови"
+dictionary_308:
+  code: Table.Languages.Name
+  id: "54"
+  languagecode: UKR
+  name: "Назва мови"
+  rem: "Назва мови"
+dictionary_309:
+  code: Table.Dictionary
+  id: "55"
+  languagecode: UKR
+  name: Словник
+  names: Словники
+  rem: Словники
+dictionary_310:
+  code: Table.Dictionary.Id
+  id: "56"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_311:
+  code: Table.Dictionary.LanguageCode
+  id: "57"
+  languagecode: UKR
+  name: "Код мови"
+  rem: "Код мови"
+dictionary_312:
+  code: Table.Dictionary.Code
+  id: "58"
+  languagecode: UKR
+  name: Лексема
+  rem: Лексема
+dictionary_313:
+  code: Table.Dictionary.Name
+  id: "59"
+  languagecode: UKR
+  name: Однина
+  rem: Однина
+dictionary_314:
+  code: Table.Dictionary.Names
+  id: "60"
+  languagecode: UKR
+  name: Множина
+  rem: Множина
+dictionary_315:
+  code: Table.Dictionary.Abbr
+  id: "61"
+  languagecode: UKR
+  name: Абревіатура
+  rem: Абревіатура
+dictionary_316:
+  code: Table.Dictionary.Rem
+  id: "62"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_317:
+  code: Table.Tariffs
+  id: "63"
+  languagecode: UKR
+  name: "Вид тарифу"
+  names: "Види тарифів"
+  rem: "Види тарифів"
+dictionary_318:
+  code: Table.Tariffs.DateFrom
+  id: "64"
+  languagecode: UKR
+  name: Дата
+  rem: Дата
+dictionary_320:
+  code: Table.Tariffs.Code
+  id: "66"
+  languagecode: UKR
+  name: "Код тарифу"
+  rem: "Код тарифу"
+dictionary_321:
+  code: Table.Tariffs.Tag
+  id: "67"
+  languagecode: UKR
+  name: Ознака
+  rem: Ознака
+dictionary_322:
+  code: Common.Value1
+  id: "68"
+  languagecode: UKR
+  name: М.кв./М.куб.
+  rem: М.кв./М.куб.
+dictionary_323:
+  code: Common.Value2
+  id: "69"
+  languagecode: UKR
+  name: Гкал
+  rem: Гкал
+dictionary_324:
+  code: Common.Value3
+  id: "70"
+  languagecode: UKR
+  name: Чол.
+  rem: Чол.
+dictionary_325:
+  code: Table.Tariffs.Rem
+  id: "71"
+  languagecode: UKR
+  name: Коментар
+  rem: Коментар
+dictionary_326:
+  code: Table.Houses.FloorCount
+  id: "378"
+  languagecode: UKR
+  name: "Кіл-сть поверхів"
+  rem: "Кількість поверхів"
+dictionary_327:
+  code: Table.Houses.BuildYear
+  id: "379"
+  languagecode: UKR
+  name: "Рік забудови"
+  rem: "Рік забудови"
+dictionary_328:
+  code: Table.Houses.Volume
+  id: "380"
+  languagecode: UKR
+  name: "Об'єм"
+  rem: "Об'єм споруди, куб.м"
+dictionary_329:
+  code: Table.Houses.Spec
+  id: "381"
+  languagecode: UKR
+  name: Хар-ка
+  rem: "Характеристика (панельний,кирпичний та ін.)"
+dictionary_330:
+  code: Table.Houses.LivingArea
+  id: "382"
+  languagecode: UKR
+  name: "S житлова"
+  rem: "Житлова площа, кв.м"
+dictionary_331:
+  code: Table.Houses.HeatingArea
+  id: "383"
+  languagecode: UKR
+  name: "S Опал."
+  rem: "Опалювальна (корисна) площа, кв.м"
+dictionary_332:
+  code: Table.Houses.TotalPlaceArea
+  id: "384"
+  languagecode: UKR
+  name: "S Заг. площа кв."
+  rem: "Загальна площа квартир, кв.м"
+dictionary_333:
+  code: Table.Houses.BasementArea
+  id: "385"
+  languagecode: UKR
+  name: "S підвалу"
+  rem: "Площа підвалу, кв.м"
+dictionary_334:
+  code: Table.Houses.GarbageArea
+  id: "386"
+  languagecode: UKR
+  name: "S сміттєкамери"
+  rem: "Площа сміттєкамери, кв.м"
+dictionary_335:
+  code: Table.Entities
+  id: "1"
+  languagecode: UKR
+  name: Довідник
+  names: Довідники
+  rem: Довідники
+dictionary_336:
+  code: Table.Cities
+  id: "2"
+  languagecode: UKR
+  name: Місто
+  names: Міста
+  rem: Міста
+dictionary_337:
+  code: Table.Cities.Id
+  id: "3"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_338:
+  code: Table.Cities.Name
+  id: "4"
+  languagecode: UKR
+  name: "Назва міста"
+  rem: "Назва міста"
+dictionary_339:
+  code: Table.Cities.Zip
+  id: "5"
+  languagecode: UKR
+  name: Індекс
+  rem: Індекс
+dictionary_340:
+  code: Table.Regions
+  id: "6"
+  languagecode: UKR
+  name: "Адміністративний район"
+  names: "Адміністративні райони"
+  rem: "Адміністративні райони"
+dictionary_341:
+  code: Table.Regions.Id
+  id: "7"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_342:
+  code: Table.Regions.Code
+  id: "8"
+  languagecode: UKR
+  name: "Код району"
+  rem: "Код району"
+dictionary_343:
+  code: Table.Regions.Name
+  id: "9"
+  languagecode: UKR
+  name: "Назва району"
+  rem: "Назва району"
+dictionary_344:
+  code: Table.Departments
+  id: "10"
+  languagecode: UKR
+  name: "Тепловий район"
+  names: "Теплові райони"
+  rem: "Теплові райони"
+dictionary_345:
+  code: Table.Departments.Id
+  id: "11"
+  languagecode: UKR
+  name: Ід
+  rem: Ід
+dictionary_346:
+  code: Table.Departments.Code
+  id: "12"
+  languagecode: UKR
+  name: "Код району"
+  rem: "Код району"
+dictionary_347:
+  code: Table.Departments.Name
+  id: "13"
+  languagecode: UKR
+  name: "Назва району"
+  rem: "Назва району"
+dictionary_348:
+  code: Table.StreetTypes
+  id: "14"
+  languagecode: UKR
+  name: "Тип вулиці"
+  names: "Типи вулиць"
+  rem: "Типи вулиць"
+dictionary_349:
+  code: Table.Consumers
+  id: "167"
+  languagecode: UKR
+  name: Платник
+  names: Платники
+  rem: Платники
+dictionary_350:
+  code: Table.Houses.AtticArea
+  id: "387"
+  languagecode: UKR
+  name: "S горища"
+  rem: "Площа горища, технічного поверху, кв.м"
+dictionary_351:
+  code: Table.Houses.FootpaceArea
+  id: "388"
+  languagecode: UKR
+  name: "S сх. кліт."
+  rem: "Площа сходових кліток, кв.м"
+dictionary_352:
+  code: Table.Houses.NAreaExCounters
+  id: "389"
+  languagecode: UKR
+  name: "S нас. без ЗО"
+  rem: "Площа насенелення без ЗО"
+dictionary_353:
+  code: Table.Houses.SelfHeatingArea
+  id: "390"
+  languagecode: UKR
+  name: "S авт. оп."
+  rem: "Площа автономного опалення"
+dictionary_354:
+  code: Table.Houses.NArea
+  id: "391"
+  languagecode: UKR
+  name: "S нас. з ЗО"
+  rem: "Площа насенелення з ЗО"
+dictionary_355:
+  code: Table.Houses.BArea
+  id: "392"
+  languagecode: UKR
+  name: "S бюдж."
+  rem: "Площа бюджетних установ"
+dictionary_356:
+  code: Table.Houses.XArea
+  id: "393"
+  languagecode: UKR
+  name: "S госп."
+  rem: "Площа госпрозрахункових закладів"
+dictionary_357:
+  code: GUI.FindLocal.Title
+  id: "408"
+  languagecode: UKR
+  name: Пошук
+dictionary_358:
+  code: GUI.FindLocal.Find
+  id: "409"
+  languagecode: UKR
+  name: "Зн&айти:"
+dictionary_359:
+  code: GUI.FindLocal.Direction
+  id: "410"
+  languagecode: UKR
+  name: Напрямок
+dictionary_360:
+  code: GUI.FindLocal.Forward
+  id: "411"
+  languagecode: UKR
+  name: "&Вперед"
+dictionary_361:
+  code: GUI.FindLocal.Backward
+  id: "412"
+  languagecode: UKR
+  name: "&Назад"
+dictionary_362:
+  code: GUI.FindLocal.Scope
+  id: "413"
+  languagecode: UKR
+  name: Диапазон
+dictionary_363:
+  code: GUI.FindLocal.Options
+  id: "414"
+  languagecode: UKR
+  name: Опції
+dictionary_364:
+  code: GUI.FindLocal.Case
+  id: "415"
+  languagecode: UKR
+  name: "&Регистрозалежно"
+dictionary_365:
+  code: GUI.FindLocal.Wrap
+  id: "416"
+  languagecode: UKR
+  name: "По &кругу"
+dictionary_366:
+  code: GUI.FindLocal.WholeWord
+  id: "417"
+  languagecode: UKR
+  name: "&Цілі слова"
+dictionary_367:
+  code: GUI.FindLocal.RegEx
+  id: "418"
+  languagecode: UKR
+  name: RegE&x
+dictionary_368:
+  code: GUI.FindLocal.Next
+  id: "419"
+  languagecode: UKR
+  name: "Шукати &далі"
+dictionary_369:
+  code: GUI.FindLocal.NoMatch
+  id: "420"
+  languagecode: UKR
+  name: "Не знайдено"
+dictionary_370:
+  code: GUI.FindLocal.Close
+  id: "421"
+  languagecode: UKR
+  name: "&Закрити"
+dictionary_371:
+  code: GUI.FindLocal.Column
+  id: "422"
+  languagecode: UKR
+  name: "&Стовпець"
+dictionary_372:
+  code: GUI.FindLocal.Table
+  id: "423"
+  languagecode: UKR
+  name: "&Таблиця"
+dictionary_373:
+  code: GUI.Editor.FastLookup.ToolTip.Text
+  id: "424"
+  languagecode: UKR
+  name: Довідник
+dictionary_374:
+  code: GUI.Editor.FastLookup.ToolTip.Message
+  id: "425"
+  languagecode: UKR
+  name: "Ctrl + клік"
+dictionary_375:
+  code: Table.ObjectCapacities.ContractId
+  id: "426"
+  languagecode: UKR
+  name: Договір
+  names: Договори
+dictionary_376:
+  code: Table.Contracts
+  id: "427"
+  languagecode: UKR
+  name: Договір
+  names: Договори
+dictionary_377:
+  code: Common.ConsumerId
+  id: "428"
+  languagecode: UKR
+  name: Платник
+  names: Платники
+dictionary_378:
+  code: Common.ObjectId
+  id: "429"
+  languagecode: UKR
+  name: "Об'єкт"
+  names: "Об'єкти"
+dictionary_379:
+  code: Table.Contracts.Code
+  id: "430"
+  languagecode: UKR
+  name: "№ Договору"
+  names: ""
+dictionary_380:
+  code: Table.Contracts.Book
+  id: "431"
+  languagecode: UKR
+  name: "№ Книги"
+  names: ""
+dictionary_381:
+  code: Hierarchy.Consumers.CustomersWithUnknownDepartment
+  id: "432"
+  languagecode: UKR
+  name: "Платники з невідомим районом"
+dictionary_382:
+  code: Common.Contracts
+  id: "433"
+  languagecode: UKR
+  name: Договiр
+  names: Договори
+dictionary_383:
+  code: Table.Consumers.Fax
+  id: "434"
+  languagecode: UKR
+  name: Факс
+dictionary_384:
+  code: Table.Consumers.DirFIO
+  id: "435"
+  languagecode: UKR
+  name: "ПІБ директора"
+dictionary_385:
+  code: Table.Consumers.DirPhone
+  id: "436"
+  languagecode: UKR
+  name: "Тел. дир."
+dictionary_386:
+  code: Table.Consumers.GlavBuhFIO
+  id: "437"
+  languagecode: UKR
+  name: "ПІБ гол. бухгалтера"
+dictionary_387:
+  code: Table.Consumers.GlavBuhPhone
+  id: "438"
+  languagecode: UKR
+  name: "Тел. гол. бух."
+dictionary_388:
+  code: Table.Consumers.CalcFIO
+  id: "439"
+  languagecode: UKR
+  name: "ПІБ розраховувача"
+dictionary_389:
+  code: Table.Consumers.CalcPhone
+  id: "440"
+  languagecode: UKR
+  name: "Тел. розрах."
+dictionary_390:
+  code: Table.Consumers.DeliveryAddress
+  id: "441"
+  languagecode: UKR
+  name: "Адреса доставки"
+dictionary_391:
+  code: Table.Persons.IsMain
+  id: "442"
+  languagecode: UKR
+  name: ОКН
+  rem: "Основний квартиронаймач "
+dictionary_392:
+  code: Table.Benefits.IsMain
+  id: "443"
+  languagecode: UKR
+  name: Осн.
+  rem: "Основна пільга"
+dictionary_393:
+  code: Сommon.IsMain
+  id: "444"
+  languagecode: UKR
+  name: Осн.
+  rem: Основний
+dictionary_394:
+  code: Table.BenefitTypes
+  id: "445"
+  languagecode: UKR
+  name: "Категорія пільги"
+  names: "Категорії пільг"
+dictionary_395:
+  code: Table.BenefitTypes.Code
+  id: "447"
+  languagecode: UKR
+  name: Код
+dictionary_396:
+  code: Table.BenefitTypes.DateFrom
+  id: "450"
+  languagecode: UKR
+  name: "Введено з"
+dictionary_397:
+  code: Common.Benefits
+  id: "451"
+  languagecode: UKR
+  name: Пільга
+  names: Пільги
+dictionary_398:
+  code: Table.Benefits.PersonId
+  id: "452"
+  languagecode: UKR
+  name: Пільговик
+dictionary_399:
+  code: Table.Benefits.TypeId
+  id: "453"
+  languagecode: UKR
+  name: "Код пільги"
+dictionary_400:
+  code: Table.Benefits.Doc
+  id: "456"
+  languagecode: UKR
+  name: "Документ пільги"
+dictionary_401:
+  code: Table.Services.BenefitCode
+  id: "457"
+  languagecode: UKR
+  name: "Код пільги"
+dictionary_402:
+  code: Table.Services.BenefitName
+  id: "458"
+  languagecode: UKR
+  name: "Назва пільги"
+dictionary_403:
+  code: Table.Persons.ObjectId
+  id: "459"
+  languagecode: UKR
+  name: Адреса
+dictionary_404:
+  code: Table.Places.Area
+  id: "39"
+  languagecode: UKR
+  name: "Площа дов. "
+  names: Площа
+  rem: "Площа довідково"
+dictionary_405:
+  code: Table.Houses.ConsumerId
+  id: "460"
+  languagecode: UKR
+  name: Балансоутримувач
+dictionary_406:
+  code: Table.Houses.Rem2
+  id: "461"
+  languagecode: UKR
+  name: "Коментар 2"
+dictionary_407:
+  code: Table.benefit_persons
+  id: "462"
+  languagecode: UKR
+  name: "Пільговик та пільги"
+  names: "Пільговики та пільги"
+dictionary_408:
+  code: Table.heat_objects
+  id: "463"
+  languagecode: UKR
+  name: "Об'єкт теплопостачання"
+  names: "Об'єкти теплопостачання"
+dictionary_409:
+  code: Common.MiddleName
+  id: "157"
+  languagecode: UKR
+  name: "По батькові"
+  rem: "По батькові"
+dictionary_410:
+  code: Common.LastName
+  id: "158"
+  languagecode: UKR
+  name: Прізвище
+  rem: Прізвище
+dictionary_411:
+  code: Common.INN
+  id: "159"
+  languagecode: UKR
+  name: ІПН
+  rem: ІПН
+dictionary_412:
+  code: Common.GekId
+  id: "160"
+  languagecode: UKR
+  name: ЖЕК
+  rem: ЖЕК
+dictionary_413:
+  code: Common.Account
+  id: "161"
+  languagecode: UKR
+  name: "Особовий рахунок"
+  rem: "Особовий рахунок"
+dictionary_414:
+  code: Common.BirthDate
+  id: "162"
+  languagecode: UKR
+  name: "Дата народження"
+  rem: "Дата народження"
+dictionary_415:
+  code: Common.Passport
+  id: "163"
+  languagecode: UKR
+  name: Паспорт
+  rem: Паспорт
+dictionary_416:
+  code: Common.BenefitId
+  id: "164"
+  languagecode: UKR
+  name: Пільга
+  rem: Пільга
+dictionary_417:
+  code: Common.ExcludeDate
+  id: "165"
+  languagecode: UKR
+  name: "Знято з обліку"
+  rem: "Знято з обліку"
+dictionary_418:
+  code: Common.CardNum
+  id: "454"
+  languagecode: UKR
+  name: "№ Картки"
+dictionary_419:
+  code: Common.FileNum
+  id: "455"
+  languagecode: UKR
+  name: "№ Справи"
+dictionary_420:
+  code: Common.kfk
+  id: "446"
+  languagecode: UKR
+  name: КФК
+dictionary_421:
+  code: Table.Houses.Code
+  id: "341"
+  languagecode: UKR
+  name: Номер
+  rem: "Номер будівлі"
+dictionary_422:
+  code: Common.Percent
+  id: "449"
+  languagecode: UKR
+  name: Процент
+dictionary_423:
+  code: Table.BenefitTypes.Name
+  id: "448"
+  languagecode: UKR
+  name: "Категорія пільги"
+dictionary_424:
+  code: Common.Address
+  id: "464"
+  languagecode: UKR
+  name: Адреса
+dictionary_425:
+  code: Table.benefit_persons.is_main_person
+  id: "465"
+  languagecode: UKR
+  name: ОКН
+dictionary_426:
+  code: Table.benefit_persons.person_rem
+  id: "466"
+  languagecode: UKR
+  name: "Коментар пільговика"
+dictionary_427:
+  code: Table.benefit_persons.is_main_benefit
+  id: "467"
+  languagecode: UKR
+  name: "Осн. пільга"
+dictionary_428:
+  code: Table.benefit_persons.doc
+  id: "468"
+  languagecode: UKR
+  name: "Документ пільги"
+dictionary_429:
+  code: Table.benefit_persons.benefit_rem
+  id: "469"
+  languagecode: UKR
+  name: "Коментар пільги"
+dictionary_430:
+  code: Table.benefit_persons.benefit_code
+  id: "470"
+  languagecode: UKR
+  name: "Код пільги"
+dictionary_431:
+  code: Table.benefit_persons.benefit_name
+  id: "471"
+  languagecode: UKR
+  name: "Категорія пільги"
+dictionary_432:
+  code: Table.benefit_persons.benefit_date
+  id: "472"
+  languagecode: UKR
+  name: "Введено з"
+dictionary_433:
+  code: Table.benefit_persons.flat_heat_area
+  id: "473"
+  languagecode: UKR
+  name: "Опал. площа кв."
+  rem: "Опалювальна площа квартири, м2"
+dictionary_434:
+  code: Common.PersonCount
+  id: "474"
+  languagecode: UKR
+  name: "Кіл. осіб"
+  rem: "Кількість осіб"
+dictionary_435:
+  code: Common.consumer_code
+  id: "475"
+  languagecode: UKR
+  name: "Код платника"
+  rem: "Код платника"
+dictionary_436:
+  code: Common.consumer_nam
+  id: "476"
+  languagecode: UKR
+  name: Платник
+  rem: Платник
+dictionary_437:
+  code: GUI.NvgView.Menu.Views
+  id: "477"
+  languagecode: UKR
+  name: Представлення
+  names: Представлення
+  rem: "Форми для аналізу та друку"
+dictionary_438:
+  code: Table.Pavilions
+  id: "478"
+  languagecode: UKR
+  name: Павільйон
+  names: Павільйони
+dictionary_439:
+  code: Common.ParentId
+  id: "479"
+  languagecode: UKR
+  name: "Прив'язка"
+  names: "Прив'язка"
+dictionary_440:
+  code: Common.CalcTypeId
+  id: "480"
+  languagecode: UKR
+  name: "Тип розрахунку"
+dictionary_441:
+  code: Common.State
+  id: "481"
+  languagecode: UKR
+  name: "Стан"
+dictionary_442:
+  code: Common.ServiceId
+  id: "482"
+  languagecode: UKR
+  name: "Послуга"
+  rem: "Послуга"
+dictionary_443:
+  code: Table.TariffValues
+  id: "483"
+  languagecode: UKR
+  name: "Тариф"
+  names: "Тарифи"
+  rem: "Значення тарифів"
+dictionary_444:
+  code: Common.PayerId
+  id: "484"
+  languagecode: UKR
+  name: "Платник"
+dictionary_445:
+  code: Table.calc_results
+  id: "485"
+  languagecode: UKR
+  name: "Розрахунок"
+  names: "Розрахунки"
+dictionary_446:
+  code: Table.calc_results_by_payers
+  id: "486"
+  languagecode: UKR
+  name: "Розрахунок по платниках"
+  names: "Розрахунки по платниках"
+dictionary_447:
+  code: Table.calc_results_by_objects
+  id: "487"
+  languagecode: UKR
+  name: "Розрахунок по об'єктах"
+  names: "Розрахунки по об'єктах"
+dictionary_448:
+  code: Common.PlaceCode
+  id: "488"
+  languagecode: UKR
+  name: "Приміщення (номер або назва)"
+dictionary_449:
+  code: Common.AddressSpace
+  id: "489"
+  languagecode: UKR
+  name: "Адресний простір"
+dictionary_450:
+  code: Common.Topology
+  id: "490"
+  languagecode: UKR
+  name: "Теплова мережа"
+  rem: "Теплова мережа"
+dictionary_451:
+  code: GUI.NvgView.Menu.Counters
+  id: "491"
+  languagecode: UKR
+  name: "Прилади обліку"
+dictionary_452:
+  code: GUI.NvgView.Menu.Benefits
+  id: "492"
+  languagecode: UKR
+  name: "Пільги"
+dictionary_493:
+  code: TableRows.CalcTypes.PlacesConsumersServices
+  id: "493"
+  languagecode: UKR
+  name: "По юр. особам"
+dictionary_494:
+  code: Table.Corrections
+  id: "494"
+  languagecode: UKR
+  name: "Корегування"
+  names: "Корегування"
+dictionary_495:
+  code: Table.Corrections.IsIncome
+  id: "495"
+  languagecode: UKR
+  name: "Надходження"
+dictionary_496:
+  code: Table.Corrections.Value
+  id: "496"
+  languagecode: UKR
+  name: "Сума"

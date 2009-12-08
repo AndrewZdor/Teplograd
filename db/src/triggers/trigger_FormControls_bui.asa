@@ -1,0 +1,39 @@
+﻿CREATE OR REPLACE FUNCTION trg_FormControls_biu 
+RETURNS trigger AS
+$body$
+BEGIN
+    NEW.UpdateTS := LOCALTIMESTAMP;
+    NEW.UpdateUserId := current_user;
+    RETURN NULL;
+END;
+$body$
+LANGUAGE 'plpgsql'
+VOLATILE
+CALLED ON NULL INPUT
+SECURITY DEFINER
+COST 100;
+
+------------------------------
+старый текст
+
+CREATE TRIGGER trigger_FormControls_biu 
+BEFORE INSERT, UPDATE 
+ON FormControls
+REFERENCING NEW AS newrow
+FOR EACH ROW 
+
+BEGIN
+	DECLARE ColumnIdTemp integer ;
+
+	SELECT column_id 
+	INTO ColumnIdTemp 
+	FROM sys.systabcol stc JOIN Entities t ON stc.table_id = table_id_ 
+	WHERE column_name = newrow.FieldName 
+	  AND newrow.EntityId = t.Id;
+
+	SET newrow.Column_Id_ = ColumnIdTemp ;  
+	
+END;
+-----------------------------------
+CREATE TRIGGER trigger_FormControls_biu BEFORE INSERT or UPDATE ON FormControls
+    FOR EACH ROW EXECUTE PROCEDURE trg_FormControls_biu();

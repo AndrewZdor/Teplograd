@@ -1,0 +1,691 @@
+---
+prefvalues_000001:
+  datefrom: ~
+  id: "1"
+  insertts: "2008-09-19 15:19:52.687"
+  insertuserid: DBA
+  prefid: "1"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.687"
+  updateuserid: DBA
+  userid: ~
+  value: UKR
+prefvalues_000002:
+  datefrom: ~
+  id: "2"
+  insertts: "2008-09-19 15:19:52.703"
+  insertuserid: DBA
+  prefid: "2"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.703"
+  updateuserid: DBA
+  userid: ~
+  value: "0"
+prefvalues_000003:
+  datefrom: ~
+  id: "3"
+  insertts: "2008-09-19 15:19:52.703"
+  insertuserid: DBA
+  prefid: "3"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.703"
+  updateuserid: DBA
+  userid: ~
+  value: "0"
+prefvalues_000004:
+  datefrom: ~
+  id: "4"
+  insertts: "2008-09-19 15:19:52.703"
+  insertuserid: DBA
+  prefid: "4"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.703"
+  updateuserid: DBA
+  userid: ~
+  value: "1"
+prefvalues_000005:
+  datefrom: ~
+  id: "5"
+  insertts: "2008-09-19 15:19:52.718"
+  insertuserid: DBA
+  prefid: "5"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.718"
+  updateuserid: DBA
+  userid: ~
+  value: "0"
+prefvalues_000006:
+  datefrom: ~
+  id: "6"
+  insertts: "2008-09-19 15:19:52.718"
+  insertuserid: DBA
+  prefid: "6"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.718"
+  updateuserid: DBA
+  userid: ~
+  value: "0"
+prefvalues_000007:
+  datefrom: ~
+  id: "7"
+  insertts: "2008-09-19 15:19:52.718"
+  insertuserid: DBA
+  prefid: "7"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.718"
+  updateuserid: DBA
+  userid: ~
+  value: "1"
+prefvalues_000008:
+  datefrom: ~
+  id: "8"
+  insertts: "2008-09-19 15:19:52.718"
+  insertuserid: DBA
+  prefid: "8"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-08-06 12:23:25.953"
+  updateuserid: tnd
+  userid: ~
+  value: "\x01"
+prefvalues_000009:
+  datefrom: ~
+  id: "9"
+  insertts: "2008-09-19 15:19:52.734"
+  insertuserid: DBA
+  prefid: "9"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.734"
+  updateuserid: DBA
+  userid: ~
+  value: <NULL>
+prefvalues_000010:
+  datefrom: ~
+  id: "10"
+  insertts: "2008-09-19 15:19:52.734"
+  insertuserid: DBA
+  prefid: "10"
+  revision: "1"
+  sessionid: ~
+  updatets: "2009-03-19 14:02:28.94"
+  updateuserid: DBA
+  userid: ~
+  value: ""
+prefvalues_000011:
+  datefrom: ~
+  id: "11"
+  insertts: "2008-09-19 15:19:52.734"
+  insertuserid: DBA
+  prefid: "11"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.734"
+  updateuserid: DBA
+  userid: ~
+  value: "5"
+prefvalues_000012:
+  datefrom: ~
+  id: "12"
+  insertts: "2008-09-19 15:19:52.734"
+  insertuserid: DBA
+  prefid: "12"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.734"
+  updateuserid: DBA
+  userid: ~
+  value: "5"
+prefvalues_000013:
+  datefrom: ~
+  id: "13"
+  insertts: "2008-09-19 15:19:52.75"
+  insertuserid: DBA
+  prefid: "13"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.75"
+  updateuserid: DBA
+  userid: ~
+  value: "500"
+prefvalues_000014:
+  datefrom: ~
+  id: "14"
+  insertts: "2008-09-19 15:19:52.75"
+  insertuserid: DBA
+  prefid: "14"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-09-19 15:19:52.75"
+  updateuserid: DBA
+  userid: ~
+  value: "10000"
+prefvalues_000015:
+  datefrom: ~
+  id: "15"
+  insertts: "2008-09-19 15:19:52.75"
+  insertuserid: DBA
+  prefid: "15"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-10-10 14:59:07.502"
+  updateuserid: DBA
+  userid: ~
+  value: "15132390"
+prefvalues_000016:
+  datefrom: ~
+  id: "16"
+  insertts: "2008-10-03 13:35:51.651"
+  insertuserid: DBA
+  prefid: "16"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-10-03 13:35:51.651"
+  updateuserid: DBA
+  userid: ~
+  value: "10"
+prefvalues_000017:
+  datefrom: ~
+  id: "17"
+  insertts: "2008-10-03 13:35:51.667"
+  insertuserid: DBA
+  prefid: "17"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-10-03 13:35:51.667"
+  updateuserid: DBA
+  userid: ~
+  value: "1"
+prefvalues_000018:
+  datefrom: ~
+  id: "18"
+  insertts: "2008-10-03 13:35:51.667"
+  insertuserid: DBA
+  prefid: "18"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-10-03 13:35:51.667"
+  updateuserid: DBA
+  userid: ~
+  value: "1"
+prefvalues_000019:
+  datefrom: ~
+  id: "92"
+  insertts: "2008-11-20 14:14:21.641"
+  insertuserid: DBA
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-06-22 13:43:06.162"
+  updateuserid: DBA
+  userid: ~
+  value: "$LastChangedRevision: 1209 $ OK"
+prefvalues_000020:
+  datefrom: ~
+  id: "93"
+  insertts: "2008-11-20 15:16:01.838"
+  insertuserid: DBA
+  prefid: "26"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-12-22 16:17:08.507"
+  updateuserid: DBA
+  userid: "1"
+  value: "23505"
+prefvalues_000021:
+  datefrom: ~
+  id: "94"
+  insertts: "2008-11-20 15:16:01.838"
+  insertuserid: DBA
+  prefid: "27"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-12-22 16:17:08.507"
+  updateuserid: DBA
+  userid: "1"
+  value: "Index 'un_Objects_EntityId_Code' for table 'Objects' would not be unique"
+prefvalues_000022:
+  datefrom: ~
+  id: "22"
+  insertts: "2008-10-10 14:59:07.502"
+  insertuserid: DBA
+  prefid: "22"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-10-24 13:08:08.778"
+  updateuserid: DBA
+  userid: ~
+  value: "0"
+prefvalues_000023:
+  datefrom: ~
+  id: "23"
+  insertts: "2008-10-10 14:59:07.502"
+  insertuserid: DBA
+  prefid: "23"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-08-06 12:23:25.953"
+  updateuserid: tnd
+  userid: ~
+  value: "\x02"
+prefvalues_000024:
+  datefrom: ~
+  id: "24"
+  insertts: "2008-10-24 13:08:08.778"
+  insertuserid: DBA
+  prefid: "24"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-10-24 13:08:08.778"
+  updateuserid: DBA
+  userid: ~
+  value: "0"
+prefvalues_000025:
+  datefrom: ~
+  id: "25"
+  insertts: "2008-10-24 13:08:08.888"
+  insertuserid: DBA
+  prefid: "25"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-10-24 13:08:08.888"
+  updateuserid: DBA
+  userid: ~
+  value: "1"
+prefvalues_000026:
+  datefrom: ~
+  id: "26"
+  insertts: "2008-11-04 13:21:18.704"
+  insertuserid: DBA
+  prefid: "28"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-11-04 13:21:18.704"
+  updateuserid: DBA
+  userid: ~
+  value: "8404992"
+prefvalues_000027:
+  datefrom: ~
+  id: "27"
+  insertts: "2008-11-04 13:21:18.704"
+  insertuserid: DBA
+  prefid: "29"
+  revision: "0"
+  sessionid: ~
+  updatets: "2008-11-04 13:21:18.704"
+  updateuserid: DBA
+  userid: ~
+  value: "16777088"
+prefvalues_000028:
+  datefrom: ~
+  id: "96"
+  insertts: "2008-12-12 13:52:18.712"
+  insertuserid: DBA
+  prefid: "32"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-04-23 10:59:48.906"
+  updateuserid: DBA
+  userid: "1"
+  value: "2009-12-01"
+prefvalues_000029:
+  datefrom: ~
+  id: "97"
+  insertts: "2009-02-17 17:53:31.171"
+  insertuserid: DBA
+  prefid: "34"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-02-17 17:53:31.171"
+  updateuserid: DBA
+  userid: ~
+  value: "16646655"
+prefvalues_000030:
+  datefrom: ~
+  id: "98"
+  insertts: "2009-02-17 17:53:31.171"
+  insertuserid: DBA
+  prefid: "35"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-02-17 17:53:31.171"
+  updateuserid: DBA
+  userid: ~
+  value: "0"
+prefvalues_000031:
+  datefrom: ~
+  id: "99"
+  insertts: "2009-02-17 17:53:31.171"
+  insertuserid: DBA
+  prefid: "36"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-02-17 17:53:31.171"
+  updateuserid: DBA
+  userid: ~
+  value: "8356095"
+prefvalues_000032:
+  datefrom: ~
+  id: "100"
+  insertts: "2009-06-10 13:36:20.032"
+  insertuserid: DBA
+  prefid: "39"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-06-10 13:36:23.032"
+  updateuserid: DBA
+  userid: "1"
+  value: "0"
+prefvalues_000033:
+  datefrom: "2009-06-23"
+  id: "103"
+  insertts: "2009-06-23 11:57:38"
+  insertuserid: DBA
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-06-23 11:57:38.156"
+  updateuserid: DBA
+  userid: ~
+  value: "$LastChangedRevision: 1246 $ OK"
+prefvalues_000034:
+  datefrom: "2009-07-07"
+  id: "104"
+  insertts: "2009-07-07 14:05:42.057"
+  insertuserid: DBA
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-07-07 14:05:42.166"
+  updateuserid: DBA
+  userid: ~
+  value: "$LastChangedRevision: 1304 $ OK"
+prefvalues_000035:
+  datefrom: ~
+  id: "105"
+  insertts: "2009-07-07 14:06:50.778"
+  insertuserid: DBA
+  prefid: "37"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-07-07 14:06:50.778"
+  updateuserid: DBA
+  userid: "1"
+  value: "1"
+prefvalues_000036:
+  datefrom: ~
+  id: "106"
+  insertts: "2009-07-07 14:22:35.98"
+  insertuserid: DBA
+  prefid: "40"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-07-08 10:27:39.822"
+  updateuserid: DBA
+  userid: "1"
+  value: "0"
+prefvalues_000037:
+  datefrom: "2009-09-16"
+  id: "115"
+  insertts: "2009-09-16 14:35:07.529"
+  insertuserid: postgres
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-09-16 14:35:07.529"
+  updateuserid: tnd
+  userid: ~
+  value: "$LastChangedRevision: 1634 $ OK"
+prefvalues_000038:
+  datefrom: ~
+  id: "108"
+  insertts: "2009-08-06 12:25:30.593"
+  insertuserid: tnd
+  prefid: "37"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-08-06 13:13:54.859"
+  updateuserid: tnd
+  userid: "3"
+  value: "0"
+prefvalues_000039:
+  datefrom: ~
+  id: "113"
+  insertts: "2009-08-27 14:56:27.994"
+  insertuserid: postgres
+  prefid: "32"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-11-06 14:25:48.5"
+  updateuserid: tnd
+  userid: "2"
+  value: "2009-12-01"
+prefvalues_000040:
+  datefrom: "2009-10-09"
+  id: "116"
+  insertts: "2009-10-09 10:05:04.978"
+  insertuserid: postgres
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-10-09 10:05:04.978"
+  updateuserid: tnd
+  userid: ~
+  value: "$LastChangedRevision: 1729 $ OK"
+prefvalues_000041:
+  datefrom: ~
+  id: "117"
+  insertts: "2009-10-09 10:13:17.397"
+  insertuserid: postgres
+  prefid: "39"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-10-09 10:13:19.131"
+  updateuserid: tnd
+  userid: "2"
+  value: "0"
+prefvalues_000042:
+  datefrom: ~
+  id: "109"
+  insertts: "2009-08-17 13:21:34.517"
+  insertuserid: tnd
+  prefid: "40"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-08-18 11:43:26.946"
+  updateuserid: tnd
+  userid: "3"
+  value: "1"
+prefvalues_000043:
+  datefrom: "2009-10-16"
+  id: "118"
+  insertts: "2009-10-16 15:29:15.253"
+  insertuserid: postgres
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-10-16 15:29:15.253"
+  updateuserid: tnd
+  userid: ~
+  value: "$LastChangedRevision: 1752 $ OK"
+prefvalues_000044:
+  datefrom: ~
+  id: "120"
+  insertts: "2009-10-28 10:09:06.622"
+  insertuserid: tnd
+  prefid: "46"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-10-28 10:09:06.622"
+  updateuserid: tnd
+  userid: ~
+  value: "32768"
+prefvalues_000045:
+  datefrom: ~
+  id: "121"
+  insertts: "2009-10-28 10:09:06.622"
+  insertuserid: tnd
+  prefid: "47"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-10-28 10:09:06.622"
+  updateuserid: tnd
+  userid: ~
+  value: "8421376"
+prefvalues_000046:
+  datefrom: "2009-10-28"
+  id: "119"
+  insertts: "2009-10-28 10:09:06.622"
+  insertuserid: postgres
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-10-28 10:09:06.622"
+  updateuserid: tnd
+  userid: ~
+  value: "$LastChangedRevision: 1787 $ OK"
+prefvalues_000047:
+  datefrom: "2009-08-27"
+  id: "110"
+  insertts: "2009-08-27 14:30:06.885"
+  insertuserid: postgres
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-08-27 14:35:05.188"
+  updateuserid: tnd
+  userid: ~
+  value: "$LastChangedRevision: 1589 $ OK"
+prefvalues_000048:
+  datefrom: "2009-08-27"
+  id: "112"
+  insertts: "2009-08-27 14:35:05.188"
+  insertuserid: postgres
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-08-27 14:35:05.188"
+  updateuserid: tnd
+  userid: ~
+  value: "$LastChangedRevision: 1589 $ OK"
+prefvalues_000049:
+  datefrom: ~
+  id: "122"
+  insertts: "2009-10-28 11:13:32.171"
+  insertuserid: tnd
+  prefid: "32"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-10-28 11:13:32.171"
+  updateuserid: tnd
+  userid: "3"
+  value: "2009-12-01"
+prefvalues_000050:
+  datefrom: ~
+  id: "125"
+  insertts: "2009-11-09 10:01:37.187"
+  insertuserid: postgres
+  prefid: "49"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-11-09 13:06:59.156"
+  updateuserid: tnd
+  userid: "2"
+  value: "1"
+prefvalues_000051:
+  datefrom: ~
+  id: "123"
+  insertts: "2009-11-03 13:44:47.234"
+  insertuserid: postgres
+  prefid: "40"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-11-03 13:44:55.406"
+  updateuserid: tnd
+  userid: "2"
+  value: "0"
+prefvalues_000052:
+  datefrom: ~
+  id: "124"
+  insertts: "2009-11-03 13:44:57.156"
+  insertuserid: postgres
+  prefid: "48"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-11-03 13:45:04.125"
+  updateuserid: tnd
+  userid: "2"
+  value: "0"
+prefvalues_000053:
+  datefrom: "2009-09-10"
+  id: "114"
+  insertts: "2009-09-10 16:40:41.168"
+  insertuserid: postgres
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-09-10 16:40:41.168"
+  updateuserid: tnd
+  userid: ~
+  value: "$LastChangedRevision: 1621 $ OK"
+prefvalues_000054:
+  datefrom: ~
+  id: "127"
+  insertts: "2009-11-13 12:10:01.812"
+  insertuserid: postgres
+  prefid: "50"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-11-13 12:10:01.812"
+  updateuserid: postgres
+  userid: ~
+  value: "2"
+prefvalues_000055:
+  datefrom: "2009-11-13"
+  id: "126"
+  insertts: "2009-11-13 12:10:01.812"
+  insertuserid: postgres
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-11-13 12:10:01.812"
+  updateuserid: tnd
+  userid: ~
+  value: "$LastChangedRevision: 1828 $ OK"
+prefvalues_000056:
+  datefrom: ~
+  id: "95"
+  insertts: "2008-12-12 13:48:31.308"
+  insertuserid: DBA
+  prefid: "31"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-11-16 18:04:33.994"
+  updateuserid: tnd
+  userid: ~
+  value: "1"
+prefvalues_000057:
+  datefrom: "2009-11-16"
+  id: "128"
+  insertts: "2009-11-16 18:04:33.994"
+  insertuserid: postgres
+  prefid: "30"
+  revision: "0"
+  sessionid: ~
+  updatets: "2009-11-16 18:04:33.994"
+  updateuserid: tnd
+  userid: ~
+  value: "$LastChangedRevision: 1825 $ OK"
+prefvalues_000058:
+  datefrom: "2009-11-16"
+  id: "129"
+  prefid: 51
+  userid: ~
+  value: 20

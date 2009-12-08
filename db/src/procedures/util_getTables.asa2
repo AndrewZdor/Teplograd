@@ -1,0 +1,53 @@
+/**
+Возвращает список таблиц БД в порядке их зависимостей.
+Позволяет получить список таблиц, отсортированных по их FOREIGN KEY,
+где гарантировано сначала идут родительские таблицы, а только потом дочерние.
+Это позволяет выполнять операции над множеством таблиц, без нарушения целостности данных.
+Например, нам необходимо очистить все таблицы в БД. Для этого необходимо отключить триггеры.
+Однако отключение триггеров влечет за собой отключение каскадных операций и существуют еще связи без установленных каскадов.
+Получается, что очищать данные в таблицах нам по любому придется в порядке от дочерних таблиц к родительским.
+Данная процедура и позволяет проводить на основе ее возвращаемого отсортированного списка таблиц такие сложные манипуляции.
+*/
+CREATE PROCEDURE util_getTables()
+BEGIN
+    DECLARE @SQLState String;
+    DECLARE @ErrorMsg LongString;
+    DECLARE @ProcId INTEGER;
+
+    DECLARE LOCAL TEMPORARY TABLE #TableList (
+		Number  INT IDENTITY NOT NULL PRIMARY KEY, -- Порядковый номер в списке
+		Level   SMALLINT 	 NOT NULL, -- Уровень в иеархии вложенности зависимостей
+		EntityId INT 	 	 NOT NULL -- ID таблицы
+	) NOT TRANSACTIONAL;
+
+	DECLARE @Level SMALLINT;
+  	SET @Level = 0;
+
+	Entities: LOOP
+	    SET @Level = @Level + 1;
+
+		-- Заносим во времянку все таблицы, не имеющие родителей
+		-- или имеющих уже перенесенных в времянку родителей
+		INSERT INTO #TableList (Level, EntityId)
+		SELECT @Level, Table_Id
+		  FROM SysTable t
+		 WHERE Creator = suser_id(sys_getTableOwner())
+		   AND Table_Type = 'BASE'
+		   AND Existing_Obj IS NULL
+		   AND Table_Id NOT IN (SELECT EntityId FROM #TableList)
+		   AND Table_Id NOT IN (SELECT Foreign_Table_Id FROM SysForeignKey
+		       				    WHERE Primary_Table_Id <> t.Table_Id AND
+		       				   	      Primary_Table_Id NOT IN (SELECT EntityId FROM #TableList) );
+
+		-- Если ничего не было добавлено, то таблицы закончились
+		IF @@ROWCOUNT = 0 THEN
+		  LEAVE Entities;
+		END IF;
+
+	END LOOP;
+
+	SELECT l.*, t.Table_Name
+	  FROM #TableList l JOIN SysTable t ON t.Table_Id = l.EntityId
+	ORDER BY Number;
+
+END;

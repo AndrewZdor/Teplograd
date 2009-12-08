@@ -1,0 +1,40 @@
+﻿CREATE OR REPLACE FUNCTION trg_Entities_biu 
+RETURNS trigger AS
+$body$
+BEGIN
+    NEW.UpdateTS := LOCALTIMESTAMP;
+    NEW.UpdateUserId := current_user;
+    RETURN NULL;
+END;
+$body$
+LANGUAGE 'plpgsql'
+VOLATILE
+CALLED ON NULL INPUT
+SECURITY DEFINER
+COST 100;
+
+------------------------------
+старый текст
+
+
+CREATE TRIGGER trigger_Entities_biu
+BEFORE INSERT, UPDATE
+ON Entities
+REFERENCING NEW AS newrow
+FOR EACH ROW
+
+BEGIN
+	DECLARE EntityIdTemp integer ;
+
+	SELECT table_id
+	INTO EntityIdTemp
+	FROM sys.systab
+	WHERE table_name = newrow.Code ;
+
+	SET newrow.Table_Id_ = EntityIdTemp;
+
+END;
+
+-----------------------------------
+CREATE TRIGGER trigger_Entities_biu BEFORE INSERT or UPDATE ON FormControls
+    FOR EACH ROW EXECUTE PROCEDURE trg_Entities_biu();

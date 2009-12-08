@@ -1,0 +1,99 @@
+--- 
+calctemplates_000001: 
+  calctypeid: "1"
+  dorestrict: t
+  fieldname: TariffValues.Value
+  id: "3"
+  insertts: "2008-12-30 14:02:44.84"
+  insertuserid: DBA
+  orderno: "40"
+  querysql: |-
+      
+      		-- Changing op.DateFrom.
+      		SELECT o.Id AS ObjectId, s.Id AS ServiceId, t.Id AS RowId, op.DateFrom,
+      			(SELECT tv.Value2 FROM TariffValues tv WHERE tv.TariffId = t.Id AND tv.ServiceId = s.Id AND tv.DateFrom <= op.DateFrom ORDER BY tv.DateFrom DESC LIMIT 1) AS Value,
+      			o.InsDate, o.DelDate
+      		FROM Objects o
+      		JOIN ObjectProperties op ON op.ObjectId = o.Id
+      		JOIN EntityProperties ep ON ep.Id = op.PropertyId
+      		    AND ep.Code = 'TariffId'
+      		JOIN Tariffs t ON t.Id::TEXT = op.Value
+      		CROSS JOIN Services s
+      		WHERE EXISTS (SELECT 1 FROM TariffValues tv WHERE tv.TariffId = t.Id AND tv.ServiceId = s.Id AND tv.DateFrom <= op.DateFrom)
+      		UNION
+      		-- Changing tv.DateFrom.
+      		SELECT o.Id AS ObjectId, tv.ServiceId, tv.TariffId AS RowId, tv.DateFrom, tv.Value2 AS Value, o.InsDate, o.DelDate
+      		FROM TariffValues tv
+      		JOIN ObjectProperties op ON op.Value = tv.TariffId::TEXT AND op.DateFrom <= tv.DateFrom
+      		JOIN EntityProperties ep ON ep.Id = op.PropertyId AND ep.Code = 'TariffId'
+      		JOIN Objects o ON o.Id = op.ObjectId
+      		
+  revision: "0"
+  updatets: "2009-08-27 14:35:05.188"
+  updateuserid: tnd
+calctemplates_000002: 
+  calctypeid: "1"
+  dorestrict: t
+  fieldname: Objects.State
+  id: "8"
+  insertts: "2009-10-16 15:29:15.253"
+  insertuserid: postgres
+  orderno: "100"
+  querysql: ~
+  revision: "0"
+  updatets: "2009-10-16 15:29:15.253"
+  updateuserid: postgres
+calctemplates_000003: 
+  calctypeid: "1"
+  dorestrict: t
+  fieldname: ObjectCapacities.Value
+  id: "1"
+  insertts: "2008-12-30 14:02:44.84"
+  insertuserid: DBA
+  orderno: "10"
+  querysql: |
+      
+      SELECT oc.ObjectId, oc.ServiceId, oc.Id AS RowId, oc.DateFrom, oc.Value2 AS Value, o.InsDate, o.DelDate
+      FROM ObjectCapacities oc
+      JOIN Objects o ON o.Id = oc.ObjectId
+      WHERE COALESCE(oc.Value2, 0) != 0
+  revision: "0"
+  updatets: "2009-10-28 10:09:06.622"
+  updateuserid: tnd
+calctemplates_000004: 
+  calctypeid: "1"
+  dorestrict: f
+  fieldname: ServiceLog.State
+  id: "5"
+  insertts: "2008-12-30 14:02:44.84"
+  insertuserid: DBA
+  orderno: "80"
+  querysql: |-
+      SELECT sl.ObjectId, sl.ServiceId, NULL::INT AS RowId, sl.DateFrom, CASE WHEN sl.State THEN 1 ELSE 0 END AS Value, o.InsDate, o.DelDate
+      FROM ServiceLog sl
+      JOIN Objects o ON o.Id = sl.ObjectId
+  revision: "0"
+  updatets: "2009-10-28 10:09:06.622"
+  updateuserid: tnd
+calctemplates_000005: 
+  calctypeid: "1"
+  dorestrict: t
+  fieldname: Objects.PayerId
+  id: "6"
+  insertts: "2009-03-02 17:38:51.358"
+  insertuserid: DBA
+  orderno: "90"
+  querysql: |-
+      SELECT oc.ObjectId, oc.ServiceId, NULL::INT AS RowId, c.DateFrom, c.ConsumerId AS Value, cn.InsDate, cn.DelDate
+      FROM Contracts c
+      JOIN Consumers cn ON cn.Id = c.ConsumerId
+      JOIN ObjectCapacities oc ON oc.ContractId = c.Id
+      UNION -- Contracts.DateTo handling.
+      SELECT oc.ObjectId, oc.ServiceId, NULL::INT AS RowId, c.DateTo, NULL AS Value, cn.InsDate, cn.DelDate
+      FROM Contracts c
+      JOIN Consumers cn ON cn.Id = c.ConsumerId
+      JOIN ObjectCapacities oc ON oc.ContractId = c.Id
+      WHERE c.DateTo IS NOT NULL
+  revision: "0"
+  updatets: "2009-10-28 10:09:06.622"
+  updateuserid: tnd
